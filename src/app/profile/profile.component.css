@@ -1,0 +1,27 @@
+.profile-box {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  color: black;
+}
+
+.profile-box .profile-img {
+  width: 100px;
+  height: 100px;
+  background: url("https://randomuser.me/api/portraits/men/35.jpg");
+  background-position: auto;
+  background-size: 100%;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.profile-info {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+}
+
+.profile-info ul li {
+  text-decoration: none;
+  list-style: none;
+}
