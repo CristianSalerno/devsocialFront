@@ -1,0 +1,21 @@
+.navbar {
+  background-color: #2A2A72;
+}
+
+.navbar a {
+     color: #fff;
+}
+
+#hover-effect::after {
+ content: '';
+ display: block;
+ width: 0;
+ height: 2px;
+ background: #fff;
+ transition: width .3s;
+}
+
+#hover-effect:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
