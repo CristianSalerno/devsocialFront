@@ -7,15 +7,19 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { RegisterFieldsComponent } from './register-fields/register-fields.component';
-
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    ProfileComponent,
+    RegisterFieldsComponent,
+    RegisterFormComponent,
     NavbarComponent,
     HeroComponent
+
   ],
   imports: [
     BrowserModule,
