@@ -8,7 +8,7 @@ import { RegisterFieldsComponent } from './register-fields/register-fields.compo
 const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'register', component: RegisterFormComponent },
-  { path: 'register/:fields', component: RegisterFieldsComponent }
+  { path: 'register/fields', component: RegisterFieldsComponent }
 ];
 
 @NgModule({
