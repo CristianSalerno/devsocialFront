@@ -11,15 +11,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
 
 
+import { NavbarComponent } from './navbar/navbar.component';
+import { HeroComponent } from './hero/hero.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
-    RegisterFieldsComponent,
-    RegisterFormComponent,
     NavbarComponent,
     HeroComponent
-
   ],
   imports: [
     BrowserModule,
