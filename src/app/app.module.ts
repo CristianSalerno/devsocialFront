@@ -14,14 +14,8 @@ import { HeroComponent } from './hero/hero.component';
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    ProfileComponent,
-    RegisterFormComponent,
-    RegisterFieldsComponent
-=======
     NavbarComponent,
     HeroComponent
->>>>>>> 5a6ee9f26ae35e2b4512e5b7e1c1cb76e6045433
   ],
   imports: [
     BrowserModule,
