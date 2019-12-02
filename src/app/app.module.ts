@@ -10,15 +10,14 @@ import { RegisterFieldsComponent } from './register-fields/register-fields.compo
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
 
-
-import { NavbarComponent } from './navbar/navbar.component';
-import { HeroComponent } from './hero/hero.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HeroComponent
+    HeroComponent,
+    ProfileComponent,
+    RegisterFormComponent,
+    RegisterFieldsComponent,
   ],
   imports: [
     BrowserModule,
