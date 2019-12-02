@@ -9,10 +9,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { RegisterFieldsComponent } from './register-fields/register-fields.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
-
-
-import { NavbarComponent } from './navbar/navbar.component';
-import { HeroComponent } from './hero/hero.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +17,9 @@ import { HeroComponent } from './hero/hero.component';
     NavbarComponent,
     HeroComponent,
     ProfileComponent,
+    RegisterFormComponent,
     RegisterFieldsComponent,
-    RegisterFormComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
