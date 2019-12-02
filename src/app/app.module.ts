@@ -15,7 +15,10 @@ import { HeroComponent } from './hero/hero.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    HeroComponent
+    HeroComponent,
+    ProfileComponent,
+    RegisterFieldsComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,
