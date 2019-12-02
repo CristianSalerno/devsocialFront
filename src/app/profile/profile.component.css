@@ -1,11 +1,13 @@
 * {
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+
 }
 
 .profile-box {
   width: 100%;
   height: 400px;
-  padding: 10px;
+  padding: 5%;
   color: #fff;
   background: #2A2A72;
   border-radius: 10px;
@@ -24,7 +26,7 @@
 .profile-info {
   width: 100%;
   height: 400px;
-  padding: 10px;
+  padding: 5%;
   background: #2A2A72;
   color: #fff;
   border-radius: 10px;
@@ -46,8 +48,9 @@
   flex-direction: row;
   width: 100%;
   height: 60px;
-  background: #2A2A72;
-  justify-content: center;
+  <<<<<<< HEAD background: #2A2A72;
+  =======border: 3px solid #2A2A72;
+  >>>>>>>develop justify-content: center;
   border-radius: 10px;
 }
 
@@ -57,6 +60,7 @@
   background: #2A2A72;
   color: #fff;
   border-radius: 10px;
+  padding: 5%;
 }
 
 
