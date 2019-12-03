@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+
 }
 
 .hero img {
@@ -16,4 +17,5 @@
   right: 0;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
+
 }
