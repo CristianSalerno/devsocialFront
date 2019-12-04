@@ -3,6 +3,9 @@ a {
   color: #2A2A72;
 }
 
+
+
+
 .row .media-icons {
   width: 30px;
   height: 30px;
@@ -24,10 +27,7 @@ a {
   color: #2A2A72;
 }
 
-.row .card .btn-card {
-  background: #2A2A72;
-  color: #fff;
-}
+
 
 .row .buttons-config .btn-c {
   background: #2A2A72;
@@ -40,24 +40,69 @@ a {
   color: #fff;
 }
 
-.row .card .card-header {
-  background: white;
-  border: none;
-}
-
-.row .card .card-footer {
-  background: white;
-  border: none
-}
-
-.row .card {
-  border: none;
-}
 
 .container .row .progress .progress-bar {
   background: #2A2A72;
-  ;
+
 }
+
+
+.projects {
+  margin: 10px;
+}
+
+.projects .body-card i {
+  cursor: pointer;
+  display: inline-block;
+  width: 100px;
+  padding: 10px;
+}
+
+
+
+
+.projects .body-card i:hover {
+  color: #2A2A72;
+  color: white;
+  background: #2A2A72;
+  transition: 0.5s;
+}
+
+
+.projects .project-card .footer-card p {
+  display: block;
+  border: 1px solid #2A2A72;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.projects .project-card .footer-card p:hover {
+  background: #2A2A72;
+  color: #fff;
+  transition: 0.5s;
+}
+
+
+.projects .project-card .body-card {
+  cursor: pointer;
+  padding: 20px;
+}
+
+.projects .project-card {
+  width: 300px;
+  height: 350px;
+  background: rgba(128, 128, 128, 0.103);
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width:768px) {
