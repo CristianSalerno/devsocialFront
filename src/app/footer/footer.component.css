@@ -1,8 +1,10 @@
 footer {
-    background-color: #2A2A72;
-    color: #fff;
+    background-color: #fff;
+    color: black;
     font-size: 14px;
     overflow: hidden;
+    border-top: 1px solid #CCCCCC;
+
 }
 
 footer ul {
@@ -12,7 +14,7 @@ footer ul {
 
 footer ul li a {
   text-decoration: none;
-  color: white;
+  color: #000;
 }
 
 
@@ -21,7 +23,7 @@ footer ul li a {
   display: block;
   width: 0;
   height: 2px;
-  background: #fff;
+  background: #000;
   transition: width .5s;
 }
 

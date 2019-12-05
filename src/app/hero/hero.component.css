@@ -6,6 +6,11 @@
 }
 
 
-.info h4 {
-    font-weight: bolder;
+.info p {
+    font-family: 'Vollkorn', serif;
+    color: lavender;
+}
+
+.shadow {
+    border: 1px solid #CCCCCC;
 }
