@@ -1,5 +1,5 @@
 .velo{
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, 0.562);
     position: fixed;
     top: 0;
 	right: 0;
@@ -15,7 +15,8 @@
     margin: 10vh auto;
     border-radius: 10px;
     padding: 5vh;
-    background-color: rgba(0, 0, 0, 0.808);
+    opacity: .9;
+    background-color: #288bf5e1;
 }
 .btn-edit{
     width: 20vh;

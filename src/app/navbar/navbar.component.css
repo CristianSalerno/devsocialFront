@@ -6,6 +6,10 @@
 .navbar a {
      color: #000;
 }
+    
+#title {
+      font-family: 'Vollkorn', serif;
+}
 
 #hover-effect::after {
  content: '';
