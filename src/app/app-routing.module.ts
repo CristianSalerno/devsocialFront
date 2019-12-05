@@ -3,13 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeroComponent } from './hero/hero.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: HeroComponent },
+
   { path: 'profile', component: ProfileComponent },
-  { path: 'projects', component: ProjectsComponent }
+  { path: 'projects', component: ProjectsComponent },
+  {
+    path: 'home', component: HeroComponent, children: [
+      { path: 'login', component: LoginComponent }
+    ]
+  }
+
 ];
 
 @NgModule({

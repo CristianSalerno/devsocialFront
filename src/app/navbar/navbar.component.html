@@ -18,7 +18,7 @@
           <a class="nav-link" href="#" id="hover-effect">Link 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" id="hover-effect">Link 3</a>
+          <a [routerLink]="['/profile']" class="nav-link" id="hover-effect" *ngIf="mainUser">{{mainUser.name}}</a>
         </li>
       </ul>
     </div>
