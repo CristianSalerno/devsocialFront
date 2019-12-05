@@ -1,6 +1,6 @@
 .hero {
     background-image: url('../../assets/FONDOHERO.jpg');
-    height: 50vh;
+    height: 60vh;
     background-position: center;
     background-size: cover;
 }
@@ -14,3 +14,22 @@
 .shadow {
     border: 1px solid #CCCCCC;
 }
+
+.hero-text {
+    margin-top: 20%;
+}
+
+
+@media (min-width:720px ) {
+
+.hero {
+   height: 50vh; 
+}
+.hero-text {
+    margin-top: 10%;
+}
+
+}
+ 
+
+

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-light shadow-lg">
+<nav class="navbar navbar-expand-sm bg-light navbar-light shadow-lg position-fixed">
   <div class="container">
 
     <a id="title" class="navbar-brand font-weight-bold text-primary" href="#">
@@ -16,6 +16,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" id="hover-effect">Link 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="hover-effect" [routerLink]="['/profile']">Profile</a>
         </li>
         <li class="nav-item">
           <a [routerLink]="['/profile']" class="nav-link" id="hover-effect" *ngIf="mainUser">{{mainUser.name}}</a>
