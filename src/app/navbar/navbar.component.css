@@ -1,10 +1,12 @@
 .navbar {
-  background-color: #2A2A72;
-  overflow: hidden;
+   position: s;
+    width: 100%;
+    z-index: 999;
+  
 }
 
 .navbar a {
-     color: #fff;
+     color: #000;
 }
 
 #hover-effect::after {
@@ -12,7 +14,7 @@
  display: block;
  width: 0;
  height: 2px;
- background: #fff;
+ background: #000;
  transition: width .3s;
 }
 
