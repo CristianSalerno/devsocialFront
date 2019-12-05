@@ -1,5 +1,4 @@
 <div class="hero">
-
   <img class="d-inline-block w-100 img-responsive" src="../../assets/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
     alt="First slide">
 
@@ -18,12 +17,12 @@
       <div class="row mt-5">
         <div class="col-6  text-center col-sm-12 my-sm-3">
           <button type="button" class="btn btn-info btn-lg">Register</button>
-
         </div>
         <div class="col-6  text-center col-sm-12">
-          <button type="button" class="btn btn-info btn-lg">Login</button>
+          <button [routerLink]="['/home/login']" type="button" class="btn btn-info btn-lg">Login</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+<router-outlet></router-outlet>

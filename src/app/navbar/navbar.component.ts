@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'models/user.model';
+import { UsersService } from 'services/users.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  mainUser: any;
+  constructor(private usersService: UsersService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.mainUser = await this.usersService.mainUserExist();
   }
-
 }

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm">
   <div class="container">
 
-    <a class="navbar-brand" href="#">
+    <a [routerLink]="['/home']" class="navbar-brand">
       <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/logo_white.png" width="30"
         height="30" alt="logo">
       BootstrapBay
@@ -18,8 +18,8 @@
         <li class="nav-item">
           <a class="nav-link" href="#" id="hover-effect">Link 2</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="hover-effect">Link 3</a>
+        <li  class="nav-item">
+          <a [routerLink]="['/profile']" class="nav-link" id="hover-effect" *ngIf="mainUser">{{mainUser.name}}</a>
         </li>
       </ul>
     </div>

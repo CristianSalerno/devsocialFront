@@ -2,7 +2,7 @@
   <!-- Sección 1 del grid perfil -->
   <div class="col-sm mt-3">
     <div class="profile-box">
-      <h3 class="text-center mb-3">User name</h3>
+      <h3 *ngIf="mainUser" class="text-center mb-3">{{mainUser.name}}</h3>
       <div class="profile-img mb-4">
       </div>
       <h4 class="mb-3">About me</h4>

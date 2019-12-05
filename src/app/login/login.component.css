@@ -1,0 +1,52 @@
+.velo{
+    background-color: rgba(0,0,0,.7);
+    position: fixed;
+    top: 0;
+	right: 0;
+	bottom: 0;
+    left: 0;
+    z-index: 9999;
+    color: white;
+    padding: 2%;
+}
+
+.loginCase{
+    height: 70vh;
+    background-color: rgba(42, 42, 114, 0.849);
+    margin: 10vh auto;
+    border-radius: 10px;
+    padding: 5vh;
+}
+
+
+.btn-edit{
+    width: 20vh;
+}
+
+.login{
+    margin:10px
+}
+.forget-pass{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.884);
+    display: inline-block;
+    margin: 2%;
+    transition: 1s;
+}
+.forget-pass:hover{
+    color: rgb(156, 156, 156);
+}
+
+.errorWords{
+    color: red;
+    font-size: 14px;
+    opacity: .8;
+    font-weight: bold;
+}
+.closeButton{
+    display: inline-block;
+    font-size: 70px;
+    position: absolute;
+    top: 2%;
+    left: 85%;
+}
