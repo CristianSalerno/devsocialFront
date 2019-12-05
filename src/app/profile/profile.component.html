@@ -1,72 +1,112 @@
 <div class="container">
   <div class="row">
-
-
-    <!-- Sección 1 del grid perfil -->
-    <div class="col-md-4 mt-3">
-      <div class="profile-box ">
-        <h3 class="text-center mb-3">User name</h3>
-        <div class="profile-img mb-4">
+    <div class="col-md-4 p-2 text-center">
+      <div class="box-profile p-5">
+        <h3 class="mb-4 p-2">Profile Name</h3>
+        <div class="img-profile">
+          <img src="https://randomuser.me/api/portraits/men/43.jpg" class="img-fluid rounded-circle">
         </div>
-        <h4 class="mb-3 text-center">About me</h4>
-        <p class="mt-3 px-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente a harum autem
-          accusantium
-          aut,
-          ut suscipit.
-          Culpa sunt delectus illo omnis sit, animi sapiente labore hic magni veritatis provident nihil.</p>
-      </div>
-    </div>
-    <!-- Sección 2 del grid perfil -->
-    <div class="col-md-4">
-      <div class="profile-info mt-3 d-flex flex-column align-content-center">
+        <p><small>Frontend Developer</small></p>
+        <a href=""><i class="fas fa-tools mr-2"></i>Edit</a>
+        <h4 class="mt-4">About Me</h4>
+        <div class="social-icons">
+          <a href="#"><img class="media-img mr-2" width="20" height="20"
+              src="https://image.flaticon.com/icons/svg/174/174848.svg" alt="facebook img" /></a>
+          <a href="#"> <img class="media-img mr-2" width="20" height="20"
+              src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="linkedin img" /></a>
+          <a href="#"> <img class="media-img mr-2" width="20" height="20"
+              src="https://image.flaticon.com/icons/svg/174/174876.svg" alt="twitter img" /></a>
+          <a href="#"> <img class="media-img mr-2" width="20" height="20"
+              src="https://image.flaticon.com/icons/svg/174/174855.svg" alt="instagram img" /></a>
+        </div>
+        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat est sunt ipsum explicabo
+          praesentium,
+          autem cumque quis quae, repudiandae numquam aperiam quibusdam culpa aliquam illum sed reiciendis esse tenetur.
+          <a class="ml-2" href=""><i class="far fa-edit"></i></a>
+        </p>
+        <hr>
         <h4>Skills</h4>
-        <ul>
-          <li>Frontend</li>
-          <li>Javascript</li>
-          <li>Angular</li>
-          <li>Backend</li>
-        </ul>
-        <h4>Hobby</h4>
-        <ul>
-          <li>Hobby 1</li>
-          <li>Hobby 2</li>
-          <li>Hobby 3</li>
-          <li>Hobby 4</li>
-        </ul>
+        <div class="skills-icons">
+          <i class="fab fa-js-square fa-3x"></i>
+          <i class="fab fa-angular fa-3x"></i>
+          <i class=" fab fa-css3-alt fa-3x"></i>
+        </div>
+
+        <hr>
+        <h4 class="mt-4 p-3">Hobbies</h4>
+        <p>Development ,Robotic, Data Science
+          <a class="ml-2" href=""><i class="far fa-edit"></i></a>
+        </p>
+        <cite>Profile completed:</cite>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0"
+            aria-valuemax="100">85%</div>
+        </div>
+        <div class="buttons-config mt-4">
+          <button class="btn btn-block">Edit Profile</button>
+        </div>
+      </div>
+    </div>
+    <!-- Aca empiezan los proyectos -->
+    <div class="col-md-8 text-center">
+      <div class="col-12">
+        <h3 class="mb-4">Projects</h3>
+      </div>
+      <!-- Projects -->
+      <div class="col-md-6">
+        <div class="projects">
+          <div class="col-md-8">
+            <div class="project-card mb-2">
+              <div class="header-card">
+                <h3>title</h3>
+              </div>
+              <div class="body-card">
+                <img src="https://miro.medium.com/max/1586/1*SlAPqCmjtwvRsn0Kszi7oA.png" class="img-fluid"
+                  alt="img-project" style="width: 15rem;">
+                <i class="far fa-2x fa-heart"></i>
+                <i class="fas fa-2x fa-share-alt"></i>
+              </div>
+              <div class="footer-card">
+                <p>Go to project</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="project-card">
+              <div class="header-card">
+                <h3>title</h3>
+              </div>
+              <div class="body-card">
+                <img src="https://miro.medium.com/max/1586/1*SlAPqCmjtwvRsn0Kszi7oA.png" class="img-fluid"
+                  alt="img-project" style="width: 15rem;">
+                <i class="far fa-2x fa-heart"></i>
+                <i class="fas fa-2x fa-share-alt"></i>
+              </div>
+              <div class="footer-card">
+                <p>Go to project</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Sección 3 del grid perfil -->
-    <div class="col-md-4 mt-3">
-      <div class="profile-ideas">
-        <h4 class="text-center">Projects</h4>
-        <ul>
-          <li>project 1</li>
-          <li>project 2</li>
-          <li>project 3</li>
-        </ul>
-        <h4 class="text-center">Availability</h4>
-        <cite title="Source Title" class="blockquote-footer">Full Time</cite>
-        <h4 class="text-center">Interest</h4>
-        <ul>
-          <li>Interest 1</li>
-          <li>Interest 2</li>
-          <li>Interest 3</li>
-        </ul>
-        <button class="btn btn-light btn-sm ml-2 text-nowrap">Edit profile</button>
-      </div>
 
-    </div>
-    <!-- Redes Sociales -->
-    <div class="social-media mt-4 mb-4 ">
-      <a href="#"><img class="media-img mr-2" src="https://image.flaticon.com/icons/svg/174/174848.svg"
-          alt="facebook img" /></a>
-      <a href="#"> <img class="media-img mr-2" src="https://image.flaticon.com/icons/svg/174/174857.svg"
-          alt="linkedin img" /></a>
-      <a href="#"> <img class="media-img mr-2" src="https://image.flaticon.com/icons/svg/174/174876.svg"
-          alt="twitter img" /></a>
-      <a href="#"> <img class="media-img mr-2" src="https://image.flaticon.com/icons/svg/174/174855.svg"
-          alt="instagram img" /></a>
-    </div>
+
+
+
+
+
+    <!--
+
+  <div class="col-12">
+    <a href="#"><img class="media-img mr-2" width="20" height="20"
+        src="https://image.flaticon.com/icons/svg/174/174848.svg" alt="facebook img" /></a>
+    <a href="#"> <img class="media-img mr-2" width="20" height="20"
+        src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="linkedin img" /></a>
+    <a href="#"> <img class="media-img mr-2" width="20" height="20"
+        src="https://image.flaticon.com/icons/svg/174/174876.svg" alt="twitter img" /></a>
+    <a href="#"> <img class="media-img mr-2" width="20" height="20"
+        src="https://image.flaticon.com/icons/svg/174/174855.svg" alt="instagram img" /></a>
   </div>
-</div>
+</div> -->

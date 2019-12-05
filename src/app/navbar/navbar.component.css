@@ -1,5 +1,5 @@
 .navbar {
-   position: s;
+   
     width: 100%;
     z-index: 999;
   
@@ -19,6 +19,6 @@
 }
 
 #hover-effect:hover::after {
-    width: 100%;
-    transition: width .3s;
+  width: 100%;
+  transition: width .3s;
 }

@@ -6,25 +6,26 @@ footer {
 }
 
 footer ul {
-    list-style-type: none;
-    
+  list-style-type: none;
+
 }
 
 footer ul li a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 
 #hover-effect::after {
- content: '';
- display: block;
- width: 0;
- height: 2px;
- background: #fff;
- transition: width .5s;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width .5s;
 }
+
 #hover-effect:hover::after {
-    width: 100%;
-    transition: width .5s;
+  width: 100%;
+  transition: width .5s;
 }
