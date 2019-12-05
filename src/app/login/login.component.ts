@@ -39,10 +39,10 @@ export class LoginComponent implements OnInit {
     } else {
       if ( this.access.value.persistAccount === true) {
         // tslint:disable-next-line: no-string-literal
-        localStorage.setItem('user_token', result['succesfull']);
+        localStorage.setItem('user_token', result['succesfull'].toString());
       } else {
         // tslint:disable-next-line: no-string-literal
-        sessionStorage.setItem('user_token', result['succesfull']);
+        sessionStorage.setItem('user_token', result['succesfull'].toString());
       }
       await this.router.navigate(['home']);
       console.log(result);
