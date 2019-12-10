@@ -9,10 +9,15 @@ import { UsersService } from 'services/users.service';
 })
 export class ProfileComponent implements OnInit {
   mainUser: User;
-  constructor(private usersService: UsersService) { }
+  usuarioActivo: any;
+
+  constructor(private usersService: UsersService) {
+
+  }
 
   async ngOnInit() {
     this.mainUser = await this.usersService.mainUserExist();
+
   }
 
 }

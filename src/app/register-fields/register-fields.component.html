@@ -1,11 +1,11 @@
 <div class="container pt-5">
   <h3 class="text-center mt-3 mb-5">Tell more about you !</h3>
 <div class="row">
-  <div class="col-12 col-md-6 col-sm-8">
-   <form>
+  <div class="col-md-6 col-sm-6">
+   <form [formGroup]="createUser" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label>You Role</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="form-control" formControlName="speciality">
       <option>Developer</option>
       <option>UX/UI</option>
       <option>Graphic Designer</option>
@@ -15,7 +15,7 @@
   </div>
   <div class="form-group">
     <label>Experience</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
+    <select class="form-control" formControlName="experience">
       <option>Aprentice</option>
       <option>Junior</option>
       <option>Semi-senior</option>
@@ -25,95 +25,22 @@
   </div>
   <div class="form-group">
     <label>Availabity</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
+    <select class="form-control" formControlName="availability">
       <option>Full Time</option>
       <option>Part Time</option>
       <option>Weekends</option>
       <option>Casual</option>
     </select>
   </div>
-   <button class="btn btn-light mt-2 float-right" [routerLink]="['/profile']">Finish</button>
-      <button class="btn btn-dark mt-2 mr-2 float-right" [routerLink]="['']">Cancel</button>
+   <button class="btn btn-light mt-2 float-right" >Finish</button>
+      <button class="btn btn-dark mt-2 mr-2 float-right">Cancel</button>
 </form>
   </div>
-</div>
- 
 
-
-
- <!--  <div class="row mt-3">
-    <div class="col-sm mt-2">
-      <div class="box-checks">
-        <h4>Role</h4>
-        <ul>
-          <li>
-            <label>Developer</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-          <li>
-            <label class="ml-2">UX/UI</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-          <li>
-            <label class="ml-2">Graphic Designer</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-          <li>
-            <label class="ml-2">Startup</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-        </ul>
-      </div>
+    <div class="col-md-6 col-sm-6">
+        <div class="img">
+        </div>  
     </div>
-    <div class="col-sm mt-2">
-      <div class="box-checks">
-        <h4>Skills</h4>
-        <ul>
-          <li>
-            <label>Aprentice</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-          <li>
-            <label>Junior</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-          <li>
-            <label class="ml-2">Semi-Senior</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-          <li>
-            <label class="ml-2">Senior</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-          <li>
-            <label class="ml-2">God Level</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-sm mt-2">
-      <div class="box-checks">
-        <h4>Time Available</h4>
-        <ul>
-          <li>
-            <label>Full Time</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-          <li>
-            <label>Part Time</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-          <li>
-            <label class="ml-2">Only Weekends</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-          <li>
-            <label class="ml-2">Casual</label>
-            <input class="ml-2" type="checkbox">
-          </li>
-        </ul>
-      </div> -->
-     
+  </div>
 </div>
 

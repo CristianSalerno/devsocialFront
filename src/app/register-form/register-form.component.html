@@ -1,8 +1,8 @@
 <div class="container">
   <div class="formulario">
-<form [formGroup]="register" (ngSubmit)="onSubmit()" novalidate>
+<form [formGroup]="register" (ngSubmit)="onSubmit()" >
             <div class="form-group">
-            <p class="text-center">Please complete the fields to create a new account</p> 
+            <p class="text-center">Welcome, Please complete the fields to create a new account </p> 
               <label>Email</label>
               <input type="text" class="form-control" placeholder="Your Email" formControlName="email">
               <p class="error" *ngIf="register.controls.email.errors && (register.controls.email.touched || register.controls.email.dirty)  " > "email" is required</p>
@@ -21,10 +21,10 @@
             <div class="form-group">
               <label>Repeat Password</label>
               <input type="password" class="form-control" placeholder="Repeat Password" formControlName="repeatpassword">
-              <p class="error" *ngIf="register.controls.password.invalid && (register.controls.email.touched || register.controls.email.dirty)">the password doesn't match</p>
+              <p class="error" *ngIf="register.controls.repeatpassword  .invalid && (register.controls.repeatpassword.touched || register.controls.repeatpassword.dirty)">the password doesn't match</p>
             </div>
             <button class="btn btn-dark mr-3" value="cancel" [routerLink]="['/home']">cancel</button>
-            <button class="btn btn-light" value="continue" *ngIf="register.valid">continue</button>
+            <button class="btn btn-light" value="continue" *ngIf="register.controls.email.valid">continue</button>
           </form>
   </div>
 </div>

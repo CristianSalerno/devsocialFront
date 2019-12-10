@@ -22,16 +22,18 @@ export class RegisterFormComponent implements OnInit {
         Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)]),
       username: new FormControl('', [
         Validators.required,
-
+        Validators.minLength(6),
+        Validators.maxLength(15),
       ]),
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
-        Validators.maxLength(30),
+        Validators.maxLength(10),
       ]
       ),
       repeatpassword: new FormControl('',
-        /* [this.passwordValidator] */
+
+        //[this.passwordValidator]
       ),
     })
   }
@@ -39,21 +41,21 @@ export class RegisterFormComponent implements OnInit {
   ngOnInit() {
 
   }
-  /* 
-    passwordValidator(form: FormGroup) {
-      const passwordControl = form.controls['passwords'];
-      const repeatpassword = form.controls['repeatpassword']
-      if (passwordControl.value === repeatpassword.value) {
-        return null;
-      } else {
-        return { passwordValidator: true };
-      }
-    } */
+
+  /* passwordValidator(forms: FormGroup) {
+    const passwordControl = forms.controls['password'];
+    const repeatpassword = forms.controls['repeatpassword']
+    if (passwordControl.value === repeatpassword.value) {
+      return null;
+    } else {
+      return { passwordValidator: true };
+    }
+  } */
 
 
   async onSubmit() {
     console.log(this.register.value);
-    const result = await this.user.registerUser(this.register.value);
+    await this.user.registerUser(this.register.value);
     this.router.navigate(['/fields'])
   }
 }
