@@ -48,6 +48,17 @@ export class UsersService {
     };
     return this.http.post('http://localhost:3000/api/users/updatenames', pBody, httpOptions).toPromise();
   }
+
+  registerUser(pUser) {
+    return this.http.post('http://localhost:3000/api/users/register', pUser).toPromise();
+  }
+
+  /* Envia los campos a la tabla user_profile */
+  addUserFields(pUserData) {
+    return this.http.post('http://localhost:3000/api/userProfile', pUserData).toPromise();
+  }
+
+
 }
 
 

@@ -16,6 +16,10 @@ import { ProjectsComponent } from './projects/projects.component';
 
 import { LoginComponent } from './login/login.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ProjectProfileComponent } from './project-profile/project-profile.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -28,14 +32,15 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     FooterComponent,
     ProjectsComponent,
     LoginComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    ProjectProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
 
   ],
   providers: [],

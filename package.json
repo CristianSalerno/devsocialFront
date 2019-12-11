@@ -21,6 +21,7 @@
     "@angular/router": "~8.2.12",
     "angular-font-awesome": "^3.1.2",
     "angular-webstorage-service": "^1.0.2",
+    "bcrypt": "^3.0.7",
     "bootstrap": "^4.4.1",
     "cors": "^2.8.5",
     "font-awesome": "^4.7.0",

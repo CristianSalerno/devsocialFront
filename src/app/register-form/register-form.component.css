@@ -1,4 +1,23 @@
-* {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+.container .formulario{
+    padding:10%;
+    padding-top: 10%;
+}
+
+  
+  .error {
+    color: rgb(255, 83, 83);
+    font-size: 11px;
+    text-align: center;
+  }
+  .valid{
+    color: rgb(22, 205, 22);
+    font-size: 11px;
+    text-align: center;
+  }
+
+
+@media screen and (max-width:768px) {
+    .container .formulario{
+        padding-top:40%;
+    }
 }

@@ -15,10 +15,7 @@
           <a class="nav-link" href="#" id="hover-effect">Link 1 <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" id="hover-effect">Link 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="hover-effect" [routerLink]="['/profile']">Profile</a>
+          <a [routerLink]="['/projects']" class="nav-link" id="hover-effect" *ngIf="mainUser">Projects</a>
         </li>
         <li class="nav-item">
           <a [routerLink]="['/profile']" class="nav-link" id="hover-effect" *ngIf="mainUser">{{mainUser.username}}</a>
