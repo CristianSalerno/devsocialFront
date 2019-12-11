@@ -17,8 +17,7 @@
             <div class="form-group">
               <label>Password</label>
               <input type="password" class="form-control" placeholder="Password" formControlName="password">
-              <p class="error" *ngIf="register.controls.password.invalid && (register.controls.password.touched || register.controls.password.dirty)"> "password" is required</p>
-              <p class="error" *ngIf="register.controls.password.invalid.minLength && (register.controls.password.touched || register.controls.password.dirty)"> "password" min length is {{minLength.value}}</p>
+              <p class="error" *ngIf="register.controls.password.invalid && (register.controls.password.touched || register.controls.password.dirty)"> "password" is required / min length 6</p>
             </div>
             <div class="form-group">
               <label>Repeat Password</label>

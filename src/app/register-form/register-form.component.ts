@@ -33,16 +33,19 @@ export class RegisterFormComponent implements OnInit {
       ),
       repeatpassword: new FormControl('',
 
-        //[this.passwordValidator]
       ),
-    })
+    }),
+      [
+        this.passwordValidator
+      ]
   }
 
   ngOnInit() {
 
   }
 
-  /* passwordValidator(forms: FormGroup) {
+
+  passwordValidator(forms: FormGroup) {
     const passwordControl = forms.controls['password'];
     const repeatpassword = forms.controls['repeatpassword']
     if (passwordControl.value === repeatpassword.value) {
@@ -50,7 +53,7 @@ export class RegisterFormComponent implements OnInit {
     } else {
       return { passwordValidator: true };
     }
-  } */
+  }
 
 
   async onSubmit() {
