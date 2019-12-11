@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { TemasService } from 'services/temas.service';
+import { Temas } from 'models/temas.model';
+
 
 @Component({
   selector: 'app-projects',
@@ -6,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
+  arrProyectos: Temas[];
+  constructor(private temasservice: TemasService) {
+    this.arrProyectos = [];
+  }
 
-  constructor() { }
+  async ngOnInit() {
+    this.arrProyectos = await this.temasservice.getAll();
+    console.log(this.arrProyectos);
 
-  ngOnInit() {
+
   }
 
 }

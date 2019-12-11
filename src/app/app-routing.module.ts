@@ -4,7 +4,7 @@ import { HeroComponent } from './hero/hero.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './login/login.component';
-
+import { ProjectProfileComponent } from './project-profile/project-profile.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -15,7 +15,8 @@ const routes: Routes = [
   },
   { path: 'profile', component: ProfileComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: 'login', component: LoginComponent}
+  { path: 'projects/profile/:pId', component: ProjectProfileComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({

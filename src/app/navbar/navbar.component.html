@@ -3,7 +3,7 @@
 
     <a id="title" class="navbar-brand font-weight-bold text-primary" href="#">
       <img src="" width="" height="" alt="">
-      BootstrapBay
+      DevSocial
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-5"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,10 @@
           <a class="nav-link" href="#" id="hover-effect">Link 1 <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" id="hover-effect">Link 2</a>
+          <a [routerLink]="['/projects']" class="nav-link" id="hover-effect">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/projects']" class="nav-link" id="hover-effect" *ngIf="mainUser">Projects</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" id="hover-effect" [routerLink]="['/profile']">Profile</a>

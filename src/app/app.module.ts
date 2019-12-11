@@ -15,6 +15,10 @@ import { FooterComponent } from './footer/footer.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 import { LoginComponent } from './login/login.component';
+import { ProjectProfileComponent } from './project-profile/project-profile.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -26,14 +30,15 @@ import { LoginComponent } from './login/login.component';
     RegisterFieldsComponent,
     FooterComponent,
     ProjectsComponent,
-    LoginComponent
+    LoginComponent,
+    ProjectProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
 
   ],
   providers: [],
