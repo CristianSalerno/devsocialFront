@@ -1,24 +1,50 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-light shadow-sm position-fixed">
+<nav
+  class="navbar navbar-expand-sm bg-light navbar-light shadow-sm position-fixed"
+>
   <div class="container">
-
     <a id="title" class="navbar-brand font-weight-bold text-primary" href="#">
-      <img src="" width="" height="" alt="">
+      <img src="" width="" height="" alt="" />
       DevSocial
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-5"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar-list-5"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbar-list-5">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#" id="hover-effect">Link 1 <span class="sr-only">(current)</span></a>
+          <a
+            class="nav-link"
+            id="hover-effect"
+            *ngIf="mainUser"
+            [routerLink]="['/idea']"
+            >New Project<span class="sr-only">(current)</span></a
+          >
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/projects']" class="nav-link" id="hover-effect" *ngIf="mainUser">Projects</a>
+          <a
+            [routerLink]="['/projects']"
+            class="nav-link"
+            id="hover-effect"
+            *ngIf="mainUser"
+            >Projects</a
+          >
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/profile']" class="nav-link" id="hover-effect" *ngIf="mainUser">{{mainUser.username}}</a>
+          <a
+            [routerLink]="['/profile']"
+            class="nav-link"
+            id="hover-effect"
+            *ngIf="mainUser"
+            >{{ mainUser.username }}</a
+          >
         </li>
       </ul>
     </div>
