@@ -11,15 +11,24 @@ import { Temas } from 'models/temas.model';
 })
 export class ProjectsComponent implements OnInit {
   arrProyectos: Temas[];
+  proyectosFiltrados: Temas[];
   constructor(private temasservice: TemasService) {
-    this.arrProyectos = [];
+
   }
 
   async ngOnInit() {
     this.arrProyectos = await this.temasservice.getAll();
-    console.log(this.arrProyectos);
+    this.proyectosFiltrados = this.arrProyectos;
 
 
+
+  }
+
+  async filtrarProyectos(e) {
+    this.arrProyectos = this.proyectosFiltrados.filter(proyecto => proyecto.name.includes(e.target.value));
+    if (e.target.value === "") {
+      this.arrProyectos = await this.temasservice.getAll();
+    }
   }
 
 }

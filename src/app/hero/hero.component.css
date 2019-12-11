@@ -6,9 +6,12 @@
 }
 
 
-.info p {
+section p {
     font-family: 'Vollkorn', serif;
-    color: lavender;
+    color: gray;
+    font-weight: 600;
+    
+
 }
 
 .shadow {

@@ -1,6 +1,14 @@
 <div class="container">
 
+    <form class="pt-4">
+        <div class="form-group pt-5">
+            <label for="exampleFormControlInput1" class="color-dark">Filtra por titulo:</label>
+            <input (keyup)="filtrarProyectos($event)" type="text" class="form-control" id="exampleFormControlInput1"
+                placeholder="Filtra por titulo...">
+        </div>
+    </form>
     <h2 class="text-center">Projects</h2>
+
     <div class="fondo">
 
         <div class="row mt-5 mb-5 d-flex  border" *ngFor="let proyecto of arrProyectos">
@@ -13,7 +21,7 @@
                     <p class="card-text">{{proyecto.descripcion}}</p>
                     <p class="card-text"><small class="text-muted">Last updated {{proyecto.updateAt | date }}</small>
                     </p>
-                    <a href="/projects/profile/{{proyecto.id}}" class="btn btn-primary stretched-link">Ir a
+                    <a [routerLink]="['/projects', 'profile', proyecto.id]" class="btn btn-primary stretched-link">Ir a
                         {{proyecto.name}} </a>
                 </div>
             </div>
