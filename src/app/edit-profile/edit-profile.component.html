@@ -1,0 +1,137 @@
+<div class="container">
+    <div class="row">
+        <div class="edit-case col-12">
+            <section *ngIf="mainUser" class="title-edit">
+                <h2>Account settings ...</h2>
+            </section>
+            <div *ngIf="mainUser" class="row">
+                <section class="col-md-12 col-lg-4">
+                    <div class="easy-edit">
+                        <form [formGroup]="updateUser" (ngSubmit)="updateInfo()">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input class="form-control" formControlName="username">
+                            </div>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" formControlName="name">
+                            </div>
+                            <div class="form-group">
+                                <label>Surnames</label>
+                                <input type="text" class="form-control" formControlName="surnames">
+                            </div>
+                            <div class="btn-edit">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <section *ngIf="mainUser" class="col-md-8 col-lg-8">
+                    <div class="important-edit">
+                        <div class="row">
+                            <div class="col-4">
+                                <h4>Your email</h4>
+                                <p>{{mainUser.email}}</p>
+                            </div>
+                            <div class="col-8 btn-edit">
+                                <button class="btn btn-primary">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="important-edit">
+                        <div class="row">
+                            <div class="col-4">
+                                <h4>Password</h4>
+                                <p>Change password</p>
+                            </div>
+                            <div class="col-8 btn-edit">
+                                <button class="btn btn-primary">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section *ngIf="mainUser" class="title-edit">
+                <h2>Other things ...</h2>
+            </section>
+            <form *ngIf="mainUser">
+                <div class="row">
+                    <section class="col-md-12 col-lg-6">
+                        <div class="select-edit">
+                            <div class="row">
+                                <div class="skill-edit col-4">
+                                    <h4>Skills</h4>
+                                    <label><input class="mr-2" type="checkbox">Aprentice</label>
+                                    <label><input class="mr-2" type="checkbox">Junior</label>
+                                    <label><input class="mr-2" type="checkbox">Semi-senior</label>
+                                    <label><input class="mr-2" type="checkbox">Senior</label>
+                                    <label><input class="mr-2" type="checkbox">God level</label>
+                                </div>
+                                <div class="skill-edit col-4">
+                                    <h4>Role</h4>
+                                    <label><input class="mr-2" type="checkbox">Developer</label>
+                                    <label><input class="mr-2" type="checkbox">UX/UI</label>
+                                    <label><input class="mr-2" type="checkbox">Graphic Designer</label>
+                                </div>
+                                <div class="skill-edit col-4">
+                                    <h4>Time Available</h4>
+                                    <label><input class="mr-2" type="checkbox">Full Time</label>
+                                    <label><input class="mr-2" type="checkbox">Part Time</label>
+                                    <label><input class="mr-2" type="checkbox">Only Weekends</label>
+                                    <label><input class="mr-2" type="checkbox">Casual</label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-md-12 col-lg-6">
+                        <div class="about-edit">
+                            <h4 class="text-center">About me</h4>
+                            <div class="textarea-edit">
+                                <div class="form-group">
+                                    <textarea rows="4" cols="60"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="button-edit">
+                    <input type="button" value="Update" class="btn btn-block btn-primary mt-3">
+                </div>
+            </form>
+            <section *ngIf="mainUser" class="title-edit">
+                <h2>Something more ...</h2>
+            </section>
+            <div *ngIf="mainUser" class="row">
+                <div class="col-12">
+                    <div class="other-edit">
+                        <form>
+                            <div class="form-group">
+                                <label>Country</label>
+                                <input type="text" class="form-control" placeholder="Country">
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" class="form-control" placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <label>Language</label>
+                                <input type="text" class="form-control" placeholder="Language">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="text" class="form-control" placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <label>Interest</label>
+                                <input type="text" class="form-control" placeholder="Interest">
+                            </div>
+                            <div class="btn-edit">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

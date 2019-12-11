@@ -9,7 +9,7 @@ import { UsersService } from 'services/users.service';
 })
 export class NavbarComponent implements OnInit {
 
-  mainUser: any;
+  mainUser: User;
   constructor(private usersService: UsersService) { }
 
   async ngOnInit() {

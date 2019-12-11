@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-light shadow-lg position-fixed">
+<nav class="navbar navbar-expand-sm bg-light navbar-light shadow-sm position-fixed">
   <div class="container">
 
     <a id="title" class="navbar-brand font-weight-bold text-primary" href="#">
       <img src="" width="" height="" alt="">
-      BootstrapBay
+      DevSocial
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-5"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,7 @@
           <a class="nav-link" href="#" id="hover-effect" [routerLink]="['/profile']">Profile</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/profile']" class="nav-link" id="hover-effect" *ngIf="mainUser">{{mainUser.name}}</a>
+          <a [routerLink]="['/profile']" class="nav-link" id="hover-effect" *ngIf="mainUser">{{mainUser.username}}</a>
         </li>
       </ul>
     </div>

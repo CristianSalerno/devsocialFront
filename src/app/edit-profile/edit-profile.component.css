@@ -1,0 +1,53 @@
+li{
+    list-style: none;
+}
+.edit-case{
+    margin-top: 10vh;
+    min-height: 80vh;
+}
+.title-edit{
+    margin-top: 5vh;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+.easy-edit{
+    margin-top: 6vh;
+}
+.important-edit{
+    border-bottom: 1px solid rgb(230, 230, 230);
+    height:10vh;
+    margin: 6vh 0 5vh 0;
+}
+.btn-edit{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn-edit button{
+    width: 15vh;
+    height: 5vh;
+}
+
+.select-edit{
+    margin-top: 5%;
+}
+.skill-edit label{
+    display: block;
+}
+.about-edit{
+    padding: 5%;
+}
+.textarea-edit{
+    padding: 2%;
+    margin-top: 2%;
+}
+textarea{
+    padding: 5%;
+    border: rgb(185, 185, 185) solid 1px;
+}
+
+.other-edit{
+   width: 70%;
+   margin: 2% auto;
+
+}
+  

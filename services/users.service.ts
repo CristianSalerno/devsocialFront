@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class UsersService {
   users: User[];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAll(token) {
     return this.http.get<User[]>('http://localhost:3000/api/users/').toPromise();
@@ -39,6 +39,14 @@ export class UsersService {
       })
     };
     return this.http.get<User>('http://localhost:3000/api/users/main', httpOptions).toPromise();
+  }
+  updateNames(pToken: string, pBody) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        user_token: pToken
+      })
+    };
+    return this.http.post('http://localhost:3000/api/users/updatenames', pBody, httpOptions).toPromise();
   }
 }
 

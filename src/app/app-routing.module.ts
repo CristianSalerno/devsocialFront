@@ -4,6 +4,7 @@ import { HeroComponent } from './hero/hero.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './login/login.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 const routes: Routes = [
@@ -14,8 +15,9 @@ const routes: Routes = [
     ]
   },
   { path: 'profile', component: ProfileComponent },
+  { path: 'profile/edit', component: EditProfileComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
