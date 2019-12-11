@@ -8,6 +8,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ProjectProfileComponent } from './project-profile/project-profile.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { RegisterFieldsComponent } from './register-fields/register-fields.component';
+import { NewIdeaComponent } from './new-idea/new-idea.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/profile/:pId', component: ProjectProfileComponent },
   { path: 'register', component: RegisterFormComponent },
-  { path: 'fields', component: RegisterFieldsComponent }
+  { path: 'fields', component: RegisterFieldsComponent },
+  { path: 'idea', component: NewIdeaComponent },
 ];
 
 @NgModule({
