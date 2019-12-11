@@ -29,7 +29,7 @@ export class UsersService {
     } else if (sessionStorage.getItem('user_token')) {
       return this.getMainUser(sessionStorage.getItem('user_token'));
     } else {
-      return null;
+      return undefined;
     }
   }
   getMainUser(pToken: string) {
@@ -57,8 +57,6 @@ export class UsersService {
   addUserFields(pUserData) {
     return this.http.post('http://localhost:3000/api/userProfile', pUserData).toPromise();
   }
-
-
 }
 
 
