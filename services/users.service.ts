@@ -49,6 +49,24 @@ export class UsersService {
     return this.http.post('http://localhost:3000/api/users/updatenames', pBody, httpOptions).toPromise();
   }
 
+  updateEmail(pToken: string, pBody) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        user_token: pToken
+      })
+    };
+    return this.http.post('http://localhost:3000/api/users/updatemail', pBody, httpOptions).toPromise();
+  }
+
+  updatePassword(pToken: string, pBody: User) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        user_token: pToken
+      })
+    };
+    return this.http.post('http://localhost:3000/api/users/updatepass', pBody, httpOptions).toPromise();
+  }
+
   registerUser(pUser) {
     return this.http.post('http://localhost:3000/api/users/register', pUser).toPromise();
   }

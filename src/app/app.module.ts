@@ -17,6 +17,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './login/login.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ProjectProfileComponent } from './project-profile/project-profile.component';
+import { EditPasswordComponent } from './edit-password/edit-password.component';
+import { EditEmailComponent } from './edit-email/edit-email.component';
 
 
 
@@ -33,7 +35,9 @@ import { ProjectProfileComponent } from './project-profile/project-profile.compo
     ProjectsComponent,
     LoginComponent,
     EditProfileComponent,
-    ProjectProfileComponent
+    ProjectProfileComponent,
+    EditPasswordComponent,
+    EditEmailComponent
   ],
   imports: [
     BrowserModule,

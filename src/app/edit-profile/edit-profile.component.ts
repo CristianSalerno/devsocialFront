@@ -26,10 +26,7 @@ export class EditProfileComponent implements OnInit {
 
   async updateInfo() {
     const token = (localStorage.getItem('user_token')) ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
-    console.log(token);
-    this.updateUser.value.id = this.mainUser.id;
-    console.log(this.updateUser.value);
-    const result = await this.usersService.updateNames(token, this.updateUser.value);
-    console.log(result);
+    await this.usersService.updateNames(token, this.updateUser.value);
+    alert('Update Sucessfull');
   }
 }

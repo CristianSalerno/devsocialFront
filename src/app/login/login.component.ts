@@ -17,9 +17,9 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthenticationService,
     private router: Router
-    ) {
+  ) {
     this.access = new FormGroup({
-      email : new FormControl(''),
+      email: new FormControl(''),
       password: new FormControl(''),
       persistAccount: new FormControl('')
     });
@@ -35,22 +35,22 @@ export class LoginComponent implements OnInit {
     const result = await this.authService.auth(this.access.value);
     // tslint:disable-next-line: no-string-literal
     if (result['error']) {
-        this.errorLogin = true;
+      this.errorLogin = true;
     } else {
-      if ( this.access.value.persistAccount === true) {
+      if (this.access.value.persistAccount === true) {
         // tslint:disable-next-line: no-string-literal
         localStorage.setItem('user_token', result['succesfull'].toString());
       } else {
         // tslint:disable-next-line: no-string-literal
         sessionStorage.setItem('user_token', result['succesfull'].toString());
       }
-      await this.router.navigate(['home']);
+      await this.router.navigate(['/projects']);
       console.log(result);
     }
   }
 
   showPass() {
     this.passView = (this.passView === 'password') ? 'text' : 'password';
-    this.eyes =  (this.eyes === 'fas fa-eye-slash') ? 'fas fa-eye' : 'fas fa-eye-slash';
+    this.eyes = (this.eyes === 'fas fa-eye-slash') ? 'fas fa-eye' : 'fas fa-eye-slash';
   }
 }

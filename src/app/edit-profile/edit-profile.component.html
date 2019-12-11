@@ -34,7 +34,7 @@
                                 <p>{{mainUser.email}}</p>
                             </div>
                             <div class="col-8 btn-edit">
-                                <button class="btn btn-primary">Edit</button>
+                                <button [routerLink]="['email']" class="btn btn-primary">Edit</button>
                             </div>
                         </div>
                     </div>
@@ -45,13 +45,16 @@
                                 <p>Change password</p>
                             </div>
                             <div class="col-8 btn-edit">
-                                <button class="btn btn-primary">Edit</button>
+                                <button [routerLink]="['pass']" class="btn btn-primary">Edit</button>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
-            <section *ngIf="mainUser" class="title-edit">
+
+            <!-- OTROS EDIT DEL PERFIL -->
+
+            <!-- <section *ngIf="mainUser" class="title-edit">
                 <h2>Other things ...</h2>
             </section>
             <form *ngIf="mainUser">
@@ -97,8 +100,8 @@
                 <div class="button-edit">
                     <input type="button" value="Update" class="btn btn-block btn-primary mt-3">
                 </div>
-            </form>
-            <section *ngIf="mainUser" class="title-edit">
+            </form> -->
+            <!-- <section *ngIf="mainUser" class="title-edit">
                 <h2>Something more ...</h2>
             </section>
             <div *ngIf="mainUser" class="row">
@@ -131,7 +134,9 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
+
+<router-outlet></router-outlet>
