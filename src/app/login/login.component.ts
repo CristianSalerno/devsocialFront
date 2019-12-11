@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('user_token', result['succesfull'].toString());
       }
       await this.router.navigate(['/projects']);
+      window.location.reload();
       console.log(result);
     }
   }
