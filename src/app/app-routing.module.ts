@@ -5,18 +5,21 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './login/login.component';
 import { ProjectProfileComponent } from './project-profile/project-profile.component';
+import { RegisterFormComponent } from './register-form/register-form.component'
+import { RegisterFieldsComponent } from './register-fields/register-fields.component'
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
     path: 'home', component: HeroComponent, children: [
-      { path: 'login', component: LoginComponent }
+      { path: 'login', component: LoginComponent },
     ]
   },
   { path: 'profile', component: ProfileComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/profile/:pId', component: ProjectProfileComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'register', component: RegisterFormComponent },
+  { path: 'fields', component: RegisterFieldsComponent }
 ];
 
 @NgModule({
