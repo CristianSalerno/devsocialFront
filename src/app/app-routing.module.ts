@@ -9,6 +9,8 @@ import { ProjectProfileComponent } from './project-profile/project-profile.compo
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { RegisterFieldsComponent } from './register-fields/register-fields.component';
 import { NewIdeaComponent } from './new-idea/new-idea.component';
+import { EditPasswordComponent } from './edit-password/edit-password.component';
+import { EditEmailComponent } from './edit-email/edit-email.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -18,7 +20,12 @@ const routes: Routes = [
     ]
   },
   { path: 'profile', component: ProfileComponent },
-  { path: 'profile/edit', component: EditProfileComponent },
+  {
+    path: 'profile/edit', component: EditProfileComponent, children: [
+      { path: 'pass', component: EditPasswordComponent },
+      { path: 'email', component: EditEmailComponent }
+    ]
+  },
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/profile/:pId', component: ProjectProfileComponent },
   { path: 'register', component: RegisterFormComponent },

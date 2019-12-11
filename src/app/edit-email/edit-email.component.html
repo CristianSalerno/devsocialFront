@@ -1,0 +1,26 @@
+<div class="velo">
+    <div class="emailCase col-sm-12 col-md-6 col-xl-5">
+        <button [routerLink]="['/profile/edit']" type="button" class="close closeButton" aria-label="Close">
+            <span>&times;</span>
+        </button>
+        <div class="email">
+            <h3 class="text-center">Change your Email</h3>
+            <form [formGroup]="updateInfo" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" formControlName="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label>Repeat email</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" formControlName="repeatEmail"
+                            placeholder="Repeat email">
+                        <div class="input-group-append">
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Update" class="btn-block btn btn-dark btn-edit">
+            </form>
+        </div>
+    </div>
+</div>
