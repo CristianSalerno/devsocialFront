@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -17,7 +16,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './login/login.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ProjectProfileComponent } from './project-profile/project-profile.component';
-
+import { NewIdeaComponent } from './new-idea/new-idea.component';
+import { EditPasswordComponent } from './edit-password/edit-password.component';
+import { EditEmailComponent } from './edit-email/edit-email.component';
 
 
 
@@ -33,7 +34,10 @@ import { ProjectProfileComponent } from './project-profile/project-profile.compo
     ProjectsComponent,
     LoginComponent,
     EditProfileComponent,
-    ProjectProfileComponent
+    ProjectProfileComponent,
+    NewIdeaComponent,
+    EditPasswordComponent,
+    EditEmailComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,6 @@ import { ProjectProfileComponent } from './project-profile/project-profile.compo
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

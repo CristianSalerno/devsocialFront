@@ -16,7 +16,7 @@ export class RegisterFieldsComponent implements OnInit {
       speciality: new FormControl(''),
       experience: new FormControl(''),
       availability: new FormControl(''),
-    })
+    });
 
 
   }
@@ -27,7 +27,7 @@ export class RegisterFieldsComponent implements OnInit {
   async onSubmit() {
     console.log(this.createUser.value);
     await this.userService.addUserFields(this.createUser.value);
-    this.router.navigate(['/profile'])
+    this.router.navigate(['/profile']);
   }
 
 }
