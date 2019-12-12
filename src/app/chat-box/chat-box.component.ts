@@ -13,6 +13,7 @@ export class ChatBoxComponent implements OnInit {
   chat: FormGroup;
   mainUser: any;
   comentsArr: any;
+  routeActive: number;
 
   constructor(
     private chatService: ChatService,
@@ -22,12 +23,14 @@ export class ChatBoxComponent implements OnInit {
     this.chat = new FormGroup({
       coment: new FormControl("", [Validators.required])
     });
-    this.comentsArr = [];
   }
 
   async ngOnInit() {
     this.mainUser = await this.userService.mainUserExist();
-    this.comentsArr = await this.chatService.getComents();
+    this.activatedRoute.params.subscribe(params => {
+      this.routeActive = parseInt(params.pId);
+    });
+    this.comentsArr = await this.chatService.getComents(this.routeActive);
   }
 
   onSubmit() {
@@ -35,6 +38,9 @@ export class ChatBoxComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       this.chat.value.idTema = parseInt(params.pId);
     });
-    this.chatService.leaveComent(this.chat.value);
+
+    this.chatService.leaveComent(this.chat.value).then(comentarios => {
+      this.comentsArr = comentarios;
+    });
   }
 }
