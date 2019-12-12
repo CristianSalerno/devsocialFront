@@ -19,6 +19,9 @@
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold text-primary">{{proyecto.name}}</h5>
                     <p class="card-text">{{proyecto.descripcion}}</p>
+                    <p class="card-text"><small class="text-muted">Creation day
+                            {{proyecto.fecha_inicio | date }}</small>
+                    </p>
                     <p class="card-text"><small class="text-muted">Last updated {{proyecto.updateAt | date }}</small>
                     </p>
                     <a [routerLink]="['/projects', 'profile', proyecto.id]" class="btn btn-primary stretched-link">Ir a
