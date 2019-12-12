@@ -23,7 +23,7 @@ import { ChatBoxComponent } from './chat-box/chat-box.component';
 
 /* REDUX */
 
-import { NgReduxModule, NgRedux } from '@angular-redux/store';
+
 import { IAppState, rootReducer } from './store';
 import { EditImageComponent } from './edit-image/edit-image.component';
 
@@ -44,11 +44,8 @@ import { EditImageComponent } from './edit-image/edit-image.component';
     NewIdeaComponent,
     EditPasswordComponent,
     EditEmailComponent,
-<<<<<<< HEAD
-    ChatBoxComponent
-=======
+    ChatBoxComponent,
     EditImageComponent
->>>>>>> 46b642b3c035568508377079e7feacdc0cb3ad08
   ],
   imports: [
     BrowserModule,
@@ -56,13 +53,13 @@ import { EditImageComponent } from './edit-image/edit-image.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    NgReduxModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(ngredux: NgRedux<IAppState>) {
-    ngredux.configureStore(rootReducer, { counter: 0 });
+  constructor() {
+
   }
 }
