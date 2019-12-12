@@ -11,6 +11,7 @@ import { RegisterFieldsComponent } from './register-fields/register-fields.compo
 import { NewIdeaComponent } from './new-idea/new-idea.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { EditEmailComponent } from './edit-email/edit-email.component';
+import { EditImageComponent } from './edit-image/edit-image.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -23,7 +24,8 @@ const routes: Routes = [
   {
     path: 'profile/edit', component: EditProfileComponent, children: [
       { path: 'pass', component: EditPasswordComponent },
-      { path: 'email', component: EditEmailComponent }
+      { path: 'email', component: EditEmailComponent },
+      { path: 'image', component: EditImageComponent }
     ]
   },
   { path: 'projects', component: ProjectsComponent },
