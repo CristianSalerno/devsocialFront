@@ -4,16 +4,16 @@ import { HttpClient } from "@angular/common/http";
 @Injectable({
   providedIn: "root"
 })
-export class AuthenticationService {
+export class ChatService {
   constructor(private http: HttpClient) {}
 
-  auth(pBody) {
-    const body = {
-      email: pBody.email,
-      password: pBody.password
-    };
+  leaveComent(pComent) {
     return this.http
-      .post("http://localhost:3000/api/users/login", body)
+      .post("http://localhost:3000/api/coment", pComent)
       .toPromise();
+  }
+
+  getComents() {
+    return this.http.get("http://localhost:3000/api/coment").toPromise();
   }
 }

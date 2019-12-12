@@ -19,6 +19,7 @@ import { ProjectProfileComponent } from './project-profile/project-profile.compo
 import { NewIdeaComponent } from './new-idea/new-idea.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { EditEmailComponent } from './edit-email/edit-email.component';
+import { ChatBoxComponent } from './chat-box/chat-box.component';
 
 
 
@@ -37,7 +38,8 @@ import { EditEmailComponent } from './edit-email/edit-email.component';
     ProjectProfileComponent,
     NewIdeaComponent,
     EditPasswordComponent,
-    EditEmailComponent
+    EditEmailComponent,
+    ChatBoxComponent
   ],
   imports: [
     BrowserModule,
