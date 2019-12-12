@@ -23,15 +23,8 @@ import { ChatBoxComponent } from "./chat-box/chat-box.component";
 
 /* REDUX */
 
-<<<<<<< HEAD
 import { IAppState, rootReducer } from "./store";
 import { EditImageComponent } from "./edit-image/edit-image.component";
-=======
-
-import { IAppState, rootReducer } from './store';
-import { EditImageComponent } from './edit-image/edit-image.component';
-
->>>>>>> 715b080157aad97ab9ae0fed51404afa4d244330
 
 @NgModule({
   declarations: [
@@ -57,22 +50,11 @@ import { EditImageComponent } from './edit-image/edit-image.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-<<<<<<< HEAD
     HttpClientModule
-=======
-    HttpClientModule,
-
->>>>>>> 715b080157aad97ab9ae0fed51404afa4d244330
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-<<<<<<< HEAD
   constructor() {}
-=======
-  constructor() {
-
-  }
->>>>>>> 715b080157aad97ab9ae0fed51404afa4d244330
 }
