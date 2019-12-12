@@ -19,6 +19,7 @@ import { ProjectProfileComponent } from './project-profile/project-profile.compo
 import { NewIdeaComponent } from './new-idea/new-idea.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { EditEmailComponent } from './edit-email/edit-email.component';
+import { ChatBoxComponent } from './chat-box/chat-box.component';
 
 /* REDUX */
 
@@ -43,7 +44,11 @@ import { EditImageComponent } from './edit-image/edit-image.component';
     NewIdeaComponent,
     EditPasswordComponent,
     EditEmailComponent,
+<<<<<<< HEAD
+    ChatBoxComponent
+=======
     EditImageComponent
+>>>>>>> 46b642b3c035568508377079e7feacdc0cb3ad08
   ],
   imports: [
     BrowserModule,

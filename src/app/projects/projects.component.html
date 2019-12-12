@@ -1,11 +1,46 @@
 <div class="container">
+  <form class="pt-4">
+    <div class="form-group pt-5">
+      <label for="exampleFormControlInput1" class="color-dark"
+        >Filtra por titulo:</label
+      >
+      <input
+        (keyup)="filtrarProyectos($event)"
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Filtra por titulo..."
+      />
+    </div>
+  </form>
+  <h2 class="text-center">Projects</h2>
 
-    <form class="pt-4">
-        <div class="form-group pt-5">
-            <label for="exampleFormControlInput1" class="color-dark">Filtra por titulo:</label>
-            <input (keyup)="filtrarProyectos($event)" type="text" class="form-control" id="exampleFormControlInput1"
-                placeholder="Filtra por titulo...">
+  <div class="fondo">
+    <div
+      class="row mt-5 mb-5 d-flex  border"
+      *ngFor="let proyecto of arrProyectos"
+    >
+      <div class=" col-md-4 mt-3 mb-3">
+        <img [src]="proyecto.imgUrl" class="card-img" alt="..." />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold text-primary">
+            {{ proyecto.name }}
+          </h5>
+          <p class="card-text">{{ proyecto.descripcion }}</p>
+          <p class="card-text">
+            <small class="text-muted"
+              >Last updated {{ proyecto.updateAt | date }}</small
+            >
+          </p>
+          <a
+            [routerLink]="['/projects', 'profile', proyecto.id]"
+            class="btn btn-primary stretched-link"
+            >Ir a {{ proyecto.name }}
+          </a>
         </div>
+<<<<<<< HEAD
     </form>
     <h2 class="text-center">Projects</h2>
 
@@ -32,3 +67,9 @@
 
 
     </div>
+=======
+      </div>
+    </div>
+  </div>
+</div>
+>>>>>>> a0b19a2914ff94df4efe39d369b93233d89e638f
