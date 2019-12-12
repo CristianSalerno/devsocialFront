@@ -19,7 +19,11 @@ import { ProjectProfileComponent } from './project-profile/project-profile.compo
 import { NewIdeaComponent } from './new-idea/new-idea.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { EditEmailComponent } from './edit-email/edit-email.component';
+import { ChatBoxComponent } from './chat-box/chat-box.component';
 import { EditImageComponent } from './edit-image/edit-image.component';
+
+/* REDUX */
+
 
 /* REDUX */
 
@@ -39,6 +43,7 @@ import { EditImageComponent } from './edit-image/edit-image.component';
     NewIdeaComponent,
     EditPasswordComponent,
     EditEmailComponent,
+    ChatBoxComponent,
     EditImageComponent
   ],
   imports: [
@@ -46,10 +51,11 @@ import { EditImageComponent } from './edit-image/edit-image.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  constructor() { }
 }

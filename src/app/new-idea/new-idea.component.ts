@@ -4,6 +4,9 @@ import { TemasService } from 'services/temas.service';
 import { UsertemaService } from 'services/usertema.service';
 import { UsersService } from 'services/users.service';
 import { User } from 'models/user.model';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-new-idea',
@@ -13,8 +16,10 @@ import { User } from 'models/user.model';
 export class NewIdeaComponent implements OnInit {
   form: FormGroup;
   mainUser: User;
+
   constructor(
     private temasService: TemasService,
+    private router: Router,
     private usertemaService: UsertemaService,
     private usersService: UsersService) {
     this.form = new FormGroup({
@@ -46,5 +51,7 @@ export class NewIdeaComponent implements OnInit {
     };
     const result = await this.usertemaService.insert(body);
     console.log(result);
+    await this.router.navigate(['/projects']);
+
   }
 }

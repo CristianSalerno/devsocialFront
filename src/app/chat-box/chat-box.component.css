@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.coment-box {
+  border: 1px solid rgba(135, 135, 135, 0.18);
+  padding: 10px;
+  margin: 10px;
+  min-height: 30vh;
+}
+
+.coment-box h6 {
+  color: rgba(56, 56, 250, 0.687);
+  display: inline-block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.29);
+}
+
+.coment-box h6 small {
+  color: rgba(114, 114, 114, 0.803);
+}
+
+.coment-box .coment {
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid rgba(145, 145, 145, 0.262);
+  border-radius: 10px;
+  overflow: scroll;
+  word-wrap: break-word;
+}
+
+.coment-box .coment .date {
+  font-weight: lighter;
+  color: rgba(128, 128, 128, 0.68);
+}
+
+.coment-box .coment p {
+  padding: 10px;
+}
