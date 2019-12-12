@@ -20,4 +20,9 @@ export class TemasService {
   getById(pId) {
     return this.http.get<Temas[]>('http://localhost:3000/api/temas/' + pId).toPromise();
   }
+
+  create(pBody) {
+    return this.http.post<Temas[]>('http://localhost:3000/api/temas/create', pBody).toPromise();
+  }
+
 }

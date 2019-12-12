@@ -11,9 +11,11 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   mainUser: User;
+  counter = 0;
   constructor(
     private usersService: UsersService,
-    private router: Router) { }
+    private router: Router) {
+  }
 
   async ngOnInit() {
     this.mainUser = await this.usersService.mainUserExist();
