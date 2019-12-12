@@ -19,13 +19,9 @@ import { ProjectProfileComponent } from './project-profile/project-profile.compo
 import { NewIdeaComponent } from './new-idea/new-idea.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { EditEmailComponent } from './edit-email/edit-email.component';
-
-/* REDUX */
-
-import { NgReduxModule, NgRedux } from '@angular-redux/store';
-import { IAppState, rootReducer } from './store';
 import { EditImageComponent } from './edit-image/edit-image.component';
 
+/* REDUX */
 
 @NgModule({
   declarations: [
@@ -50,14 +46,10 @@ import { EditImageComponent } from './edit-image/edit-image.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
-    NgReduxModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(ngredux: NgRedux<IAppState>) {
-    ngredux.configureStore(rootReducer, { counter: 0 });
-  }
 }
