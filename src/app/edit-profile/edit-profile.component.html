@@ -4,6 +4,19 @@
             <section *ngIf="mainUser" class="title-edit">
                 <h2>Account settings ...</h2>
             </section>
+            <section class="profile row">
+            </section>
+            <div class="edit-image col-md-12 col-lg-6">
+                <div class="image-profile">
+                    <img src="https://uybor.uz/borless/uybor/img/user-images/user_no_photo_300x300.png"
+                        class="img-fluid rounded-circle" />
+                </div>
+                <div class="btnedit">
+                    <button [routerLink]="['image']" class=" btn btn-primary">
+                        Edit Image
+                    </button>
+                </div>
+            </div>
             <div *ngIf="mainUser" class="row">
                 <section class="col-md-12 col-lg-4">
                     <div class="easy-edit">

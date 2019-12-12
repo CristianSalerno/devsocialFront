@@ -5,22 +5,28 @@
     background-size: cover;
 }
 
-
+.info{
+    border-top: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
 section p {
     font-family: 'Vollkorn', serif;
     color: gray;
     font-weight: 600;
-    
-
-}
-
-.shadow {
-    border: 1px solid #CCCCCC;
 }
 
 .hero-text {
     margin-top: 20%;
 }
+
+.infoboxes{
+    padding: 15vh 0;
+}
+
+.infobox{
+    border: 1px solid rgb(224, 224, 224);
+}
+
 
 
 @media (min-width:820px ) {

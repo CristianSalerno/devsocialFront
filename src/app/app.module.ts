@@ -20,6 +20,11 @@ import { NewIdeaComponent } from './new-idea/new-idea.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { EditEmailComponent } from './edit-email/edit-email.component';
 
+/* REDUX */
+
+import { NgReduxModule, NgRedux } from '@angular-redux/store';
+import { IAppState, rootReducer } from './store';
+import { EditImageComponent } from './edit-image/edit-image.component';
 
 
 @NgModule({
@@ -37,16 +42,22 @@ import { EditEmailComponent } from './edit-email/edit-email.component';
     ProjectProfileComponent,
     NewIdeaComponent,
     EditPasswordComponent,
-    EditEmailComponent
+    EditEmailComponent,
+    EditImageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgReduxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(ngredux: NgRedux<IAppState>) {
+    ngredux.configureStore(rootReducer, { counter: 0 });
+  }
+}
