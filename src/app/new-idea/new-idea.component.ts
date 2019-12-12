@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, ReactiveFormsModule, FormsModule, FormControl, Validators } from '@angular/forms';
 import { TemasService } from 'services/temas.service';
+import { Router } from '@angular/router';
 
 
 
@@ -12,7 +13,7 @@ import { TemasService } from 'services/temas.service';
 export class NewIdeaComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private temasService: TemasService) {
+  constructor(private temasService: TemasService, private router: Router) {
     this.form = new FormGroup({
       name: new FormControl('', [Validators.required]),
       descripcion: new FormControl('', [Validators.required]),
@@ -32,6 +33,7 @@ export class NewIdeaComponent implements OnInit {
 
   async onSubmit(e) {
     const formularioValue = await this.temasService.create(this.form.value);
-    console.log(formularioValue);
+    await this.router.navigate(['/projects']);
+
   }
 }

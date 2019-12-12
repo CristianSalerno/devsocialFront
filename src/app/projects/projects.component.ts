@@ -25,10 +25,11 @@ export class ProjectsComponent implements OnInit {
   }
 
   async filtrarProyectos(e) {
-    this.arrProyectos = this.proyectosFiltrados.filter(proyecto => proyecto.name.includes(e.target.value));
+    this.arrProyectos = this.proyectosFiltrados.filter(proyecto => proyecto.name.toLowerCase().includes(e.target.value.toLowerCase()));
     if (e.target.value === "") {
       this.arrProyectos = await this.temasservice.getAll();
     }
+    console.log(this.arrProyectos);
   }
 
 }
