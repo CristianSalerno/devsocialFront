@@ -1,44 +1,42 @@
-<section class="hero">
-    <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-12  text-center hero-text">
-                <h1 class="text-light ">WELCOME TO DEVSOCIAL</h1>
-                <h2 class="text-light mt-4">The Place Where Projects Come True</h2>
-            </div>
-            <div class="col-12 text-center">
-                <button type="button" class="btn btn-primary" [routerLink]="['login']">Login</button>
-                <button type="button" class="btn btn-outline-light ml-3" [routerLink]="['/register']">Register</button>
+<div class="landing">
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 hero-text">
+                    <h1 class="text-light ">WELCOME TO DEVSOCIAL</h1>
+                    <h2 class="text-light mt-4">The Place Where Projects Come True</h2>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="info">
-    <div class="container">
-        <div class="row justify-content-center infoboxes">
-            <div class="col-11 col-md-3  rounded m-3 p-4 shadow-sm infobox">
-                <h3 class="font-weight-bold text-primary">Register</h3>
-                <hr>
-                <p>Complete the registration and enter to view a entire world of projects from developers around the
-                    globe.</p>
-            </div>
-            <div class="col-11 col-md-3  rounded m-3 p-4 shadow-sm infobox">
-                <h3 class="font-weight-bold text-primary">Create Your Own Project</h3>
-                <hr>
-                <p>Create your own project. Find different developer profiles and interact with them to help you
-                    complete the project
-                    collaboratively</p>
-            </div>
-            <div class="col-11 col-md-3  rounded m-3 p-4 shadow-sm infobox">
-                <h3 class="font-weight-bold text-primary">Work on projects with other developers</h3>
-                <hr>
-                <p>Find projects from other developers that fit your level and interests. Complete the projects, meet
-                    other developers and
-                    improve your skills together.
-                </p>
+    </section>
+    <section class="info">
+        <div class="container">
+            <div class="row justify-content-center infoboxes">
+                <div class="col-11 col-md-3  rounded m-3 p-4 shadow-sm infobox">
+                    <h3 class="font-weight-bold">Register</h3>
+                    <hr>
+                    <p>Complete the registration and enter to view a entire world of projects from developers around the
+                        globe.</p>
+                </div>
+                <div class="col-11 col-md-3  rounded m-3 p-4 shadow-sm infobox">
+                    <h3 class="font-weight-bold">Create Your Own Project</h3>
+                    <hr>
+                    <p>Create your own project. Find different developer profiles and interact with them to help you
+                        complete the project
+                        collaboratively</p>
+                </div>
+                <div class="col-11 col-md-3  rounded m-3 p-4 shadow-sm infobox">
+                    <h3 class="font-weight-bold">Work on projects with other developers</h3>
+                    <hr>
+                    <p>Find projects from other developers that fit your level and interests. Complete the projects,
+                        meet
+                        other developers and
+                        improve your skills together.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <router-outlet></router-outlet>

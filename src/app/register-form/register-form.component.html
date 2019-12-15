@@ -1,31 +1,41 @@
 <div class="container">
   <div class="formulario">
-<form [formGroup]="register" (ngSubmit)="onSubmit()" >
-            <div class="form-group">
-            <p class="text-center">Welcome, Please complete the fields to create a new account </p> 
-              <label>Email</label>
-              <input type="text" class="form-control" placeholder="Your Email" formControlName="email">
-              <p class="error" *ngIf="register.controls.email.errors && (register.controls.email.touched || register.controls.email.dirty)" > "email" is required</p>
-              <p class="valid" *ngIf="register.controls.email.valid && (register.controls.email.touched || register.controls.email.dirty)" > "email" is ok</p>
-            </div>
-            <div class="form-group">
-              <label>Username</label>
-              <input type="text" class="form-control" placeholder="Username" formControlName="username">
-              <p class="error" *ngIf="register.controls.username.invalid && (register.controls.username.touched || register.controls.username.dirty)"> "username" min length 6</p>
-              <p class="valid" *ngIf="register.controls.username.valid"> "username" is valid</p>
-            </div>
-            <div class="form-group">
-              <label>Password</label>
-              <input type="password" class="form-control" placeholder="Password" formControlName="password">
-              <p class="error" *ngIf="register.controls.password.invalid && (register.controls.password.touched || register.controls.password.dirty)"> "password" is required / min length 6</p>
-            </div>
-            <div class="form-group">
-              <label>Repeat Password</label>
-              <input type="password" class="form-control" placeholder="Repeat Password" formControlName="repeatpassword">
-              <p class="error" *ngIf="register.controls.repeatpassword  .invalid && (register.controls.repeatpassword.touched || register.controls.repeatpassword.dirty)">the password doesn't match</p>
-            </div>
-            <button class="btn btn-dark mr-3" value="cancel" [routerLink]="['/home']">cancel</button>
-            <button class="btn btn-light" value="continue" *ngIf="register.controls.email.valid">continue</button>
-          </form>
+    <form [formGroup]="register" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <p class="text-center">Welcome, Please complete the fields to create a new account </p>
+        <label>Email</label>
+        <input type="text" class="form-control" placeholder="Your Email" formControlName="email">
+        <p class="error"
+          *ngIf="register.controls.email.errors && (register.controls.email.touched || register.controls.email.dirty)">
+          "email" is required</p>
+        <p class="valid"
+          *ngIf="register.controls.email.valid && (register.controls.email.touched || register.controls.email.dirty)">
+          "email" is ok</p>
+      </div>
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" placeholder="Username" formControlName="username">
+        <p class="error"
+          *ngIf="register.controls.username.invalid && (register.controls.username.touched || register.controls.username.dirty)">
+          "username" min length 6</p>
+        <p class="valid" *ngIf="register.controls.username.valid"> "username" is valid</p>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+        <p class="error"
+          *ngIf="register.controls.password.invalid && (register.controls.password.touched || register.controls.password.dirty)">
+          "password" is required / min length 6</p>
+      </div>
+      <div class="form-group">
+        <label>Repeat Password</label>
+        <input type="password" class="form-control" placeholder="Repeat Password" formControlName="repeatpassword">
+        <p class="error"
+          *ngIf="register.controls.repeatpassword  .invalid && (register.controls.repeatpassword.touched || register.controls.repeatpassword.dirty)">
+          the password doesn't match</p>
+      </div>
+      <button class="btn btn-dark mr-3" value="cancel" [routerLink]="['/home']">CANCEL</button>
+      <button class="btn btn-light" value="continue" *ngIf="register.controls.email.valid">continue</button>
+    </form>
   </div>
 </div>
