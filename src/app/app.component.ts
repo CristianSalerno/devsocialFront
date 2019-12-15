@@ -7,9 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'devsocialfront';
-  username: any;
   constructor() {
   }
-
 }
 

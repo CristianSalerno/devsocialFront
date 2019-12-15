@@ -2,26 +2,47 @@
   width: 100%;
   z-index: 999;
 }
-.nav-item .editbtn-sign{
+.nav-item .editbtn-dark{
   background: white;
   margin: 0 1vh;
 }
-.nav-item .editbtn-login{
+.nav-item .editbtn-main{
   background: white;
   margin: 0 1vh;
   color: rgb(62, 143, 209);
   border: 1px rgb(62, 143, 209) solid;
 }
+.nav-item .editbtn-red{
+  background: white;
+  color: rgb(207, 76, 76);
+  border: 1px rgb(207, 76, 76) solid;
+}
+.nav-item .editbtn-black{
+  background: white;
+  color: rgb(53, 53, 53);
+  border: 1px rgb(53, 53, 53) solid;
+}
 .title{
   color: rgb(62, 143, 209);
 }
+.image-profile{
+ width: 2em;
+ height: 2em;
+}
+.dropdown-item{
+  color:rgb(71, 71, 71);
+}
+
 @media (max-width:990px){
-  .nav-item .editbtn-sign{
+  .nav-item .editbtn-dark{
     background: white;
     margin: 1vh 1vh;
   }
-  .nav-item .editbtn-login{
+  .nav-item .editbtn-main{
     background: white;
     margin: 1vh 1vh;
+  }
+  .nav-item .editbtn-red{
+    background: white;
   }
 }

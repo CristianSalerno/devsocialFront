@@ -9,15 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  username: any;
-  mainUser: User;
-  counter = 0;
+  mainUser: any;
   constructor(
     private router: Router) {
+    console.log(localStorage.getItem('user_token'));
     const token = (localStorage.getItem('user_token')) ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
     if (token) {
-      this.username = (localStorage.getItem('username')) ? localStorage.getItem('username') : sessionStorage.getItem('username');
-      console.log(this.username);
+      this.mainUser = {
+        username: localStorage.getItem('username') ? localStorage.getItem('username') : sessionStorage.getItem('username'),
+        imageUrl: localStorage.getItem('image_url') ? localStorage.getItem('image_url') : sessionStorage.getItem('image_url')
+      };
     }
   }
 

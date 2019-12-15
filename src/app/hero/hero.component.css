@@ -27,6 +27,7 @@ section p {
 }
 .infobox h3{
     height: 13vh;
+    color: rgb(62, 143, 209);
 }
 .contador{
     padding-top:4vh;

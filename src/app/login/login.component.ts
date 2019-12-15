@@ -44,6 +44,8 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('username', result['username']);
         // tslint:disable-next-line: no-string-literal
         localStorage.setItem('id', result['id'].toString());
+        // tslint:disable-next-line: no-string-literal
+        localStorage.setItem('image_url', result['imageUrl'].toString());
       } else {
         // tslint:disable-next-line: no-string-literal
         sessionStorage.setItem('user_token', result['succesfull'].toString());
@@ -51,6 +53,8 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('username', result['username']);
         // tslint:disable-next-line: no-string-literal
         sessionStorage.setItem('id', result['id'].toString());
+        // tslint:disable-next-line: no-string-literal
+        sessionStorage.setItem('image_url', result['imageUrl'].toString());
       }
       await this.router.navigate(['/home']);
       console.log(result);
