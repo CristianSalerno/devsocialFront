@@ -21,7 +21,7 @@ export class UsersService {
         user_token: pToken
       })
     };
-    return this.http.get<User[]>('http://localhost:3000/api/users/', httpOptions).toPromise();
+    return this.http.get<User>('http://localhost:3000/api/users/', httpOptions).toPromise();
   }
   mainUserExist() {
     if (localStorage.getItem('user_token')) {

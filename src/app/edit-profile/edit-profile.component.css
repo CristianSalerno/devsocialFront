@@ -71,3 +71,6 @@ textarea{
     position: absolute;
     
 }
+.btn-primary{
+    opacity: .8;
+}

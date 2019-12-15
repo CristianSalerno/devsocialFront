@@ -25,9 +25,11 @@
           <p class="card-text">
             <small class="text-muted">Last updated {{ proyecto.updateAt | date }}</small>
           </p>
-          <a [routerLink]="['/projects', 'profile', proyecto.id]" class="btn btn-primary stretched-link">Ir a
+          <a [routerLink]="['/projects', 'profile', proyecto.id]" class="btn btn-primary">Ir a
             {{ proyecto.name }}
           </a>
+          <button (click)="onSubmit(proyecto.id)" class="btn btn-outline-danger ml-3">Subscription
+          </button>
         </div>
       </div>
     </div>

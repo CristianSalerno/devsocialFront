@@ -9,22 +9,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  username: any;
   mainUser: User;
   counter = 0;
   constructor(
-    private usersService: UsersService,
     private router: Router) {
+    const token = (localStorage.getItem('user_token')) ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
+    if (token) {
+      this.username = (localStorage.getItem('username')) ? localStorage.getItem('username') : sessionStorage.getItem('username');
+      console.log(this.username);
+    }
   }
 
-  async ngOnInit() {
-    this.mainUser = await this.usersService.mainUserExist();
+  ngOnInit() {
+
   }
 
   async logout() {
-    localStorage.removeItem('user_token');
-    sessionStorage.removeItem('user_token');
-    await this.router.navigate(['/home']);
+    localStorage.clear();
+    sessionStorage.clear();
     window.location.reload();
+    await this.router.navigate(['/home']);
   }
 }

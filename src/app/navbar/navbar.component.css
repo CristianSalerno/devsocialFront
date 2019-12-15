@@ -1,26 +1,27 @@
-.navbar {
-    width: 100%;
-    z-index: 999;
-}
-
-.navbar a {
-     color: #000;
-}
-    
-#title {
-      font-family: 'Vollkorn', serif;
-}
-
-#hover-effect::after {
- content: '';
- display: block;
- width: 0;
- height: 2px;
- background: #000;
- transition: width .3s;
-}
-
-#hover-effect:hover::after {
+.navbar{
   width: 100%;
-  transition: width .3s;
+  z-index: 999;
+}
+.nav-item .editbtn-sign{
+  background: white;
+  margin: 0 1vh;
+}
+.nav-item .editbtn-login{
+  background: white;
+  margin: 0 1vh;
+  color: rgb(62, 143, 209);
+  border: 1px rgb(62, 143, 209) solid;
+}
+.title{
+  color: rgb(62, 143, 209);
+}
+@media (max-width:990px){
+  .nav-item .editbtn-sign{
+    background: white;
+    margin: 1vh 1vh;
+  }
+  .nav-item .editbtn-login{
+    background: white;
+    margin: 1vh 1vh;
+  }
 }

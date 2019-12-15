@@ -40,13 +40,21 @@ export class LoginComponent implements OnInit {
       if (this.access.value.persistAccount === true) {
         // tslint:disable-next-line: no-string-literal
         localStorage.setItem('user_token', result['succesfull'].toString());
+        // tslint:disable-next-line: no-string-literal
+        localStorage.setItem('username', result['username']);
+        // tslint:disable-next-line: no-string-literal
+        localStorage.setItem('id', result['id'].toString());
       } else {
         // tslint:disable-next-line: no-string-literal
         sessionStorage.setItem('user_token', result['succesfull'].toString());
+        // tslint:disable-next-line: no-string-literal
+        sessionStorage.setItem('username', result['username']);
+        // tslint:disable-next-line: no-string-literal
+        sessionStorage.setItem('id', result['id'].toString());
       }
-      await this.router.navigate(['/projects']);
-      window.location.reload();
+      await this.router.navigate(['/home']);
       console.log(result);
+      window.location.reload();
     }
   }
 
