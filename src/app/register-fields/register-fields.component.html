@@ -1,46 +1,44 @@
 <div class="container pt-5">
   <h3 class="text-center mt-3 mb-5">Tell more about you !</h3>
-<div class="row">
-  <div class="col-md-6 col-sm-6">
-   <form [formGroup]="createUser" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <label>You Role</label>
-    <select class="form-control" formControlName="speciality">
-      <option>Developer</option>
-      <option>UX/UI</option>
-      <option>Graphic Designer</option>
-      <option>Data Scientist</option>
-      <option>Startup</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label>Experience</label>
-    <select class="form-control" formControlName="experience">
-      <option>Aprentice</option>
-      <option>Junior</option>
-      <option>Semi-senior</option>
-      <option>Senior</option>
-      <option>God Level</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label>Availabity</label>
-    <select class="form-control" formControlName="availability">
-      <option>Full Time</option>
-      <option>Part Time</option>
-      <option>Weekends</option>
-      <option>Casual</option>
-    </select>
-  </div>
-   <button class="btn btn-light mt-2 float-right" >Finish</button>
-      <button class="btn btn-dark mt-2 mr-2 float-right">Cancel</button>
-</form>
-  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <form [formGroup]="createUser" (ngSubmit)="onSubmit(userId)">
+        <div class="form-group">
+          <label>You Role</label>
+          <select class="form-control" formControlName="speciality">
+            <option>Developer</option>
+            <option>UX/UI</option>
+            <option>Graphic Designer</option>
+            <option>Data Scientist</option>
+            <option>Startup</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Experience</label>
+          <select class="form-control" formControlName="experience">
+            <option>Aprentice</option>
+            <option>Junior</option>
+            <option>Semi-senior</option>
+            <option>Senior</option>
+            <option>God Level</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Availabity</label>
+          <select class="form-control" formControlName="availability">
+            <option>Full Time</option>
+            <option>Part Time</option>
+            <option>Weekends</option>
+            <option>Casual</option>
+          </select>
+        </div>
+        <button class="btn btn-light mt-2 float-right">Finish</button>
+        <button class="btn btn-dark mt-2 mr-2 float-right">Cancel</button>
+      </form>
+    </div>
 
     <div class="col-md-6 col-sm-6">
-        <div class="img">
-        </div>  
+      <div class="img"></div>
     </div>
   </div>
 </div>
-
