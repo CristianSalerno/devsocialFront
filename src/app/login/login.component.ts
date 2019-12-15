@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
         // tslint:disable-next-line: no-string-literal
         sessionStorage.setItem('id', result['id'].toString());
         // tslint:disable-next-line: no-string-literal
-        sessionStorage.setItem('image_url', result['imageUrl'].toString());
+        sessionStorage.setItem('image_url', result['imageUrl']);
       }
       await this.router.navigate(['/home']);
       console.log(result);
