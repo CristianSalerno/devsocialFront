@@ -1,43 +1,83 @@
-<nav class="mb-1 navbar navbar-expand-lg navbar-light info-color position-fixed bg-light">
+<nav
+  class="mb-1 navbar navbar-expand-lg navbar-light info-color position-fixed bg-light"
+>
   <div class="container">
-    <a class="navbar-brand title" href="#">DevSocial</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
-      aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+    <a [routerLink]="['/home']">
+      <img class="img-logo" src="../../assets/devsocial-01.png" alt=""
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent-4"
+      aria-controls="navbarSupportedContent-4"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
       <ul *ngIf="!mainUser" class="navbar-nav ml-auto mt-2">
         <li class="nav-item active">
-          <a [routerLink]="['/register']" class="nav-link btn btn-outline-dark editbtn-dark" href="#">
+          <a
+            [routerLink]="['/register']"
+            class="nav-link btn btn-outline-dark editbtn-dark"
+            href="#"
+          >
             <i class="fas fa-sign-in-alt"></i> Sign in
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/home/login']" class="nav-link btn  editbtn-main" href="#">
-            <i class="far fa-user"></i> Login</a>
+          <a
+            [routerLink]="['/home/login']"
+            class="nav-link btn  editbtn-main"
+            href="#"
+          >
+            <i class="far fa-user"></i> Login</a
+          >
         </li>
       </ul>
       <ul *ngIf="mainUser" class="navbar-nav ml-auto">
         <li class="nav-item active mt-1">
-          <a [routerLink]="['/idea']" class="nav-link btn editbtn-main" href="#">
+          <a
+            [routerLink]="['/idea']"
+            class="nav-link btn editbtn-main"
+            href="#"
+          >
             <i class="far fa-lightbulb"></i> New project
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle btn" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            {{mainUser.username}} <img class="rounded-circle img-fluid image-profile" [src]="mainUser.imageUrl" alt="">
+          <a
+            class="nav-link dropdown-toggle btn"
+            id="navbarDropdownMenuLink-4"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            {{ mainUser.username }}
+            <img
+              class="rounded-circle img-fluid image-profile"
+              [src]="mainUser.imageUrl"
+              alt=""
+            />
           </a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-            <a [routerLink]="['/profile']" class="dropdown-item" href="#"><i class="fas fa-user-circle"></i> My
-              account</a>
-            <a [routerLink]="['/projects']" class="dropdown-item" href="#"><i class="fas fa-project-diagram"></i>
+          <div
+            class="dropdown-menu dropdown-menu-right dropdown-info"
+            aria-labelledby="navbarDropdownMenuLink-4"
+          >
+            <a [routerLink]="['/profile']" class="dropdown-item" href="#"
+              ><i class="fas fa-user-circle"></i> My account</a
+            >
+            <a [routerLink]="['/projects']" class="dropdown-item" href="#"
+              ><i class="fas fa-project-diagram"></i>
               Projects
             </a>
-            <a (click)="logout()" class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt"></i>
-              Logout</a>
+            <a (click)="logout()" class="dropdown-item text-danger" href="#"
+              ><i class="fas fa-sign-out-alt"></i> Logout</a
+            >
           </div>
         </li>
       </ul>
