@@ -24,7 +24,15 @@
 }
 .title{
   color: rgb(62, 143, 209);
+  font-weight: 700;
+  font-size: 1.5em;
+  transition: .5s;
 }
+.title:hover{
+  color: rgb(62, 143, 209);
+  opacity: .8;
+}
+
 .image-profile{
  width: 2em;
  height: 2em;
