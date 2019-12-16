@@ -59,8 +59,7 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem("image_url", result["imageUrl"]);
 
       }
-      this.userProfile.getAllUserData(localStorage.getItem("id"));
-      console.log("este console", this.userProfile);
+
       await this.router.navigate(["/home"]);
 
       window.location.reload();
