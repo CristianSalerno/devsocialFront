@@ -38,11 +38,7 @@ export class NavbarComponent implements OnInit {
   }
 
   async goProfile() {
-<<<<<<< HEAD
-    const sesionActive = (sessionStorage.getItem("id")) ? sessionStorage.getItem("id") : localStorage.getItem("id");
-=======
     const sesionActive = (sessionStorage.getItem('id')) ? sessionStorage.getItem('id') : localStorage.getItem('id');
->>>>>>> develop
     this.userInfo = await this.userProfile.getAllUserData(sesionActive);
     console.log(this.userInfo);
   }
