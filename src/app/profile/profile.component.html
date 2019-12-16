@@ -1,14 +1,24 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 p-2 text-center profile-edit">
-      <div class="box-profile p-5">
-        <h3 class="mb-4 p-2" *ngIf="mainUser">{{ mainUser.username }}</h3>
+      <div class="box-profile p-5" *ngFor="let user of userInfo">
+        <h3 class="mb-4 p-2">
+          {{ user.username }}
+        </h3>
         <div class="img-profile">
           <img src="https://uybor.uz/borless/uybor/img/user-images/user_no_photo_300x300.png"
             class="img-fluid rounded-circle image-profile" />
         </div>
-        <p><small>Frontend Developer</small></p>
+        <p>
+          <small>{{ user.speciality }}</small>
+        </p>
         <hr />
+        <p>
+          <small>Availability: {{ user.availability }}</small> <br />
+          <small>Experience: {{ user.experience }}</small> <br />
+        </p>
+        <h4>About Me</h4>
+        <p>{{ user.about_me }}</p>
         <cite>Profile completed:</cite>
         <div class="progress">
           <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0"

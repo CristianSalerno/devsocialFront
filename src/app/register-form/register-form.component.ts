@@ -1,7 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, MinLengthValidator } from '@angular/forms';
-import { UsersService } from 'services/users.service';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  MinLengthValidator
+} from '@angular/forms';
+
 import { Router } from '@angular/router';
+
+import { UsersService } from 'services/users.service';
+import { UserProfileService } from 'services/user-profile.service';
 
 @Component({
   selector: 'app-register-form',
@@ -11,43 +19,41 @@ import { Router } from '@angular/router';
 export class RegisterFormComponent implements OnInit {
   register: FormGroup;
   canSee: boolean;
+  userId: any;
   constructor(
     private user: UsersService,
-    private router: Router,
+    private userProfile: UserProfileService,
+    private router: Router
   ) {
     this.canSee = false;
-    this.register = new FormGroup({
-      email: new FormControl('',
-        [Validators.required,
-        Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)]),
+    (this.register = new FormGroup({
+      email: new FormControl('', [
+        Validators.required,
+        Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
+      ]),
       username: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
-        Validators.maxLength(15),
+        Validators.maxLength(15)
       ]),
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
-        Validators.maxLength(10),
-      ]
-      ),
-      repeatpassword: new FormControl('',
-
-      ),
-    }),
-      [
-        this.passwordValidator
-      ]
+        Validators.maxLength(10)
+      ]),
+      repeatpassword: new FormControl('')
+    })),
+      // tslint:disable-next-line: no-unused-expression
+      [this.passwordValidator];
   }
 
-  ngOnInit() {
-
-  }
-
+  ngOnInit() { }
 
   passwordValidator(forms: FormGroup) {
+    // tslint:disable-next-line: no-string-literal
     const passwordControl = forms.controls['password'];
-    const repeatpassword = forms.controls['repeatpassword']
+    // tslint:disable-next-line: no-string-literal
+    const repeatpassword = forms.controls['repeatpassword'];
     if (passwordControl.value === repeatpassword.value) {
       return null;
     } else {
@@ -55,10 +61,9 @@ export class RegisterFormComponent implements OnInit {
     }
   }
 
-
   async onSubmit() {
-    console.log(this.register.value);
-    await this.user.registerUser(this.register.value);
-    this.router.navigate(['/fields'])
+    this.userId = await this.user.registerUser(this.register.value);
+    sessionStorage.setItem('userId', this.userId);
+    this.router.navigate(['/fields']);
   }
 }

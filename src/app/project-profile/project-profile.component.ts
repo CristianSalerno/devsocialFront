@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { ActivatedRoute } from '@angular/router';
-import { TemasService } from 'services/temas.service';
-import { SubscriptionService } from 'services/subscription.service';
-import { UsertemaService } from 'services/usertema.service';
+import { ActivatedRoute } from "@angular/router";
+import { TemasService } from "services/temas.service";
+import { SubscriptionService } from "services/subscription.service";
+import { UsertemaService } from "services/usertema.service";
 
 @Component({
-  selector: 'app-project-profile',
-  templateUrl: './project-profile.component.html',
-  styleUrls: ['./project-profile.component.css']
+  selector: "app-project-profile",
+  templateUrl: "./project-profile.component.html",
+  styleUrls: ["./project-profile.component.css"]
 })
 export class ProjectProfileComponent implements OnInit {
   proyectoArr: any[];
@@ -18,7 +18,8 @@ export class ProjectProfileComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private temasService: TemasService,
     private subscriptionService: SubscriptionService,
-    private usertemaService: UsertemaService) {
+    private usertemaService: UsertemaService
+  ) {
     this.proyectoArr = [];
     this.subscriptionActive = [];
   }
@@ -32,32 +33,39 @@ export class ProjectProfileComponent implements OnInit {
 
       const body = {
         idTema: this.paramsId,
-        state: 'pending'
+        state: "pending"
       };
-      this.subscriptionActive = await this.subscriptionService.getByTemaState(body);
-      console.log(this.subscriptionActive);
+      this.subscriptionActive = await this.subscriptionService.getByTemaState(
+        body
+      );
     });
   }
 
   /* Subscription */
   async onSubmitAccept(data) {
     const body = {
-      stateEdit: 'accept',
+      stateEdit: "accept",
       idTema: this.paramsId,
-      state: 'pending',
+      state: "pending",
       idSubscription: data.idSub
     };
-    const token = (localStorage.getItem('user_token')) ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
+    const token = localStorage.getItem("user_token")
+      ? localStorage.getItem("user_token")
+      : sessionStorage.getItem("user_token");
     const result = await this.subscriptionService.updateState(body);
     this.subscriptionActive = result;
-    const res = await this.usertemaService.insert(token, { idTema: this.paramsId, idUser: data.id, role: 'collaborator' });
+    const res = await this.usertemaService.insert(token, {
+      idTema: this.paramsId,
+      idUser: data.id,
+      role: "collaborator"
+    });
     console.log(res);
   }
   async onSubmitReject(data) {
     const body = {
-      stateEdit: 'reject',
+      stateEdit: "reject",
       idTema: this.paramsId,
-      state: 'pending',
+      state: "pending",
       idSubscription: data.idSub
     };
     const result = await this.subscriptionService.updateState(body);

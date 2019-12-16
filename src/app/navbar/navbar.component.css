@@ -1,56 +1,61 @@
-.navbar{
+.navbar {
   width: 100%;
   z-index: 999;
 }
-.nav-item .editbtn-dark{
+
+.container .img-logo {
+  width: auto;
+  height: 35px;
+}
+.nav-item .editbtn-dark {
   background: white;
   margin: 0 1vh;
 }
-.nav-item .editbtn-main{
+.nav-item .editbtn-main {
   background: white;
   margin: 0 1vh;
   color: rgb(62, 143, 209);
   border: 1px rgb(62, 143, 209) solid;
 }
-.nav-item .editbtn-red{
+.nav-item .editbtn-red {
   background: white;
   color: rgb(207, 76, 76);
   border: 1px rgb(207, 76, 76) solid;
 }
-.nav-item .editbtn-black{
+.nav-item .editbtn-black {
   background: white;
   color: rgb(53, 53, 53);
   border: 1px rgb(53, 53, 53) solid;
 }
-.title{
+.title {
   color: rgb(62, 143, 209);
   font-weight: 700;
   font-size: 1.5em;
-  transition: .5s;
+  transition: 0.5s;
 }
-.title:hover{
+.title:hover {
   color: rgb(62, 143, 209);
-  opacity: .8;
+  opacity: 0.8;
 }
 
-.image-profile{
- width: 2em;
- height: 2em;
+.image-profile {
+  width: 2em;
+  height: 2em;
 }
-.dropdown-item{
-  color:rgb(71, 71, 71);
+.dropdown-item {
+  color: rgb(71, 71, 71);
 }
 
-@media (max-width:990px){
-  .nav-item .editbtn-dark{
+@media (max-width: 990px) {
+  .nav-item .editbtn-dark {
     background: white;
     margin: 1vh 1vh;
   }
-  .nav-item .editbtn-main{
+  .nav-item .editbtn-main {
     background: white;
     margin: 1vh 1vh;
   }
-  .nav-item .editbtn-red{
+  .nav-item .editbtn-red {
     background: white;
   }
 }

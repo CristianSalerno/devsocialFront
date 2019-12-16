@@ -1,19 +1,19 @@
-import { Injectable } from '@angular/core';
-import { User } from '../models/user.model';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { User } from "../models/user.model";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
-
-
 export class UsersService {
   users: User[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAll(token) {
-    return this.http.get<User[]>('http://localhost:3000/api/users/').toPromise();
+    return this.http
+      .get<User[]>("http://localhost:3000/api/users/")
+      .toPromise();
   }
   getById(pToken: string) {
     const httpOptions = {
@@ -24,10 +24,10 @@ export class UsersService {
     return this.http.get<User>('http://localhost:3000/api/users/', httpOptions).toPromise();
   }
   mainUserExist() {
-    if (localStorage.getItem('user_token')) {
-      return this.getMainUser(localStorage.getItem('user_token'));
-    } else if (sessionStorage.getItem('user_token')) {
-      return this.getMainUser(sessionStorage.getItem('user_token'));
+    if (localStorage.getItem("user_token")) {
+      return this.getMainUser(localStorage.getItem("user_token"));
+    } else if (sessionStorage.getItem("user_token")) {
+      return this.getMainUser(sessionStorage.getItem("user_token"));
     } else {
       return undefined;
     }
@@ -38,7 +38,9 @@ export class UsersService {
         user_token: pToken
       })
     };
-    return this.http.get<User>('http://localhost:3000/api/users/main', httpOptions).toPromise();
+    return this.http
+      .get<User>("http://localhost:3000/api/users/main", httpOptions)
+      .toPromise();
   }
   updateNames(pToken: string, pBody) {
     const httpOptions = {
@@ -46,7 +48,9 @@ export class UsersService {
         user_token: pToken
       })
     };
-    return this.http.post('http://localhost:3000/api/users/updatenames', pBody, httpOptions).toPromise();
+    return this.http
+      .post("http://localhost:3000/api/users/updatenames", pBody, httpOptions)
+      .toPromise();
   }
 
   updateEmail(pToken: string, pBody) {
@@ -55,7 +59,9 @@ export class UsersService {
         user_token: pToken
       })
     };
-    return this.http.post('http://localhost:3000/api/users/updatemail', pBody, httpOptions).toPromise();
+    return this.http
+      .post("http://localhost:3000/api/users/updatemail", pBody, httpOptions)
+      .toPromise();
   }
 
   updatePassword(pToken: string, pBody: User) {
@@ -64,19 +70,14 @@ export class UsersService {
         user_token: pToken
       })
     };
-    return this.http.post('http://localhost:3000/api/users/updatepass', pBody, httpOptions).toPromise();
+    return this.http
+      .post("http://localhost:3000/api/users/updatepass", pBody, httpOptions)
+      .toPromise();
   }
 
   registerUser(pUser) {
-    return this.http.post('http://localhost:3000/api/users/register', pUser).toPromise();
-  }
-
-  /* Envia los campos a la tabla user_profile */
-  addUserFields(pUserData) {
-    return this.http.post('http://localhost:3000/api/userProfile', pUserData).toPromise();
+    return this.http
+      .post("http://localhost:3000/api/users/register", pUser)
+      .toPromise();
   }
 }
-
-
-
-

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'models/user.model';
-import { UsersService } from 'services/users.service';
+import { UserProfileService } from 'services/user-profile.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,15 +9,16 @@ import { UsersService } from 'services/users.service';
 })
 export class ProfileComponent implements OnInit {
   mainUser: User;
-  usuarioActivo: any;
+  userInfo: any;
+  arrUser: any;
+  userKey: any;
 
-  constructor(private usersService: UsersService) {
-
-  }
+  constructor(private userProfile: UserProfileService) { }
 
   async ngOnInit() {
-    this.mainUser = await this.usersService.mainUserExist();
-
+    this.userInfo = await this.userProfile.getAllUserData(
+      sessionStorage.getItem('userId')
+    );
+    console.log(this.userInfo);
   }
-
 }

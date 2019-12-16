@@ -21,25 +21,60 @@ import { EntryCreatorGuard } from 'guards/entry-creator.guard';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
-    path: 'home', component: HeroComponent, children: [
-      { path: 'login', component: LoginComponent },
-    ]
+    path: 'home',
+    component: HeroComponent,
+    children: [{ path: 'login', component: LoginComponent }]
   },
-  { path: 'profile', component: ProfileComponent, canActivate: [UserEntryGuard] },
-  { path: 'profile/:idUser', component: PublicProfileComponent, canActivate: [UserEntryGuard] },
   {
-    path: 'profile/edit', component: EditProfileComponent, canActivate: [UserEntryGuard], children: [
-      { path: 'pass', component: EditPasswordComponent, canActivate: [UserEntryGuard] },
-      { path: 'email', component: EditEmailComponent, canActivate: [UserEntryGuard] },
-      { path: 'image', component: EditImageComponent, canActivate: [UserEntryGuard] }
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [UserEntryGuard]
+  },
+  {
+    path: 'profile/:idUser',
+    component: PublicProfileComponent,
+    canActivate: [UserEntryGuard]
+  },
+  {
+    path: 'profile/edit',
+    component: EditProfileComponent,
+    canActivate: [UserEntryGuard],
+    children: [
+      {
+        path: 'pass',
+        component: EditPasswordComponent,
+        canActivate: [UserEntryGuard]
+      },
+      {
+        path: 'email',
+        component: EditEmailComponent,
+        canActivate: [UserEntryGuard]
+      },
+      {
+        path: 'image',
+        component: EditImageComponent,
+        canActivate: [UserEntryGuard]
+      }
     ]
   },
-  { path: 'projects', component: ProjectsComponent, canActivate: [UserEntryGuard] },
-  { path: 'projects/profile/:pId', component: ProjectProfileComponent, canActivate: [UserEntryGuard, EntryProjectGuard] },
-  { path: 'projects/creator/:pId', component: ProjectCreatorComponent, canActivate: [UserEntryGuard, EntryCreatorGuard] },
+  {
+    path: 'projects',
+    component: ProjectsComponent,
+    canActivate: [UserEntryGuard]
+  },
+  {
+    path: 'projects/profile/:pId',
+    component: ProjectProfileComponent,
+    canActivate: [EntryProjectGuard]
+  },
+  {
+    path: 'projects/creator/:pId',
+    component: ProjectCreatorComponent,
+    canActivate: [EntryCreatorGuard]
+  },
   { path: 'register', component: RegisterFormComponent },
-  { path: 'fields', component: RegisterFieldsComponent, canActivate: [UserEntryGuard] },
-  { path: 'idea', component: NewIdeaComponent, canActivate: [UserEntryGuard] },
+  { path: 'fields', component: RegisterFieldsComponent },
+  { path: 'idea', component: NewIdeaComponent, canActivate: [UserEntryGuard] }
 ];
 
 @NgModule({
