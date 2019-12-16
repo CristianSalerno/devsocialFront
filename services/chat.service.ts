@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   providedIn: "root"
 })
 export class ChatService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   leaveComent(pComent) {
     return this.http
