@@ -26,6 +26,6 @@ export class RegisterFieldsComponent implements OnInit {
     const result = await this.userProfile.addUserFields(newUser);
 
     const userData = await this.userProfile.getAllUserData(newUser.userId);
-    this.router.navigate(["/profile"]);
+    this.router.navigate(["/home"]);
   }
 }
