@@ -23,7 +23,7 @@ import { ChatBoxComponent } from "./chat-box/chat-box.component";
 import { EditImageComponent } from "./edit-image/edit-image.component";
 
 /* REDUX */
-
+//ACA VA A IR REDUX POR RICARDO FANIZZI 😇🤓
 /* REDUX */
 
 @NgModule({
@@ -56,5 +56,5 @@ import { EditImageComponent } from "./edit-image/edit-image.component";
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor() {}
+  constructor() { }
 }
