@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("id", result["id"]);
         // tslint:disable-next-line: no-string-literal
         localStorage.setItem("image_url", result["imageUrl"]);
+
       } else {
         // tslint:disable-next-line: no-string-literal
         sessionStorage.setItem("user_token", result["succesfull"]);
@@ -56,7 +57,9 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem("id", result["id"]);
         // tslint:disable-next-line: no-string-literal
         sessionStorage.setItem("image_url", result["imageUrl"]);
+
       }
+
       await this.router.navigate(["/home"]);
 
       window.location.reload();

@@ -26,7 +26,7 @@ import { ProjectAdmComponent } from "./project-adm/project-adm.component";
 import { ProjectCreatorComponent } from "./project-creator/project-creator.component";
 
 /* REDUX */
-
+//ACA VA A IR REDUX POR RICARDO FANIZZI 😇🤓
 /* REDUX */
 
 @NgModule({
@@ -62,5 +62,5 @@ import { ProjectCreatorComponent } from "./project-creator/project-creator.compo
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor() {}
+  constructor() { }
 }
