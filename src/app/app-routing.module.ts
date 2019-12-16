@@ -31,11 +31,6 @@ const routes: Routes = [
     canActivate: [UserEntryGuard]
   },
   {
-    path: 'profile/:idUser',
-    component: PublicProfileComponent,
-    canActivate: [UserEntryGuard]
-  },
-  {
     path: 'profile/edit',
     component: EditProfileComponent,
     canActivate: [UserEntryGuard],
@@ -56,6 +51,11 @@ const routes: Routes = [
         canActivate: [UserEntryGuard]
       }
     ]
+  },
+  {
+    path: 'profile/:idUser',
+    component: PublicProfileComponent,
+    canActivate: [UserEntryGuard]
   },
   {
     path: 'projects',

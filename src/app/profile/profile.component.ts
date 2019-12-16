@@ -16,9 +16,8 @@ export class ProfileComponent implements OnInit {
   constructor(private userProfile: UserProfileService) { }
 
   async ngOnInit() {
-    this.userInfo = await this.userProfile.getAllUserData(
-      sessionStorage.getItem('userId')
-    );
+    const id = (localStorage.getItem('id')) ? localStorage.getItem('id') : sessionStorage.getItem('id');
+    this.userInfo = await this.userProfile.getAllUserData(id);
     console.log(this.userInfo);
   }
 }

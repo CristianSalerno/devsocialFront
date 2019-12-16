@@ -14,7 +14,6 @@ export class EditProfileComponent implements OnInit {
   constructor(private usersService: UsersService) {
 
   }
-
   async ngOnInit() {
     this.mainUser = await this.usersService.mainUserExist();
     this.updateUser = new FormGroup({

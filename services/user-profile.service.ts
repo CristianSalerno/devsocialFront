@@ -5,12 +5,12 @@ import { HttpClient } from "@angular/common/http";
   providedIn: "root"
 })
 export class UserProfileService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   /* Envia los campos a la tabla user_profile */
   addUserFields(pUserData) {
     return this.http
-      .post("http://localhost:3000/api/userProfile", pUserData)
+      .post('http://localhost:3000/api/userProfile', pUserData)
       .toPromise();
   }
 
