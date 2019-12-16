@@ -22,6 +22,7 @@ export class EntryProjectGuard implements CanActivate {
       console.log('creator');
       return true;
     } else {
+      alert('Yo cant enter to this project');
       this.router.navigate(['/projects']);
     }
   }
