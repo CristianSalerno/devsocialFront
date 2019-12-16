@@ -16,6 +16,7 @@ import { UserEntryGuard } from 'guards/user-entry.guard';
 import { PublicProfileComponent } from './public-profile/public-profile.component';
 import { EntryProjectGuard } from 'guards/entry-project.guard';
 import { ProjectCreatorComponent } from './project-creator/project-creator.component';
+import { EntryCreatorGuard } from 'guards/entry-creator.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -34,8 +35,8 @@ const routes: Routes = [
     ]
   },
   { path: 'projects', component: ProjectsComponent, canActivate: [UserEntryGuard] },
-  { path: 'projects/profile/:pId', component: ProjectProfileComponent, canActivate: [EntryProjectGuard] },
-  { path: 'projects/creator/:pId', component: ProjectCreatorComponent, canActivate: [EntryProjectGuard] },
+  { path: 'projects/profile/:pId', component: ProjectProfileComponent, canActivate: [UserEntryGuard, EntryProjectGuard] },
+  { path: 'projects/creator/:pId', component: ProjectCreatorComponent, canActivate: [UserEntryGuard, EntryCreatorGuard] },
   { path: 'register', component: RegisterFormComponent },
   { path: 'fields', component: RegisterFieldsComponent, canActivate: [UserEntryGuard] },
   { path: 'idea', component: NewIdeaComponent, canActivate: [UserEntryGuard] },

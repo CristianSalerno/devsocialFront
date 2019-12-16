@@ -18,7 +18,7 @@ export class EntryProjectGuard implements CanActivate {
     const token = (localStorage.getItem('user_token')) ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
     const result = await this.usertemaService.checkUser(token, { idTema: route.params.pId });
     // tslint:disable-next-line: no-string-literal
-    if (result['role'] === 'creator') {
+    if (result['role'] === 'collaborator') {
       console.log('creator');
       return true;
     } else {

@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { TemasService } from 'services/temas.service';
 import { Temas } from 'models/temas.model';
 import { SubscriptionService } from 'services/subscription.service';
+import { UsertemaService } from 'services/usertema.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +17,9 @@ export class ProjectsComponent implements OnInit {
   proyectosFiltrados: Temas[];
   constructor(
     private temasservice: TemasService,
-    private subscriptionService: SubscriptionService) {
+    private subscriptionService: SubscriptionService,
+    private usertemaService: UsertemaService,
+    private router: Router) {
 
   }
 
@@ -36,5 +40,16 @@ export class ProjectsComponent implements OnInit {
     const result = await this.subscriptionService.insert(token, idTema);
     console.log(result);
     alert('Subscription sucessfull');
+  }
+  async checkUser(id) {
+    const token = (localStorage.getItem('user_token') ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token'));
+    const result = await this.usertemaService.checkUser(token, { idTema: id });
+    // tslint:disable-next-line: no-string-literal
+    if (result['role'] === 'collaborator') {
+      this.router.navigate(['/projects/profile/' + id]);
+      // tslint:disable-next-line: no-string-literal
+    } else if (result['role'] === 'creator') {
+      this.router.navigate(['/projects/creator/' + id]);
+    }
   }
 }
