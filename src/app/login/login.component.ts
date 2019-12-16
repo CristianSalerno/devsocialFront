@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     this.errorLogin = false;
   }
 
-  async ngOnInit() {}
+  async ngOnInit() { }
 
   async onSubmit() {
     const result = await this.authService.auth(this.access.value);
@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("id", result["id"]);
         // tslint:disable-next-line: no-string-literal
         localStorage.setItem("image_url", result["imageUrl"]);
+
       } else {
         // tslint:disable-next-line: no-string-literal
         sessionStorage.setItem("user_token", result["succesfull"]);
@@ -56,7 +57,10 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem("id", result["id"]);
         // tslint:disable-next-line: no-string-literal
         sessionStorage.setItem("image_url", result["imageUrl"]);
+
       }
+      this.userProfile.getAllUserData(localStorage.getItem("id"));
+      console.log("este console", this.userProfile);
       await this.router.navigate(["/home"]);
 
       window.location.reload();
