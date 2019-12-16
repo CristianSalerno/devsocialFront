@@ -15,7 +15,6 @@ export class UserProfileService {
   }
 
   getAllUserData(pUserid) {
-    console.log("userId PuserId", pUserid);
     return this.http
       .get(`http://localhost:3000/api/userProfile/allData/${pUserid}`)
       .toPromise();

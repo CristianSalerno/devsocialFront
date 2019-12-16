@@ -3,7 +3,7 @@
 >
   <div class="container">
     <a [routerLink]="['/home']">
-      <img class="img-logo" src="../../assets/devsocial-01.png" alt=""
+      <img class="img-logo" src="../../assets/devsocial.png" alt=""
     /></a>
     <button
       class="navbar-toggler"
@@ -68,7 +68,10 @@
             class="dropdown-menu dropdown-menu-right dropdown-info"
             aria-labelledby="navbarDropdownMenuLink-4"
           >
-            <a [routerLink]="['/profile']" class="dropdown-item" href="#"
+            <a
+              [routerLink]="['/profile']"
+              class="dropdown-item"
+              (click)="goProfile()"
               ><i class="fas fa-user-circle"></i> My account</a
             >
             <a [routerLink]="['/projects']" class="dropdown-item" href="#"

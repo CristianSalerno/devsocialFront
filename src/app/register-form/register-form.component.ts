@@ -60,7 +60,6 @@ export class RegisterFormComponent implements OnInit {
 
   async onSubmit() {
     this.userId = await this.user.registerUser(this.register.value);
-    console.log("Este es mi User ID ", this.userId);
     sessionStorage.setItem("userId", this.userId);
     this.router.navigate(["/fields"]);
   }

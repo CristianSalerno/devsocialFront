@@ -1,7 +1,8 @@
 import { Component, OnInit, OnChanges } from "@angular/core";
 import { User } from "models/user.model";
 import { UsersService } from "services/users.service";
-import { Router } from "@angular/router";
+import { Router, RouterModule } from "@angular/router";
+import { UserProfileService } from "services/user-profile.service";
 
 @Component({
   selector: "app-navbar",
@@ -10,8 +11,8 @@ import { Router } from "@angular/router";
 })
 export class NavbarComponent implements OnInit {
   mainUser: any;
-  constructor(private router: Router) {
-    console.log(localStorage.getItem("user_token"));
+  userInfo: any;
+  constructor(private router: Router, private userProfile: UserProfileService) {
     const token = localStorage.getItem("user_token")
       ? localStorage.getItem("user_token")
       : sessionStorage.getItem("user_token");
@@ -34,5 +35,11 @@ export class NavbarComponent implements OnInit {
     sessionStorage.clear();
     window.location.reload();
     await this.router.navigate(["/home"]);
+  }
+
+  async goProfile() {
+    const sesionActive = sessionStorage.getItem("id");
+    this.userInfo = await this.userProfile.getAllUserData(sesionActive);
+    console.log(this.userInfo);
   }
 }

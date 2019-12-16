@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
 import { AuthenticationService } from "services/authentication.service";
 import { Router } from "@angular/router";
+import { UserProfileService } from "services/user-profile.service";
 
 @Component({
   selector: "app-login",
@@ -13,9 +14,11 @@ export class LoginComponent implements OnInit {
   passView: string;
   access: FormGroup;
   errorLogin: boolean;
+
   constructor(
     private authService: AuthenticationService,
-    private router: Router
+    private router: Router,
+    private userProfile: UserProfileService
   ) {
     this.access = new FormGroup({
       email: new FormControl(""),
@@ -27,7 +30,7 @@ export class LoginComponent implements OnInit {
     this.errorLogin = false;
   }
 
-  ngOnInit() {}
+  async ngOnInit() {}
 
   async onSubmit() {
     const result = await this.authService.auth(this.access.value);
@@ -37,25 +40,25 @@ export class LoginComponent implements OnInit {
     } else {
       if (this.access.value.persistAccount === true) {
         // tslint:disable-next-line: no-string-literal
-        localStorage.setItem('user_token', result['succesfull'].toString());
+        localStorage.setItem("user_token", result["succesfull"].toString());
         // tslint:disable-next-line: no-string-literal
-        localStorage.setItem('username', result['username']);
+        localStorage.setItem("username", result["username"]);
         // tslint:disable-next-line: no-string-literal
-        localStorage.setItem('id', result['id'].toString());
+        localStorage.setItem("id", result["id"].toString());
         // tslint:disable-next-line: no-string-literal
-        localStorage.setItem('image_url', result['imageUrl'].toString());
+        localStorage.setItem("image_url", result["imageUrl"].toString());
       } else {
         // tslint:disable-next-line: no-string-literal
-        sessionStorage.setItem('user_token', result['succesfull'].toString());
+        sessionStorage.setItem("user_token", result["succesfull"].toString());
         // tslint:disable-next-line: no-string-literal
-        sessionStorage.setItem('username', result['username']);
+        sessionStorage.setItem("username", result["username"]);
         // tslint:disable-next-line: no-string-literal
-        sessionStorage.setItem('id', result['id'].toString());
+        sessionStorage.setItem("id", result["id"].toString());
         // tslint:disable-next-line: no-string-literal
-        sessionStorage.setItem('image_url', result['imageUrl']);
+        sessionStorage.setItem("image_url", result["imageUrl"]);
       }
-      await this.router.navigate(['/home']);
-      console.log(result);
+      await this.router.navigate(["/home"]);
+
       window.location.reload();
     }
   }
