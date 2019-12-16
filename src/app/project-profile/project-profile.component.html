@@ -18,11 +18,13 @@
             <div class="col-md-12 col-lg-6 skill-accept">
               <h3 class="title-skills">TEAM</h3>
               <ul>
-                <li><a class="btn editbtn-main btn-block" href="">adrianmartin Frontend <i class="fas fa-check"></i></a>
+                <li><a class="btn editbtn-main btn-block" href="">adrianmartin <small>Frontend</small> <i
+                      class="fas fa-check ml-1"></i></a>
                 </li>
-                <li><a class="btn editbtn-main btn-block" href="">ricardofanizzi Developer <i
-                      class="fas fa-check"></i></a></li>
-                <li><a class="btn editbtn-main btn-block" href="">cristiansalerno UX/UI <i class="fas fa-check"></i></a>
+                <li><a class="btn editbtn-main btn-block" href="">ricardofanizzi <small>Developer</small> <i
+                      class="fas fa-check ml-1"></i></a></li>
+                <li><a class="btn editbtn-main btn-block" href="">cristiansalerno <small>UX/UI</small> <i
+                      class="fas fa-check ml-1"></i></a>
                 </li>
               </ul>
             </div>
@@ -45,7 +47,7 @@
             <h3 class="text-center title">SUBSCRIPTIONS</h3>
           </div>
           <div class="subcard">
-            <div class="usersubsc" *ngFor="let subscription of subscriptionActive">
+            <div class="usersubsc mb-2" *ngFor="let subscription of subscriptionActive">
               <p class="username"><i class="fas fa-user"></i> {{subscription.username}}</p>
               <button (click)="onSubmitAccept(subscription)" class="btn editbutton">Accept</button>
               <button (click)="onSubmitReject(subscription)" class="btn editbutton red ml-1">Reject</button>
