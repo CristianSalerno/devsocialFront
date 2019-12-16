@@ -7,30 +7,10 @@ footer {
 footer .container a {
   margin-left: 10px;
   text-decoration: none;
-}
-/* 
-footer ul {
-  list-style-type: none;
-
+  font-weight: 300;
 }
 
-footer ul li a {
-  text-decoration: none;
-  color: #000;
+footer .container p{
+  font-weight: 300;
 }
 
-
-#hover-effect::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #000;
-  transition: width .5s;
-}
-
-#hover-effect:hover::after {
-  width: 100%;
-  transition: width .5s;
-}
- */

@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
-      <div class="col-md-6 col-sm-6">
-        <div class="image-fields text-center">
-          <img src="../../assets/object1.png" alt="">
-          <h5 class="text-center mt-3">Last step</h5>
-          <p>Select the fields to complete your profile and match projects with your preferences</p>
-        </div>
+    <div class="col-md-6 col-sm-6">
+      <div class="image-fields text-center">
+        <img src="../../assets/object1.png" alt="">
+        <h5 class="text-center mt-3">Last step</h5>
+        <p>Select the fields to complete your profile and match projects with your preferences</p>
       </div>
-      <div class="col-md-6 col-sm-6 mt-3">
+    </div>
+    <div class="col-md-6 col-sm-6 mt-3">
       <form [formGroup]="createUser" (ngSubmit)="onSubmit(userId)">
         <div class="form-group">
           <label>You Role</label>
@@ -38,8 +38,8 @@
             <option>Casual</option>
           </select>
         </div>
-        <button class="btn btn-light mb-2 float-right">Finish</button>
-        <button class="btn btn-dark mb-2 mr-2 float-right">Cancel</button>
+        <button class="btn-continue mb-2 float-right">Finish</button>
+        <button class="btn-error mb-2 mr-2 float-right">Cancel</button>
       </form>
     </div>
   </div>

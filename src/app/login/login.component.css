@@ -1,3 +1,4 @@
+
 .velo{
     background-color: rgba(0, 0, 0, 0.562);
     position: fixed;
@@ -9,22 +10,40 @@
     color: rgb(0, 0, 0);
     padding: 2%;
 }
+.login label{
+    font-weight: 400;
+}
+.login input {
+    font-weight: 300;
+}
+.login a{
+    font-weight: 300;
+    margin:10px;
+}
+
 
 .loginCase{
-    height: 70vh;
+    height: 60vh;
     margin: 10vh auto;
     border-radius: 10px;
     padding: 5vh;
-    background-color: rgb(62, 143, 209);
+    background-color: #3E8FD1;
 }
 .btn-edit{
     width: 20vh;
 }
 .login{
-    font-weight: bold;
+    font-weight: 400;
     margin:10px;
     color: white;
 }
+
+.login h3{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+
 .forget-pass{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.884);
@@ -37,10 +56,10 @@
 }
 
 .errorWords{
-    color: red;
+    color: rgb(245, 245, 245);
     font-size: 14px;
     opacity: .8;
-    font-weight: bold;
+    font-weight: 400;
 }
 .closeButton{
     display: inline-block;
@@ -53,6 +72,23 @@
 .closeButton:focus{
     outline: none;
 }
-.login h3{
-    font-weight: 1000;
+
+.btn-continue{
+    color:#fff;
+    background:#7BCBB7;
+}
+.btn-continue:hover{
+    background: #7ad7c0;
+    transition: 0.5s;
+}
+
+
+@media screen and (max-width: 768px) {
+  .loginCase{
+    height: 75vh;
+    margin: 10vh auto;
+    border-radius: 10px;
+    padding: 5vh;
+    background-color: #3E8FD1;
+    }
 }

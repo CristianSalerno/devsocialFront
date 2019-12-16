@@ -1,10 +1,48 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Vollkorn:400,700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Vollkorn:400,700&display=swap');
 
  /* font-family: 'Roboto Condensed', sans-serif;
 font-family: 'Vollkorn', serif; */
 * {
   font-family: 'Roboto Condensed', sans-serif;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+
+
+
+/* buttons generics */
+.btn-continue{
+background:#7BCBB7;
+color:#fff;
+padding:10px;
+font-family: 'roboto condensed', sans-serif;
+border:none;
+border-radius: 10px;
+}
+
+.btn-error{
+background:#3E8FD1;
+color:#fff;
+padding:10px;
+font-family: 'roboto condensed', sans-serif;
+border:none;
+border-radius: 10px;
+}
+
+
+/* login validators texts clases.*/
+  .error {
+    color: rgb(255, 83, 83);
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+  }
+  .valid{
+    color: #7BCBB7;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+  }
+  

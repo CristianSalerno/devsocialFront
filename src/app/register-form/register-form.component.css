@@ -1,19 +1,60 @@
-.container .formulario{
-    padding:10%;
-    padding-top: 10%;
+
+.container {
+    min-height: 85vh;
+    padding-top:10vh;
 }
 
-  
-  .error {
-    color: rgb(255, 83, 83);
-    font-size: 11px;
-    text-align: center;
+.container .formulario{
+  padding-top:10vh;
+}
+
+.container .register-info{
+  padding-top:10vh;
+}
+
+.container .register-info h5{
+  font-size: 20px;
+  font-family: 'roboto condensed' sans-serif;
+  font-weight: 400;
+}
+
+.container .register-info p {
+  font-size: 15px;
+  font-family: 'roboto condensed' sans-serif;
+  font-weight: 300;
+}
+
+.container .register-info .img-animated{
+  margin:0 auto;
+  margin-top: 10vh;
+  width: 150px;
+  height: 150px;
+  background:url("../../assets/object3.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  -webkit-animation: bounce 1s linear infinite alternate;
+  animation: bounce 1s linear infinite alternate;
+}
+
+@keyframes bounce {
+  to {
+    -webkit-transform: scale(1.05);
   }
-  .valid{
-    color: rgb(22, 205, 22);
-    font-size: 11px;
-    text-align: center;
+}
+
+@-webkit-keyframes bounce {
+  to {
+    -webkit-transform: scale(1.05);
   }
+}
+
+
+.container .formulario label{
+  font-weight: 400;
+}
+.container .formulario input{
+  font-weight: 300;
+}
 
 
 @media screen and (max-width:768px) {

@@ -9,13 +9,26 @@
     padding-top: 10vh;
 }
 
+.hero-text h1{
+    font-weight: 400;
+    font-size: 55px;
+    padding-top:15%;
+}
+.hero-text h2{
+    font-weight: 300;
+    font-size: 30px;
+}
+
 .info{
     border-top: 1px solid rgb(221, 221, 221);
 }
 section p {
-    font-family: 'Vollkorn', serif;
     color: gray;
-    font-weight: 600;
+    font-weight: 300;
+}
+
+section h3{
+    font-weight: 300;
 }
 
 .infoboxes{
@@ -55,16 +68,22 @@ section p {
 .project-icon i{
     font-size: 1.4em;
 }
-@media (min-width:820px ) {
 
-.hero {
-   height: 60vh; 
+
+@media screen and (max-width: 768px){
+
+    .hero {
+    height: 60vh; 
+    }
+    .hero-text {
+    margin-top: 15%;
+    }
+    .hero-text h1{
+    font-weight: 400;
+    font-size: 30px;
+    }
+.hero-text h2{
+    font-weight: 300;
+    font-size: 20px;
+    }
 }
-.hero-text {
-    margin-top: 10%;
-}
-
-}
- 
-
-

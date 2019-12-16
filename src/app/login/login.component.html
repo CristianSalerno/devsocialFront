@@ -4,7 +4,7 @@
             <span>&times;</span>
         </button>
         <div class="login">
-            <h3 class="text-center">LOGIN</h3>
+            <h3 class="text-center">Welcome back!</h3>
             <form [formGroup]="access" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                     <label>Email</label>
@@ -20,14 +20,14 @@
                         </div>
                     </div>
                 </div>
+                <a class="forget-pass" href="#">Forgot your password?</a>
                 <p class="errorWords text-center" *ngIf="errorLogin">Email or password invalid</p>
+                <input type="submit" value="Continue" class="btn-block btn-continue mb-3">
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="persistAccount">
                     <label class="form-check-label" for="exampleCheck1">Stay logged?</label>
                 </div>
-                <input type="submit" value="Continue" class="btn-block btn btn-dark btn-edit">
             </form>
-            <a class="forget-pass" href="#">Forget your password?</a>
             <button class="btn btn-block btn-light"><i class="fab fa-google"></i> Sign in with Google</button>
         </div>
     </div>

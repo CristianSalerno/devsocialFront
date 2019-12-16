@@ -9,15 +9,21 @@
 }
 
 .image-fields h5{
-    font-weight: normal;
-    font-size: 25px;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .image-fields p{
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
+.container .form-group label{
+    font-weight: 400;
+}
+.container .form-group select{
+    font-weight: 300;
+}
 
 #select-1, #select-2, #select-3{
     background:rgb(245, 245, 245);
