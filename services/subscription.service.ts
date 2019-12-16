@@ -19,7 +19,6 @@ export class SubscriptionService {
         user_token: pToken
       })
     };
-    console.log(body);
     return this.http.post('http://localhost:3000/api/subscription/insert', body, httpOptions).toPromise();
   }
   getByTemaState(body) {

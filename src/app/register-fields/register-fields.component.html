@@ -1,11 +1,17 @@
-<div class="container pt-5">
-  <h3 class="text-center mt-3 mb-5">Tell more about you !</h3>
+<div class="container">
   <div class="row">
-    <div class="col-md-6 col-sm-6">
+      <div class="col-md-6 col-sm-6">
+        <div class="image-fields text-center">
+          <img src="../../assets/object1.png" alt="">
+          <h5 class="text-center mt-3">Last step</h5>
+          <p>Select the fields to complete your profile and match projects with your preferences</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 mt-3">
       <form [formGroup]="createUser" (ngSubmit)="onSubmit(userId)">
         <div class="form-group">
           <label>You Role</label>
-          <select class="form-control" formControlName="speciality">
+          <select class="form-control" id="select-1" formControlName="speciality">
             <option>Developer</option>
             <option>UX/UI</option>
             <option>Graphic Designer</option>
@@ -15,7 +21,7 @@
         </div>
         <div class="form-group">
           <label>Experience</label>
-          <select class="form-control" formControlName="experience">
+          <select class="form-control" id="select-2" formControlName="experience">
             <option>Aprentice</option>
             <option>Junior</option>
             <option>Semi-senior</option>
@@ -25,20 +31,16 @@
         </div>
         <div class="form-group">
           <label>Availabity</label>
-          <select class="form-control" formControlName="availability">
+          <select class="form-control" id="select-3" formControlName="availability">
             <option>Full Time</option>
             <option>Part Time</option>
             <option>Weekends</option>
             <option>Casual</option>
           </select>
         </div>
-        <button class="btn btn-light mt-2 float-right">Finish</button>
-        <button class="btn btn-dark mt-2 mr-2 float-right">Cancel</button>
+        <button class="btn btn-light mb-2 float-right">Finish</button>
+        <button class="btn btn-dark mb-2 mr-2 float-right">Cancel</button>
       </form>
-    </div>
-
-    <div class="col-md-6 col-sm-6">
-      <div class="img"></div>
     </div>
   </div>
 </div>

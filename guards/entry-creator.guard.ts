@@ -18,7 +18,6 @@ export class EntryCreatorGuard implements CanActivate {
     const result = await this.usertemaService.checkUser(token, { idTema: route.params.pId });
     // tslint:disable-next-line: no-string-literal
     if (result['role'] === 'creator') {
-      console.log('creator');
       return true;
     } else {
       alert('Yo cant enter to this project');

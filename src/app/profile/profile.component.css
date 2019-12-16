@@ -1,14 +1,23 @@
+
+
 a {
   text-decoration: none;
-  color: #0056b3;
+  color: #3E8FD1;
+}
+
+.container-fluid{
+    background:rgb(245, 245, 245);
 }
 
 .profile-edit {
   margin-top: 10%;
 }
 
-h3 {
-  color: #0056b3;
+
+.profile-edit h3 {
+  color:black;
+  font-weight: normal;
+  font-size: 20px;
 }
 
 img {
@@ -16,40 +25,29 @@ img {
   height: 100px;
 }
 
-.row .media-icons {
-  width: 30px;
-  height: 30px;
-  margin-top: 15px;
-}
-
 .row .skills-icons i {
   padding: 10px;
 }
 
 .row .box-profile {
-  border-right: 3px solid #0056b3;
+  border-right: 3px solid #7BCBB7;
   height: 100%;
   width: 100%;
 }
 
 .row .buttons-config .btn {
-  border: 1px solid #0056b3;
-  color: #0056b3;
-}
-
-.row .buttons-config .btn-c {
-  background: #2a2a72;
-  color: #fff;
+  border: 1px solid #3E8FD1;
+  color: #3E8FD1;
 }
 
 .row .buttons-config .btn:hover {
-  border: 1px solid #0056b3;
-  background: #0056b3;
+  border: 1px solid #3E8FD1;
+  background: #3E8FD1;
   color: #fff;
 }
 
-.container .row .progress .progress-bar {
-  background: #0056b3;
+.container-fluid .row .progress .progress-bar {
+  background: #7BCBB7;
 }
 
 .projects {
@@ -57,39 +55,44 @@ img {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  color: #0056b3;
+  color: #3E8FD1;
 }
 
+
 .projects .project-card {
-  margin: 10px;
-  width: 50%;
-  color: #0056b3;
+  margin:10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.projects .project-card:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition:0.9s;
 }
 
 .projects .body-card i {
   cursor: pointer;
   display: inline-block;
-  width: 100px;
+  width: auto;
   padding: 10px;
 }
 
 .projects .body-card i:hover {
-  color: #0056b3;
-  color: white;
-  background: #0056b3;
+  color: #fff;
+  background: #3E8FD1;
   transition: 0.5s;
 }
 
 .projects .project-card .footer-card p {
   display: block;
-  border: 1px solid #0056b3;
+  border: 1px solid #3E8FD1;
+  background:#3E8FD1;
+  color:#fff;
   padding: 5px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .projects .project-card .footer-card p:hover {
-  background: #0056b3;
+  box-shadow: green;
   color: #fff;
   transition: 0.5s;
 }
@@ -100,9 +103,9 @@ img {
 }
 
 .projects .project-card {
-  width: 300px;
-  height: 350px;
-  background: #0057b319;
+  width: auto;
+  height: auto;
+  background: #fff;
   padding: 10px;
   border-radius: 10px;
 }
@@ -111,6 +114,15 @@ img {
 @media screen and (max-width: 768px) {
   .row .box-profile {
     border-right: none;
-    border-bottom: 3px solid #0056b3;
+    border-bottom: 3px solid #7BCBB7;
   }
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  color: #3E8FD1;
+}
+
 }

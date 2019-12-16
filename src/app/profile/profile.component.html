@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-6 p-2 text-center profile-edit">
       <div class="box-profile p-5" *ngFor="let user of userInfo">
@@ -6,7 +6,7 @@
           {{ user.username }}
         </h3>
         <div class="img-profile">
-          <img src="https://uybor.uz/borless/uybor/img/user-images/user_no_photo_300x300.png"
+          <img [src]="user.imageUrl"
             class="img-fluid rounded-circle image-profile" />
         </div>
         <p>
@@ -36,36 +36,20 @@
     <!-- Aca empiezan los proyectos -->
     <div class="col-md-6 text-center profile-edit">
       <div class="col-12">
-        <h3 class="mb-4">Projects</h3>
+        <h3 class="mb-4">User Projects</h3>
       </div>
       <!-- Projects -->
       <div class="projects">
-        <div class="project-card" style="width:15rem">
+        <div class="project-card" style="width:15rem" *ngFor="let project of userProjects">
           <div class="header-card">
-            <h3>title</h3>
+            <h3>{{project.name}}</h3>
 
             <div class="body-card">
-              <img src="https://miro.medium.com/max/1586/1*SlAPqCmjtwvRsn0Kszi7oA.png" class="img-fluid"
+              <img [src]="project.imgUrl" class="img-fluid"
                 alt="img-project" style="width: 15rem;" />
-              <i class="far fa-2x fa-heart"></i>
-              <i class="fas fa-2x fa-share-alt"></i>
             </div>
             <div class="footer-card">
-              <p>Go to project</p>
-            </div>
-          </div>
-        </div>
-        <div class="project-card" style="width:15rem">
-          <div class="header-card">
-            <h3>title</h3>
-            <div class="body-card">
-              <img src="https://miro.medium.com/max/1586/1*SlAPqCmjtwvRsn0Kszi7oA.png" class="img-fluid"
-                alt="img-project" style="width: 15rem;" />
-              <i class="far fa-2x fa-heart"></i>
-              <i class="fas fa-2x fa-share-alt"></i>
-            </div>
-            <div class="footer-card">
-              <p>Go to project</p>
+              <p>Go to {{project.name}}</p>
             </div>
           </div>
         </div>

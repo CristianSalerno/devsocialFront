@@ -59,7 +59,6 @@ export class ProjectProfileComponent implements OnInit {
       idUser: data.id,
       role: "collaborator"
     });
-    console.log(res);
   }
   async onSubmitReject(data) {
     const body = {
