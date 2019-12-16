@@ -7,30 +7,38 @@ a {
 
 .container-fluid{
     background:rgb(245, 245, 245);
+    min-height: 85vh;
 }
 
 .profile-edit {
   margin-top: 10%;
 }
 
-
-.profile-edit h3 {
-  color:black;
-  font-weight: normal;
-  font-size: 20px;
+.box-profile p{
+  font-weight: 300;
+  font-size:15px;
 }
+.box-profile h4{
+  font-weight: 400;
+  font-size:20px;
+}
+.box-profile small{
+  font-weight: 400;
+  font-size:15px;
+}
+.box-profile h3{
+  font-weight: 400;
+  font-size:50px;
+}
+
 
 img {
-  width: 100px;
-  height: 100px;
-}
-
-.row .skills-icons i {
-  padding: 10px;
+  width: 150px;
+  height: 150px;
 }
 
 .row .box-profile {
-  border-right: 3px solid #7BCBB7;
+  border-right: 2px solid #7BCBB7;
   height: 100%;
   width: 100%;
 }
@@ -58,10 +66,20 @@ img {
   color: #3E8FD1;
 }
 
-
 .projects .project-card {
   margin:10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-weight: 300;
+  padding: 10px;
+  background:#fff;
+  height: auto;
+  width: auto;
+  cursor: pointer;
+}
+
+.projects .project-card h3{
+  font-weight: 400;
+  font-size:25px;
 }
 .projects .project-card:hover{
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -75,39 +93,8 @@ img {
   padding: 10px;
 }
 
-.projects .body-card i:hover {
-  color: #fff;
-  background: #3E8FD1;
-  transition: 0.5s;
-}
-
-.projects .project-card .footer-card p {
-  display: block;
-  border: 1px solid #3E8FD1;
-  background:#3E8FD1;
-  color:#fff;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.projects .project-card .footer-card p:hover {
-  box-shadow: green;
-  color: #fff;
-  transition: 0.5s;
-}
-
 .projects .project-card .body-card {
-  cursor: pointer;
   padding: 20px;
-}
-
-.projects .project-card {
-  width: auto;
-  height: auto;
-  background: #fff;
-  padding: 10px;
-  border-radius: 10px;
 }
 
 /* media query */

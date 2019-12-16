@@ -6,17 +6,17 @@
           {{ user.username }}
         </h3>
         <div class="img-profile">
-          <img [src]="user.imageUrl"
-            class="img-fluid rounded-circle image-profile" />
+          <img [src]="user.imageUrl" class="img-fluid rounded-circle image-profile" />
         </div>
         <p>
           <small>{{ user.speciality }}</small>
         </p>
         <hr />
         <p>
-          <small>Availability: {{ user.availability }}</small> <br />
-          <small>Experience: {{ user.experience }}</small> <br />
+          <small>Availability: </small>{{ user.availability }} <br />
+          <small>Experience: </small>{{ user.experience }} <br />
         </p>
+        <hr>
         <h4>About Me</h4>
         <p>{{ user.about_me }}</p>
         <cite>Profile completed:</cite>
@@ -43,31 +43,12 @@
         <div class="project-card" style="width:15rem" *ngFor="let project of userProjects">
           <div class="header-card">
             <h3>{{project.name}}</h3>
-
             <div class="body-card">
-              <img [src]="project.imgUrl" class="img-fluid"
-                alt="img-project" style="width: 15rem;" />
-            </div>
-            <div class="footer-card">
-              <p>Go to {{project.name}}</p>
+              <img [src]="project.imgUrl" class="img-fluid" alt="img-project" style="width: 15rem;" />
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!--
-
-  <div class="col-12">
-    <a href="#"><img class="media-img mr-2" width="20" height="20"
-        src="https://image.flaticon.com/icons/svg/174/174848.svg" alt="facebook img" /></a>
-    <a href="#"> <img class="media-img mr-2" width="20" height="20"
-        src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="linkedin img" /></a>
-    <a href="#"> <img class="media-img mr-2" width="20" height="20"
-        src="https://image.flaticon.com/icons/svg/174/174876.svg" alt="twitter img" /></a>
-    <a href="#"> <img class="media-img mr-2" width="20" height="20"
-        src="https://image.flaticon.com/icons/svg/174/174855.svg" alt="instagram img" /></a>
-  </div>
-</div> -->
 </div>
