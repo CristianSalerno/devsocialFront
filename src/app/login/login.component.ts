@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     this.errorLogin = false;
   }
 
-  async ngOnInit() {}
+  async ngOnInit() { }
 
   async onSubmit() {
     const result = await this.authService.auth(this.access.value);

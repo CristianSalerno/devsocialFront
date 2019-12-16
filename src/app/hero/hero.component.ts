@@ -8,10 +8,8 @@ import { UserProfileService } from "services/user-profile.service";
 })
 export class HeroComponent implements OnInit {
   userInfo: any;
-  constructor(private userProfile: UserProfileService) {}
+  constructor(private userProfile: UserProfileService) { }
 
   async ngOnInit() {
-    const sesionActive = sessionStorage.getItem("id");
-    this.userInfo = await this.userProfile.getAllUserData(sesionActive);
   }
 }
