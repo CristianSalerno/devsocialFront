@@ -40,20 +40,20 @@ export class LoginComponent implements OnInit {
     } else {
       if (this.access.value.persistAccount === true) {
         // tslint:disable-next-line: no-string-literal
-        localStorage.setItem("user_token", result["succesfull"].toString());
+        localStorage.setItem("user_token", result["succesfull"]);
         // tslint:disable-next-line: no-string-literal
         localStorage.setItem("username", result["username"]);
         // tslint:disable-next-line: no-string-literal
-        localStorage.setItem("id", result["id"].toString());
+        localStorage.setItem("id", result["id"]);
         // tslint:disable-next-line: no-string-literal
-        localStorage.setItem("image_url", result["imageUrl"].toString());
+        localStorage.setItem("image_url", result["imageUrl"]);
       } else {
         // tslint:disable-next-line: no-string-literal
-        sessionStorage.setItem("user_token", result["succesfull"].toString());
+        sessionStorage.setItem("user_token", result["succesfull"]);
         // tslint:disable-next-line: no-string-literal
         sessionStorage.setItem("username", result["username"]);
         // tslint:disable-next-line: no-string-literal
-        sessionStorage.setItem("id", result["id"].toString());
+        sessionStorage.setItem("id", result["id"]);
         // tslint:disable-next-line: no-string-literal
         sessionStorage.setItem("image_url", result["imageUrl"]);
       }

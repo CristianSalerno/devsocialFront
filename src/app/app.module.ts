@@ -21,6 +21,9 @@ import { EditPasswordComponent } from "./edit-password/edit-password.component";
 import { EditEmailComponent } from "./edit-email/edit-email.component";
 import { ChatBoxComponent } from "./chat-box/chat-box.component";
 import { EditImageComponent } from "./edit-image/edit-image.component";
+import { PublicProfileComponent } from "./public-profile/public-profile.component";
+import { ProjectAdmComponent } from "./project-adm/project-adm.component";
+import { ProjectCreatorComponent } from "./project-creator/project-creator.component";
 
 /* REDUX */
 //ACA VA A IR REDUX POR RICARDO FANIZZI 😇🤓
@@ -43,7 +46,10 @@ import { EditImageComponent } from "./edit-image/edit-image.component";
     EditPasswordComponent,
     EditEmailComponent,
     ChatBoxComponent,
-    EditImageComponent
+    EditImageComponent,
+    PublicProfileComponent,
+    ProjectAdmComponent,
+    ProjectCreatorComponent
   ],
   imports: [
     BrowserModule,

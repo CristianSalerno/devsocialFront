@@ -38,6 +38,9 @@ export class NewIdeaComponent implements OnInit {
   }
 
   async onSubmit() {
+    const token = localStorage.getItem("user_token")
+      ? localStorage.getItem("user_token")
+      : sessionStorage.getItem("user_token");
     const formularioValue = await this.temasService.create(this.form.value);
     const body = {
       // tslint:disable-next-line: no-string-literal
@@ -45,7 +48,7 @@ export class NewIdeaComponent implements OnInit {
       idUser: this.mainUser.id,
       role: "creator"
     };
-    const result = await this.usertemaService.insert(body);
+    const result = await this.usertemaService.insert(token, body);
     await this.router.navigate(["/projects"]);
   }
 }

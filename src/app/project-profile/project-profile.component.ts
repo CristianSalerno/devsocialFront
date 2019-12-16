@@ -49,13 +49,17 @@ export class ProjectProfileComponent implements OnInit {
       state: "pending",
       idSubscription: data.idSub
     };
+    const token = localStorage.getItem("user_token")
+      ? localStorage.getItem("user_token")
+      : sessionStorage.getItem("user_token");
     const result = await this.subscriptionService.updateState(body);
     this.subscriptionActive = result;
-    const res = await this.usertemaService.insert({
+    const res = await this.usertemaService.insert(token, {
       idTema: this.paramsId,
       idUser: data.id,
       role: "collaborator"
     });
+    console.log(res);
   }
   async onSubmitReject(data) {
     const body = {
