@@ -1,38 +1,127 @@
-.container-profile {
-    padding-top: 100px;
+*{
+    list-style-type: none;
+    text-decoration: none;
+}
+.project-case{
+    min-height: 88vh;
+    background: rgb(245, 245, 245);
+}
+
+.project-profile{
+    margin-top: 13vh;
+    margin-bottom: 5vh;
     min-height: 80vh;
+    background-color: white;
+    padding: 3vh 7vh;
+    border: 1px solid rgb(224, 224, 224); 
+}
+.image-project {
+    width: 80%;
+    margin: 3vh auto;
+}
+.description-project{
+    margin-top: 7vh;
+    color: rgb(82, 82, 82);
+}
+
+.skills-project{
+    margin: 5vh 0;
+    border-top: 1px solid rgb(199, 199, 199);
+    min-height: 40vh;
+}
+
+.skills-project ul{
+    width: 80%;
+    margin: 4vh auto;
+}
+
+.skills-project i{
+    color: #7BCBB7;
+}
+
+.skills-project a{
+    margin: 1vh 0;
+
+}
+
+.skill-accept{
+    padding: 3vh;
+}
+
+.skill-pending{
+    padding: 3vh;
+}
+.editbtn-main {
+    background: white;
+    margin: 0 1vh;
+    color: rgb(73, 73, 73);
+    border: 1px rgb(73, 73, 73) solid;
+}
+.title-skills{
+    color: #3E8FD1;
+    border-bottom: 2px solid #3E8FD1;
+    border-left: 2px solid #7BCBB7;
+    padding: 1vh;
+    border-radius: 10%;
+}
+
+
+
+
+
+
+
+
+
+.chatbox{
+    background-color: white;
+    margin-top: 13vh;
 }
 
 .subscription{
-    width: 50%;
-    height: 30vh;
-    margin: 5vh auto;
-    border: 1px solid rgb(235, 235, 235);
-    border-radius: 10px;
+    border: 1px solid rgb(224, 224, 224);   
+    background-color: white;
+    margin: 5vh 0;
+    height: 35vh;
+    padding: 1vh;
 }
+
 .title{
-    padding-left: 2%;
-    background: rgb(255, 255, 255);
-    font-weight: 700;
-    font-size: 30px;
-    border: 1px solid rgb(233, 233, 233);
-    margin:0;
-}
-.pending{
-    font-size: 20px;
-    color: red;
+    color: rgb(83, 83, 83);
+    border-bottom: 2px solid rgb(83, 83, 83);
+    padding: 1vh;
 }
 
 .subcard{
-    overflow: auto;
-    height: 20vh;
+    margin: 3vh 0;
+    height: 15vh;
+    padding: 2vh;
+    overflow: scroll;
 }
 .usersubsc{
-    padding: 1%;
-    margin: 2%;
-    border-bottom: 1px solid rgb(216, 216, 216);
-    border-radius: 10px;
+    height: 6vh;
+    padding: .5vh;
+    border: 1px solid rgb(224, 224, 224);
+    display:flex;
+    text-align: center;
 }
-.user-info{
-    font-size: 22px;
+.editbutton{
+    border: 1px #7BCBB7 solid;
+    padding: 2%;
+    color: #7BCBB7;
+    width:25%;
+}
+.red{
+    border: 1px rgb(214, 75, 75) solid;
+    color: rgb(214, 75, 75); 
+}
+.username{
+    width: 50%;
+    color: rgb(102, 102, 102);
+    margin: .6vh;
+}
+.pending{
+   color: rgb(214, 75, 75);
+   font-weight: 700;
+   margin-right: 2vh;
 }

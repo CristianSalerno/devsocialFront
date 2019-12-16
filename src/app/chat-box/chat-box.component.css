@@ -4,15 +4,18 @@
   box-sizing: border-box;
 }
 
+.container{
+  padding: 1vh 2vh;
+  border: 1px solid rgb(224, 224, 224);
+}
 .coment-box {
-  border: 1px solid rgba(135, 135, 135, 0.18);
-  padding: 10px;
-  margin: 10px;
-  min-height: 30vh;
+  height: 40vh;
+  overflow: scroll;
+  margin-top: 3vh;
 }
 
 .coment-box h6 {
-  color: rgba(56, 56, 250, 0.687);
+  color: rgb(53, 82, 211);
   display: inline-block;
   border-bottom: 1px solid rgba(0, 0, 0, 0.29);
 }
@@ -22,12 +25,13 @@
 }
 
 .coment-box .coment {
-  padding: 20px;
-  margin: 20px;
-  border: 1px solid rgba(145, 145, 145, 0.262);
+  padding: 1vh;
+  margin: 1vh;
+  border: 1px solid rgb(235, 235, 235);
   border-radius: 10px;
   overflow: scroll;
   word-wrap: break-word;
+  color: grey;
 }
 
 .coment-box .coment .date {
@@ -37,4 +41,23 @@
 
 .coment-box .coment p {
   padding: 10px;
+}
+.editbutton{
+  border: 1px #7BCBB7 solid;
+  padding: 2%;
+  color: #7BCBB7;
+}
+label{
+  color: grey;
+  font-weight: 600;
+}
+.textarea{
+  padding: 1vh;
+  color: grey;
+}
+
+.title{
+  color: rgb(83, 83, 83);
+  border-bottom: 2px solid rgb(83, 83, 83);
+  padding: 1vh;
 }
