@@ -1,13 +1,12 @@
 <div class="container">
   <!--Aqui aparecen los comentarios de los usuarios-->
+  <h3 class="text-center title">COMMENTS</h3>
   <div class="coment-box">
-    <h3 class="text-center">Comments</h3>
     <div class="coment" *ngFor="let coment of comentsArr">
       <h6 *ngIf="mainUser">
         {{ mainUser.username }} said at:
         <small>{{ coment.date | date: "M/d/yy, h:mm a" }}</small>
       </h6>
-
       <p>{{ coment.coment }}</p>
     </div>
   </div>
@@ -18,14 +17,10 @@
       <form [formGroup]="chat" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label class="mt-2">Leave a comment</label>
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-            formControlName="coment"
-          ></textarea>
+          <textarea class="form-control textarea" id="exampleFormControlTextarea1" rows="3"
+            formControlName="coment"></textarea>
           <div class="button">
-            <button class="btn btn-primary mt-2 float-right">
+            <button class="btn editbutton mt-2 float-right">
               Send coment
             </button>
           </div>

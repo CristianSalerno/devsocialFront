@@ -1,72 +1,59 @@
-<div class="container container-profile ">
-  <div class="row" *ngFor="let proyecto of proyectoArr">
-    <div class="col-12 col-md-6  ">
-      <img class="img-fluid img-thumbnail" [src]="proyecto.imgUrl" alt="" />
-    </div>
-    <div class="col-12 col-md-6">
-      <h2>{{ proyecto.name }}</h2>
-      <p>{{ proyecto.descripcion }}</p>
+<div class="project-case">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-8">
+        <section class="project-profile shadow-sm">
+          <div class="title-project">
+            <h1>DEVSOCIAL</h1>
+          </div>
+          <div class="image-project">
+            <img class="img-fluid" src="https://www.imagen.com.mx/assets/img/imagen_share.png" alt="">
+          </div>
+          <div class="description-project">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem repudiandae ex asperiores, molestias
+              tempore necessitatibus iste cum, alias veritatis culpa error. Numquam commodi doloribus tenetur beatae
+              molestiae architecto, quibusdam necessitatibus?</p>
+          </div>
+          <div class="row skills-project text-center">
+            <div class="col-md-12 col-lg-6 skill-accept">
+              <h3 class="title-skills">TEAM</h3>
+              <ul>
+                <li><a class="btn editbtn-main btn-block" href="">adrianmartin Frontend <i class="fas fa-check"></i></a>
+                </li>
+                <li><a class="btn editbtn-main btn-block" href="">ricardofanizzi Developer <i
+                      class="fas fa-check"></i></a></li>
+                <li><a class="btn editbtn-main btn-block" href="">cristiansalerno UX/UI <i class="fas fa-check"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-12 col-lg-6 skill-pending">
+              <h3 class="title-skills">STILL WAITING</h3>
+              <ul>
+                <li>Data Science</li>
+                <li>Graphic Designer</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="col-md-12 col-lg-4">
+        <section class="chatbox shadow-sm">
+          <app-chat-box></app-chat-box>
+        </section>
+        <section class="subscription shadow-sm">
+          <div class=" text-primary">
+            <h3 class="text-center title">SUBSCRIPTIONS</h3>
+          </div>
+          <div class="subcard">
+            <div class="usersubsc" *ngFor="let subscription of subscriptionActive">
+              <p class="username"><i class="fas fa-user"></i> {{subscription.username}}</p>
+              <button (click)="onSubmitAccept(subscription)" class="btn editbutton">Accept</button>
+              <button (click)="onSubmitReject(subscription)" class="btn editbutton red ml-1">Reject</button>
+            </div>
+          </div>
+          <p class="text-right pending">Pending {{subscriptionActive.length}}</p>
+        </section>
+      </div>
     </div>
   </div>
-  <div class="row mt-3 ">
-    <div class="col-md-6">
-      <h2 class="mt-4">PROFILES</h2>
-      <div class="form-check mt-3">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked />
-        <label class="form-check-label" for="exampleRadios1">
-          Frontend
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
-        <label class="form-check-label" for="exampleRadios2">
-          Backend
-        </label>
-      </div>
-      <div class="form-check disabled">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3"
-          disabled />
-        <label class="form-check-label" for="exampleRadios3">
-          UX/UI
-        </label>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 d-flex flex-column mt-4">
-      <h2>TEAM PROFILES</h2>
-      <div class="row">
-        <div class="col">
-          <p>Antonio- front</p>
-          <p>Pepe- Back</p>
-          <p>Nestor-</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <app-chat-box></app-chat-box>
-  <section class="subscription shadow-sm">
-    <div class="title text-primary">
-      <div class="row">
-        <div class="col-9">
-          <p>Subscriptions</p>
-        </div>
-        <div class="col-3">
-          <p class="pending">Pending {{subscriptionActive.length}}</p>
-        </div>
-      </div>
-    </div>
-    <div class="subcard">
-      <div class="usersubsc" *ngFor="let subscription of subscriptionActive">
-        <div class="row">
-          <div class="user-info col-8 text-center">
-            <p>{{subscription.username}}</p>
-          </div>
-          <div class="col-4">
-            <button (click)="onSubmitAccept(subscription)" class="btn btn-success">Accept</button>
-            <button (click)="onSubmitReject(subscription)" class="btn btn-danger ml-2">Reject</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </div>
