@@ -40,19 +40,6 @@
         <section class="chatbox shadow-sm">
           <app-chat-box></app-chat-box>
         </section>
-        <section class="subscription shadow-sm">
-          <div class=" text-primary">
-            <h3 class="text-center title">SUBSCRIPTIONS</h3>
-          </div>
-          <div class="subcard">
-            <div class="usersubsc" *ngFor="let subscription of subscriptionActive">
-              <p class="username"><i class="fas fa-user"></i> {{subscription.username}}</p>
-              <button (click)="onSubmitAccept(subscription)" class="btn editbutton">Accept</button>
-              <button (click)="onSubmitReject(subscription)" class="btn editbutton red ml-1">Reject</button>
-            </div>
-          </div>
-          <p class="text-right pending">Pending {{subscriptionActive.length}}</p>
-        </section>
       </div>
     </div>
   </div>
