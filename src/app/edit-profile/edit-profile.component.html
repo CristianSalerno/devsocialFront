@@ -2,7 +2,7 @@
     <div class="row">
         <div class="edit-case col-12">
             <section *ngIf="mainUser" class="title-edit">
-                <h2>Account settings ...</h2>
+                <h2>Account settings</h2>
             </section>
             <section class="profile row">
             </section>
@@ -12,7 +12,7 @@
                         class="img-fluid rounded-circle" />
                 </div>
                 <div class="btnedit">
-                    <button [routerLink]="['image']" class=" btn btn-primary">
+                    <button class="btn-continue">
                         Edit Image
                     </button>
                 </div>
@@ -34,7 +34,7 @@
                                 <input type="text" class="form-control" formControlName="surnames">
                             </div>
                             <div class="btn-edit">
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-continue">Update</button>
                             </div>
                         </form>
                     </div>
@@ -47,7 +47,7 @@
                                 <p>{{mainUser.email}}</p>
                             </div>
                             <div class="col-8 btn-edit">
-                                <button [routerLink]="['email']" class="btn btn-primary">Edit</button>
+                                <button [routerLink]="['email']" class="btn btn-continue">Edit</button>
                             </div>
                         </div>
                     </div>
@@ -58,67 +58,81 @@
                                 <p>Change password</p>
                             </div>
                             <div class="col-8 btn-edit">
-                                <button [routerLink]="['pass']" class="btn btn-primary">Edit</button>
+                                <button [routerLink]="['pass']" class="btn btn-continue">Edit</button>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
-
             <!-- OTROS EDIT DEL PERFIL -->
-
-            <!-- <section *ngIf="mainUser" class="title-edit">
-                <h2>Other things ...</h2>
+            <section *ngIf="mainUser" class="title-edit">
             </section>
             <form *ngIf="mainUser">
                 <div class="row">
-                    <section class="col-md-12 col-lg-6">
+                    <section class="col-sm-6 col-md-6 col-lg-6">
                         <div class="select-edit">
                             <div class="row">
                                 <div class="skill-edit col-4">
-                                    <h4>Skills</h4>
-                                    <label><input class="mr-2" type="checkbox">Aprentice</label>
-                                    <label><input class="mr-2" type="checkbox">Junior</label>
-                                    <label><input class="mr-2" type="checkbox">Semi-senior</label>
-                                    <label><input class="mr-2" type="checkbox">Senior</label>
-                                    <label><input class="mr-2" type="checkbox">God level</label>
+                                    <div class="form-group">
+                                        <label>You Role</label>
+                                        <select class="form-control" id="select-1" formControlName="speciality">
+                                            <option>Developer</option>
+                                            <option>UX/UI</option>
+                                            <option>Graphic Designer</option>
+                                            <option>Data Scientist</option>
+                                            <option>Startup</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="skill-edit col-4">
-                                    <h4>Role</h4>
-                                    <label><input class="mr-2" type="checkbox">Developer</label>
-                                    <label><input class="mr-2" type="checkbox">UX/UI</label>
-                                    <label><input class="mr-2" type="checkbox">Graphic Designer</label>
+                                    <div class="form-group">
+                                        <label>Experience</label>
+                                        <select class="form-control" id="select-2" formControlName="experience">
+                                            <option>Aprentice</option>
+                                            <option>Junior</option>
+                                            <option>Semi-senior</option>
+                                            <option>Senior</option>
+                                            <option>God Level</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="skill-edit col-4">
-                                    <h4>Time Available</h4>
-                                    <label><input class="mr-2" type="checkbox">Full Time</label>
-                                    <label><input class="mr-2" type="checkbox">Part Time</label>
-                                    <label><input class="mr-2" type="checkbox">Only Weekends</label>
-                                    <label><input class="mr-2" type="checkbox">Casual</label>
+                                    <div class="form-group">
+                                        <label>Availabity</label>
+                                        <select class="form-control" id="select-3" formControlName="availability">
+                                            <option>Full Time</option>
+                                            <option>Part Time</option>
+                                            <option>Weekends</option>
+                                            <option>Casual</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
+                            <a class="btn btn-continue">Update</a>
                         </div>
                     </section>
-                    <section class="col-md-12 col-lg-6">
+                    <section class="col-sm-6 col-md-6 col-lg-6">
                         <div class="about-edit">
                             <h4 class="text-center">About me</h4>
                             <div class="textarea-edit">
-                                <div class="form-group">
-                                    <textarea rows="4" cols="60"></textarea>
+                                <div class="form-group text-center">
+                                    <textarea rows="15" cols="25"></textarea>
                                 </div>
+                                <a class="btn btn-continue">Update</a>
                             </div>
                         </div>
+
                     </section>
-                </div>
-                <div class="button-edit">
-                    <input type="button" value="Update" class="btn btn-block btn-primary mt-3">
                 </div>
             </form>
             <section *ngIf="mainUser" class="title-edit">
-                <h2>Something more ...</h2>
+                <h2>Info</h2>
             </section>
             <div *ngIf="mainUser" class="row">
-                <div class="col-12">
+                <div class="col-md-6">
+                    <h4 class="text-center mt-2">Information fields are not required</h4>
+                </div>
+                <div class="col-md-6 col-sm-6">
                     <div class="other-edit">
                         <form>
                             <div class="form-group">
@@ -142,12 +156,12 @@
                                 <input type="text" class="form-control" placeholder="Interest">
                             </div>
                             <div class="btn-edit">
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <a class="btn btn-continue">Update</a>
                             </div>
                         </form>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>

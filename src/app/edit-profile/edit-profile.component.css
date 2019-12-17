@@ -1,9 +1,29 @@
 li{
     list-style: none;
 }
+.row a{
+    font-size:14px;
+    color:#3E8FD1;
+    display: block;
+}
+
+.title-edit h2{
+    font-size: 15px;
+}
 .edit-case{
     margin-top: 10vh;
     min-height: 80vh;
+}
+
+.easy-edit label{
+    font-size: 14px;
+}
+
+.important-edit h4{
+    font-size: 14px;
+}
+.important-edit p{
+    font-weight: 300;
 }
 .title-edit{
     margin-top: 5vh;
@@ -41,14 +61,20 @@ li{
     margin-top: 2%;
 }
 textarea{
-    padding: 5%;
     border: rgb(185, 185, 185) solid 1px;
+    padding:10px;
+    font-weight: 300;
 }
 
 .other-edit{
    width: 70%;
    margin: 2% auto;
-
+}
+.other-edit input{
+    font-weight: 300;
+}
+.other-edit label{
+    font-size:14px;
 }
 .edit-image{
     display: flex;
@@ -73,4 +99,18 @@ textarea{
 }
 .btn-primary{
     opacity: .8;
+}
+
+#select-1, #select-2, #select-3{
+    background:rgb(245, 245, 245);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;  
+    background-image:url("../../assets/arrow-down.png");
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center right;
+    -webkit-padding-end: 5px;
+    -moz-padding-start: 5px;
+    font-weight: 300;
 }
