@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
-import { UsersService } from "services/users.service";
+import { UsersService } from "src/app/services/users.service";
 import { Router } from "@angular/router";
 
 @Component({
@@ -18,7 +18,7 @@ export class EditPasswordComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
   async onSubmit() {
     const token = localStorage.getItem("user_token")
       ? localStorage.getItem("user_token")

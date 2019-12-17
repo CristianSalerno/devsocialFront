@@ -8,8 +8,8 @@ import {
 
 import { Router } from '@angular/router';
 
-import { UsersService } from 'services/users.service';
-import { UserProfileService } from 'services/user-profile.service';
+import { UsersService } from 'src/app/services/users.service';
+import { UserProfileService } from 'src/app/services/user-profile.service';
 
 @Component({
   selector: 'app-register-form',

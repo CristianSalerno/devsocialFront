@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 
 import { ActivatedRoute } from "@angular/router";
-import { TemasService } from "services/temas.service";
-import { SubscriptionService } from "services/subscription.service";
-import { UsertemaService } from "services/usertema.service";
+import { TemasService } from "src/app/services/temas.service";
+import { SubscriptionService } from "src/app/services/subscription.service";
+import { UsertemaService } from "src/app/services/usertema.service";
 
 @Component({
   selector: 'app-project-creator',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserProfileService } from 'services/user-profile.service';
-import { UsertemaService } from 'services/usertema.service';
+import { UserProfileService } from 'src/app/services/user-profile.service';
+import { UsertemaService } from '../services/usertema.service';
 import { Router } from '@angular/router';
 
 @Component({

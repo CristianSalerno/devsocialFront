@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { ChatService } from "services/chat.service";
-import { UsersService } from "services/users.service";
+import { ChatService } from "src/app/services/chat.service";
+import { UsersService } from "src/app/services/users.service";
 import { ActivatedRoute } from "@angular/router";
 
 @Component({

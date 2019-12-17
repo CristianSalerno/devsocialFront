@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { AuthenticationService } from 'services/authentication.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 import { Router } from '@angular/router';
-import { UserProfileService } from 'services/user-profile.service';
+import { UserProfileService } from 'src/app/services/user-profile.service';
 import { NgRedux } from '@angular-redux/store';
 import { IAppState } from '../store';
 
