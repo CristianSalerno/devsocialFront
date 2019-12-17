@@ -18,7 +18,7 @@ export class TemasService {
 
 
   getById(pId) {
-    return this.http.get<Temas[]>('http://localhost:3000/api/temas/' + pId).toPromise();
+    return this.http.get<Temas>('http://localhost:3000/api/temas/' + pId).toPromise();
   }
 
   create(pBody) {

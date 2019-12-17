@@ -1,1 +1,74 @@
-<p>project-creator works!</p>
+<div class="project-case">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-8">
+                <section class="project-profile shadow-sm">
+                    <div class="title-project d-flex">
+                        <h1>DEVSOCIAL</h1>
+                        <button class="btn edit-btn-title">Edit Title</button>
+                    </div>
+                    <div class="image-project">
+                        <img class="img-fluid" src="https://www.imagen.com.mx/assets/img/imagen_share.png" alt="">
+                    </div>
+                    <button class="edit-btn-red btn">Edit image</button>
+                    <div class="description-project">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem repudiandae ex asperiores,
+                            molestias
+                            tempore necessitatibus iste cum, alias veritatis culpa error. Numquam commodi doloribus
+                            tenetur beatae
+                            molestiae architecto, quibusdam necessitatibus?</p>
+                        <button class="edit-btn-red btn">Edit Text</button>
+                    </div>
+                    <div class="row skills-project text-center">
+                        <div class="col-md-12 col-lg-12 col-xl-6 skill-accept">
+                            <h3 class="title-skills">TEAM</h3>
+                            <ul>
+                                <li>
+                                    <a class="btn editbtn-main" href="">adrianmartin Frontend <i
+                                            class="fas fa-check"></i></a>
+                                    <a class="btn edit-btn-red"><i class="fas fa-times"></i></a>
+                                </li>
+                                <li>
+                                    <a class="btn editbtn-main" href="">ricardofanizzi Developer <i
+                                            class="fas fa-check"></i></a>
+                                    <a class="btn edit-btn-red"><i class="fas fa-times"></i></a>
+                                </li>
+                                <li>
+                                    <a class="btn editbtn-main" href="">cristiansalerno UX/UI <i
+                                            class="fas fa-check"></i></a>
+                                    <a class="btn edit-btn-red"><i class="fas fa-times"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-xl-6 skill-pending">
+                            <h3 class="title-skills">STILL WAITING</h3>
+                            <ul>
+                                <li>Data Science</li>
+                                <li>Graphic Designer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-12 col-lg-4">
+                <section class="chatbox shadow-sm">
+                    <app-chat-box></app-chat-box>
+                </section>
+                <section class="subscription shadow-sm">
+                    <div class=" text-primary">
+                        <h3 class="text-center title">SUBSCRIPTIONS</h3>
+                    </div>
+                    <div class="subcard">
+                        <div class="usersubsc" *ngFor="let subscription of subscriptionActive">
+                            <p class="username"><i class="fas fa-user"></i> {{subscription.username}}</p>
+                            <button (click)="onSubmitAccept(subscription)" class="btn editbutton">Accept</button>
+                            <button (click)="onSubmitReject(subscription)"
+                                class="btn editbutton red ml-1">Reject</button>
+                        </div>
+                    </div>
+                    <p class="text-right pending">Pending {{subscriptionActive.length}}</p>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

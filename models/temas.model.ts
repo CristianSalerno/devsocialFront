@@ -9,7 +9,7 @@ export class Temas {
     updateAt: string;
     descripcion: string;
     imgUrl: string;
-    especializacion: string;
+    especializacion: any;
     ucreadorId: number;
     umodId: number;
     constructor(id, name, fechaInicio, fechaFinal, isPublic, isActive, updateAt, descripcion, imgUrl, especializacion, ucreadorId, umodId) {
