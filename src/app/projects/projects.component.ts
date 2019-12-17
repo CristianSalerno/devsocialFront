@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 export class ProjectsComponent implements OnInit {
   arrProyectos: Temas[];
   proyectosFiltrados: Temas[];
+  creatorRole: Temas;
   constructor(
     private temasservice: TemasService,
     private subscriptionService: SubscriptionService,
@@ -46,6 +47,7 @@ export class ProjectsComponent implements OnInit {
     const token = (localStorage.getItem('user_token') ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token'));
     const result = await this.usertemaService.checkUser(token, { idTema: id });
     // tslint:disable-next-line: no-string-literal
+    console.log(result);
     if (result['role'] === 'collaborator') {
       this.router.navigate(['/projects/profile/' + id]);
       // tslint:disable-next-line: no-string-literal

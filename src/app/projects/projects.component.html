@@ -1,22 +1,22 @@
-<div class="background">
+<div class="background pt-5">
   <div class="container">
 
-    <form class="pt-4">
-      <div class="form-group pt-5">
-        <h2 class="text-center">Projects</h2>
-        <label for="exampleFormControlInput1" class="color-dark">Filter By Title:</label>
-        <input (keyup)="filtrarProyectos($event)" type="text" class="form-control" id="exampleFormControlInput1"
-          placeholder="Filter By Title..." />
+    <form class="pt-4 ">
+      <div class="form-group  d-flex flex-column align-items-center pt-5">
+        <h2 class="text-center mb-4 font-weight-bold text-uppercase">Projects</h2>
+
+        <input (keyup)="filtrarProyectos($event)" type="text" class="form-control col-md-6"
+          id="exampleFormControlInput1" placeholder="Filter By Title..." />
       </div>
     </form>
     ​
     <div class="fondo">
-      <div class=" mt-5 mb-5 d-flex  bg-white shadow-sm border hover-effect rounded"
+      <div class="row mt-3 mb-5 d-flex  bg-white shadow-sm border hover-effect rounded"
         *ngFor="let proyecto of arrProyectos">
-        <div class="col-4 col-md-4 mt-3 mb-3">
+        <div class="col-12 col-md-4 mt-3 mb-3">
           <img [src]="'http://localhost:3000/images/'+ proyecto.imgUrl" class="card-img" alt="..." />
         </div>
-        <div class="col-md-8 col-10">
+        <div class="col-12 col-md-8">
           <div class="card-body">
             <h5 class="card-title font-weight-bold color-blue text-capitalize">
               {{ proyecto.name }}
