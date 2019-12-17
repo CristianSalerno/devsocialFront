@@ -35,6 +35,6 @@ export class UsertemaService {
         user_token: pToken
       })
     }
-    return this.http.get(`http://localhost:3000/api/userTema/allData/`, httpOptions).toPromise();
+    return this.http.get(`http://localhost:3000/api/userTema/allData`, httpOptions).toPromise();
   }
 }
