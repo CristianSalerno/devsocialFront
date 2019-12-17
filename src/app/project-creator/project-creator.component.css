@@ -6,6 +6,9 @@
     min-height: 88vh;
     background: rgb(245, 245, 245);
 }
+.project-case h1{
+    font-size:25px;
+}
 .edit-btn-title{
     border:1px solid rgb(214, 75, 75);
     color: rgb(214, 75, 75);
@@ -28,7 +31,7 @@
     display: block;
     margin: 0 auto;
     border: 1px rgb(214, 75, 75) solid;
-    padding: 2%;
+    padding: 1%;
     color: rgb(214, 75, 75);
 }
 
@@ -42,13 +45,19 @@
 .skills-project ul{
     width: 100%;
     margin: 4vh auto;
+    font-weight: 300;
 }
 
 .skills-project li{
     display:flex;
     justify-content: center;
+    font-weight: 300;
 }
 
+.skill-accept ul li a {
+    font-weight: 300;
+    font-size:15px;
+}
 .skills-project i{
     color: #7BCBB7;
 }
@@ -69,9 +78,19 @@ li .edit-btn-red{
     width:10%;
     margin-left: 1vh;
 }
-li .edit-btn-red i{
+li .edit-btn-red-i i{
     color: rgb(214, 75, 75);
 }
+
+.edit-links{
+    font-size: 14px;
+    font-weight: 400;
+    color:#3E8FD1;
+    margin:5px;
+    cursor:pointer;
+    display: block;
+}
+
 .description-project{
     margin-top: 7vh;
     color: rgb(82, 82, 82);
@@ -84,10 +103,11 @@ li .edit-btn-red i{
 }
 .title-skills{
     color: #3E8FD1;
-    border-bottom: 2px solid #3E8FD1;
-    border-left: 2px solid #7BCBB7;
+    border-bottom: 1px solid #3E8FD1;
+    border-left: 1px solid #7BCBB7;
     padding: 1vh;
     border-radius: 10%;
+    font-size:15px;
 }
 
 
