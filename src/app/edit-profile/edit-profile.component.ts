@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { UsersService } from 'services/users.service';
 import { User } from 'models/user.model';
 import { FormGroup, FormControl, FormControlDirective } from '@angular/forms';
+=======
+import { UsersService } from 'src/app/services/users.service';
+import { User } from 'src/app/models/user.model';
+import { FormGroup, FormControl } from '@angular/forms';
+>>>>>>> develop
 
 @Component({
   selector: 'app-edit-profile',

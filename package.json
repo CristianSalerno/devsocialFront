@@ -28,6 +28,10 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "redux": "4.0.1",
+<<<<<<< HEAD
+=======
+    "redux-devtools-extension": "^2.13.8",
+>>>>>>> develop
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

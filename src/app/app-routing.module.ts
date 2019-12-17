@@ -12,11 +12,11 @@ import { NewIdeaComponent } from './new-idea/new-idea.component';
 import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { EditEmailComponent } from './edit-email/edit-email.component';
 import { EditImageComponent } from './edit-image/edit-image.component';
-import { UserEntryGuard } from 'guards/user-entry.guard';
+import { UserEntryGuard } from 'src/app/guards/user-entry.guard';
 import { PublicProfileComponent } from './public-profile/public-profile.component';
-import { EntryProjectGuard } from 'guards/entry-project.guard';
+import { EntryProjectGuard } from 'src/app/guards/entry-project.guard';
 import { ProjectCreatorComponent } from './project-creator/project-creator.component';
-import { EntryCreatorGuard } from 'guards/entry-creator.guard';
+import { EntryCreatorGuard } from 'src/app/guards/entry-creator.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },

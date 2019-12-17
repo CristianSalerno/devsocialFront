@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { TemasService } from 'services/temas.service';
-import { Temas } from 'models/temas.model';
-import { SubscriptionService } from 'services/subscription.service';
-import { UsertemaService } from 'services/usertema.service';
+import { TemasService } from 'src/app/services/temas.service';
+import { Temas } from 'src/app/models/temas.model';
+import { SubscriptionService } from 'src/app/services/subscription.service';
+import { UsertemaService } from 'src/app/services/usertema.service';
 import { Router } from '@angular/router';
 
 

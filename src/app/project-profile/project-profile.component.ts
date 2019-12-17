@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router';
-import { TemasService } from 'services/temas.service';
-import { SubscriptionService } from 'services/subscription.service';
-import { UsertemaService } from 'services/usertema.service';
-import { Temas } from 'models/temas.model';
+import { TemasService } from 'src/app/services/temas.service';
+import { SubscriptionService } from 'src/app/services/subscription.service';
+import { UsertemaService } from 'src/app/services/usertema.service';
+import { Temas } from 'src/app/models/temas.model';
 
 @Component({
   selector: 'app-project-profile',
