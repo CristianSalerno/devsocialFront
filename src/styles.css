@@ -20,6 +20,7 @@ padding:10px;
 font-family: 'roboto condensed', sans-serif;
 border:none;
 border-radius: 10px;
+cursor: pointer;
 }
 
 .btn-error{
@@ -29,6 +30,7 @@ padding:10px;
 font-family: 'roboto condensed', sans-serif;
 border:none;
 border-radius: 10px;
+cursor: pointer;
 }
 
 
