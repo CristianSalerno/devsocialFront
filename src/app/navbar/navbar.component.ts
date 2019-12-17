@@ -1,29 +1,35 @@
-import { Component, OnInit, OnChanges } from "@angular/core";
-import { User } from "models/user.model";
-import { UsersService } from "services/users.service";
-import { Router, RouterModule } from "@angular/router";
-import { UserProfileService } from "services/user-profile.service";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserProfileService } from 'services/user-profile.service';
+import { NgRedux } from '@angular-redux/store';
+import { IAppState } from '../store';
 
 @Component({
-  selector: "app-navbar",
-  templateUrl: "./navbar.component.html",
-  styleUrls: ["./navbar.component.css"]
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
   mainUser: any;
   userInfo: any;
-  constructor(private router: Router, private userProfile: UserProfileService) {
-    const token = localStorage.getItem("user_token")
-      ? localStorage.getItem("user_token")
-      : sessionStorage.getItem("user_token");
+  constructor(
+    private router: Router,
+    private userProfile: UserProfileService,
+    private ngRedux: NgRedux<IAppState>) {
+
+    ngRedux.subscribe(() => {
+      let store = ngRedux.getState();
+      this.mainUser = {
+        username: store.dataUser.username,
+        imageUrl: store.dataUser.imageUrl
+      };
+    });
+
+    const token = localStorage.getItem('user_token') ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
     if (token) {
       this.mainUser = {
-        username: localStorage.getItem("username")
-          ? localStorage.getItem("username")
-          : sessionStorage.getItem("username"),
-        imageUrl: localStorage.getItem("image_url")
-          ? localStorage.getItem("image_url")
-          : sessionStorage.getItem("image_url").toString()
+        username: localStorage.getItem('username') ? localStorage.getItem('username') : sessionStorage.getItem('username'),
+        imageUrl: localStorage.getItem('image_url') ? localStorage.getItem('image_url') : sessionStorage.getItem('image_url')
       };
     }
   }
@@ -33,8 +39,7 @@ export class NavbarComponent implements OnInit {
   async logout() {
     localStorage.clear();
     sessionStorage.clear();
-    window.location.reload();
-    await this.router.navigate(["/home"]);
+    await this.router.navigate(['/home']);
   }
 
   async goProfile() {
