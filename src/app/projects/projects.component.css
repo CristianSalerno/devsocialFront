@@ -2,3 +2,20 @@
     min-height: 70vh;
 }
 
+.background {
+    background-color: rgb(245, 245, 245);
+}
+
+.word-wrap {
+  word-wrap: break-word;
+
+}
+
+.hover-effect:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
+    transition:0.9s;
+}
+
+.color-blue {
+    color: #3E8FD1;
+}

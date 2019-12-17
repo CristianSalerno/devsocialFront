@@ -1,35 +1,39 @@
-<div class="container">
-  <form class="pt-4">
-    <div class="form-group pt-5">
-      <label for="exampleFormControlInput1" class="color-dark">Filtra por titulo:</label>
-      <input (keyup)="filtrarProyectos($event)" type="text" class="form-control" id="exampleFormControlInput1"
-        placeholder="Filtra por titulo..." />
-    </div>
-  </form>
-  <h2 class="text-center">Projects</h2>
-  ​
-  <div class="fondo">
-    <div class="row mt-5 mb-5 d-flex  border" *ngFor="let proyecto of arrProyectos">
-      <div class=" col-md-4 mt-3 mb-3">
-        <img [src]="proyecto.imgUrl" class="card-img" alt="..." />
+<div class="background">
+  <div class="container">
+
+    <form class="pt-4">
+      <div class="form-group pt-5">
+        <h2 class="text-center">Projects</h2>
+        <label for="exampleFormControlInput1" class="color-dark">Filter By Title:</label>
+        <input (keyup)="filtrarProyectos($event)" type="text" class="form-control" id="exampleFormControlInput1"
+          placeholder="Filter By Title..." />
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title font-weight-bold text-primary">
-            {{ proyecto.name }}
-          </h5>
-          <p class="card-text">{{ proyecto.descripcion }}</p>
-          <p class="card-text">
-            <small class="text-muted">Create at {{ proyecto.fecha_inicio | date }}</small>
-          </p>
-          <p class="card-text">
-            <small class="text-muted">Last updated {{ proyecto.updateAt | date }}</small>
-          </p>
-          <a (click)="checkUser(proyecto.id)" class="btn btn-primary">Ir a
-            {{ proyecto.name }}
-          </a>
-          <button (click)="onSubmit(proyecto.id)" class="btn btn-outline-danger ml-3">Subscription
-          </button>
+    </form>
+    ​
+    <div class="fondo">
+      <div class=" mt-5 mb-5 d-flex  bg-white shadow-sm border hover-effect rounded"
+        *ngFor="let proyecto of arrProyectos">
+        <div class=" col-md-4 mt-3 mb-3">
+          <img [src]="proyecto.imgUrl" class="card-img" alt="..." />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold color-blue text-capitalize">
+              {{ proyecto.name }}
+            </h5>
+            <p class="card-text text-capitalize word-wrap">{{ proyecto.descripcion }}</p>
+            <p class="card-text text-capitalize">
+              <small class="text-muted">Create at {{ proyecto.fecha_inicio | date }}</small>
+            </p>
+            <p class="card-text" text-capitalize>
+              <small class="text-muted">Last updated {{ proyecto.updateAt | date }}</small>
+            </p>
+            <a (click)="checkUser(proyecto.id)" class="btn-error text-white">Ir a
+              {{ proyecto.name }}
+            </a>
+            <button (click)="onSubmit(proyecto.id)" class="btn-continue ml-3">Subscription
+            </button>
+          </div>
         </div>
       </div>
     </div>
