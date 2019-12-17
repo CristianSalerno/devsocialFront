@@ -31,8 +31,12 @@
 }
 
 .skills-project ul{
-    width: 80%;
+    width: 100%;
     margin: 4vh auto;
+}
+.skills-project li{
+    display:flex;
+    justify-content: center;
 }
 
 .skills-project i{

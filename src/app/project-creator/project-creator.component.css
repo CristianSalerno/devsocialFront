@@ -6,7 +6,12 @@
     min-height: 88vh;
     background: rgb(245, 245, 245);
 }
-
+.edit-btn-title{
+    border:1px solid rgb(214, 75, 75);
+    color: rgb(214, 75, 75);
+    margin: 0 2vh;
+    height: 3em;
+}
 .project-profile{
     margin-top: 13vh;
     margin-bottom: 2vh;
@@ -19,10 +24,14 @@
     width: 80%;
     margin: 3vh auto;
 }
-.description-project{
-    margin-top: 7vh;
-    color: rgb(82, 82, 82);
+.edit-btn-red{
+    display: block;
+    margin: 0 auto;
+    border: 1px rgb(214, 75, 75) solid;
+    padding: 2%;
+    color: rgb(214, 75, 75);
 }
+
 
 .skills-project{
     margin: 5vh 0;
@@ -31,8 +40,13 @@
 }
 
 .skills-project ul{
-    width: 80%;
+    width: 100%;
     margin: 4vh auto;
+}
+
+.skills-project li{
+    display:flex;
+    justify-content: center;
 }
 
 .skills-project i{
@@ -41,7 +55,7 @@
 
 .skills-project a{
     margin: 1vh 0;
-
+    display:inline-block;
 }
 
 .skill-accept{
@@ -51,11 +65,22 @@
 .skill-pending{
     padding: 3vh;
 }
+li .edit-btn-red{
+    width:10%;
+    margin-left: 1vh;
+}
+li .edit-btn-red i{
+    color: rgb(214, 75, 75);
+}
+.description-project{
+    margin-top: 7vh;
+    color: rgb(82, 82, 82);
+}
 .editbtn-main {
     background: white;
-    margin: 0 1vh;
     color: rgb(73, 73, 73);
     border: 1px rgb(73, 73, 73) solid;
+    width: 90%;
 }
 .title-skills{
     color: #3E8FD1;
@@ -64,10 +89,6 @@
     padding: 1vh;
     border-radius: 10%;
 }
-
-
-
-
 
 
 
@@ -99,7 +120,7 @@
     overflow: scroll;
 }
 .usersubsc{
-    height: 6vh;
+    height: 3em;
     padding: .5vh;
     border: 1px solid rgb(224, 224, 224);
     display:flex;
@@ -107,7 +128,7 @@
 }
 .editbutton{
     border: 1px #7BCBB7 solid;
-    padding: 2%;
+    padding: 1%;
     color: #7BCBB7;
     width:25%;
 }
