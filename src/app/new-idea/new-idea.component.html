@@ -40,9 +40,10 @@
             <option>Graphic Designer</option>
           </select>
         </div>
+
         <div class="form-group">
           <label for="exampleFormControlInput1">Project Img</label>
-          <input type="email" class="form-control" placeholder="Img URL" formControlName="imgUrl" />
+          <input type="file" (change)="onFileChange($event)" class="form-control" placeholder="Img URL" />
         </div>
         <div class="buttons text-center mb-4">
           <button class="btn-error mr-2" [routerLink]="['/projects']">

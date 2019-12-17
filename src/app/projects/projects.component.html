@@ -13,10 +13,10 @@
     <div class="fondo">
       <div class=" mt-5 mb-5 d-flex  bg-white shadow-sm border hover-effect rounded"
         *ngFor="let proyecto of arrProyectos">
-        <div class=" col-md-4 mt-3 mb-3">
-          <img [src]="proyecto.imgUrl" class="card-img" alt="..." />
+        <div class="col-4 col-md-4 mt-3 mb-3">
+          <img [src]="'http://localhost:3000/images/'+ proyecto.imgUrl" class="card-img" alt="..." />
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-10">
           <div class="card-body">
             <h5 class="card-title font-weight-bold color-blue text-capitalize">
               {{ proyecto.name }}
@@ -28,7 +28,7 @@
             <p class="card-text" text-capitalize>
               <small class="text-muted">Last updated {{ proyecto.updateAt | date }}</small>
             </p>
-            <a (click)="checkUser(proyecto.id)" class="btn-error text-white">Ir a
+            <a (click)="checkUser(proyecto.id)" class="btn-error text-white">Go to
               {{ proyecto.name }}
             </a>
             <button (click)="onSubmit(proyecto.id)" class="btn-continue ml-3">Subscription
