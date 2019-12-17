@@ -1,16 +1,16 @@
-import { Component, OnInit } from "@angular/core";
-import { FormGroup, Validators, FormControl } from "@angular/forms";
-import { TemasService } from "services/temas.service";
-import { UsertemaService } from "services/usertema.service";
-import { UsersService } from "services/users.service";
-import { User } from "models/user.model";
-import { Router } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { TemasService } from 'services/temas.service';
+import { UsertemaService } from 'services/usertema.service';
+import { UsersService } from 'services/users.service';
+import { User } from 'models/user.model';
+import { Router } from '@angular/router';
 import { HttpRequest, HttpHeaders, HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: "app-new-idea",
-  templateUrl: "./new-idea.component.html",
-  styleUrls: ["./new-idea.component.css"]
+  selector: 'app-new-idea',
+  templateUrl: './new-idea.component.html',
+  styleUrls: ['./new-idea.component.css']
 })
 export class NewIdeaComponent implements OnInit {
   form: FormGroup;
@@ -26,12 +26,12 @@ export class NewIdeaComponent implements OnInit {
 
   ) {
     this.form = new FormGroup({
-      name: new FormControl("", [Validators.required]),
-      descripcion: new FormControl("", [Validators.required]),
-      perfil1: new FormControl("", [Validators.required]),
-      perfil2: new FormControl(""),
-      perfil3: new FormControl(""),
-      imgUrl: new FormControl("", [Validators.required])
+      name: new FormControl('', [Validators.required]),
+      descripcion: new FormControl('', [Validators.required]),
+      perfil1: new FormControl('', [Validators.required]),
+      perfil2: new FormControl(''),
+      perfil3: new FormControl(''),
+      imgUrl: new FormControl('', [Validators.required])
     });
   }
 
@@ -40,24 +40,9 @@ export class NewIdeaComponent implements OnInit {
   }
 
   async onSubmit() {
-    // const token = localStorage.getItem("user_token")
-    //   ? localStorage.getItem("user_token")
-    //   : sessionStorage.getItem("user_token");
-    // const formularioValue = await this.temasService.create(this.form.value);
-    // const body = {
-    //   // tslint:disable-next-line: no-string-literal
-    //   idTema: formularioValue["insertId"],
-    //   idUser: this.mainUser.id,
-    //   role: "creator"
-    // };
-    // const result = await this.usertemaService.insert(token, body);
+    const token = localStorage.getItem('user_token') ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
 
-    // await this.router.navigate(["/projects"]);
-
-    /* insert image */
-
-    let fd = new FormData();
-    console.log(this.files);
+    const fd = new FormData();
     fd.append('imagen', this.files[0], 'nuevaImagen.png');
     fd.append('name', this.form.controls.name.value);
     fd.append('descripcion', this.form.controls.descripcion.value);
@@ -65,17 +50,24 @@ export class NewIdeaComponent implements OnInit {
     fd.append('perfil2', this.form.controls.perfil2.value);
     fd.append('perfil3', this.form.controls.perfil3.value);
 
-    let header = new HttpHeaders();
+    const header = new HttpHeaders();
     header.append('Content-Type', 'multipart/form-data');
     const req = new HttpRequest('POST', 'http://localhost:3000/api/temas/create', fd, {
       headers: header
     });
-    console.log(req);
-    this.http.request(req)
-      .toPromise()
-      .then(result => console.log(result));
+
+    const httpResult = await this.http.request(req).toPromise();
+    const body = {
+      // tslint:disable-next-line: no-string-literal
+      idTema: httpResult['body'].insertId,
+      idUser: this.mainUser.id,
+      role: 'creator'
+    };
+    const res = await this.usertemaService.insert(token, body);
+    console.log(res);
     this.router.navigate(['/projects']);
   }
+
 
   onFileChange($event) {
     this.files = $event.target.files;
