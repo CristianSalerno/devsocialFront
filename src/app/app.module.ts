@@ -26,7 +26,9 @@ import { ProjectAdmComponent } from './project-adm/project-adm.component';
 import { ProjectCreatorComponent } from './project-creator/project-creator.component';
 
 /* REDUX */
+
 import { NgRedux, NgReduxModule } from '@angular-redux/store';
+
 import { IAppState, rootReducer, INITIAL_STATE } from './store';
 // ACA VA A IR REDUX POR RICARDO FANIZZI 😇🤓
 /* REDUX */
