@@ -65,72 +65,64 @@
                 </section>
             </div>
             <!-- OTROS EDIT DEL PERFIL -->
-            <section *ngIf="mainUser" class="title-edit">
-            </section>
-            <form *ngIf="mainUser">
-                <div class="row">
-                    <section class="col-sm-6 col-md-6 col-lg-6">
-                        <div class="select-edit">
-                            <div class="row">
-                                <div class="skill-edit col-4">
-                                    <div class="form-group">
-                                        <label>You Role</label>
-                                        <select class="form-control" id="select-1">
-                                            <option>Developer</option>
-                                            <option>UX/UI</option>
-                                            <option>Graphic Designer</option>
-                                            <option>Data Scientist</option>
-                                            <option>Startup</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="skill-edit col-4">
-                                    <div class="form-group">
-                                        <label>Experience</label>
-                                        <select class="form-control" id="select-2">
-                                            <option>Aprentice</option>
-                                            <option>Junior</option>
-                                            <option>Semi-senior</option>
-                                            <option>Senior</option>
-                                            <option>God Level</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="skill-edit col-4">
-                                    <div class="form-group">
-                                        <label>Availabity</label>
-                                        <select class="form-control" id="select-3">
-                                            <option>Full Time</option>
-                                            <option>Part Time</option>
-                                            <option>Weekends</option>
-                                            <option>Casual</option>
-                                        </select>
-                                    </div>
+            <div class="row">
+                <section class="col-sm-6 col-md-6 col-lg-6">
+                    <form class="select-edit" [formGroup]="updateSkills" (ngSubmit)="updateSkill()">
+                        <div class="row">
+                            <div class="skill-edit col-4">
+                                <div class="form-group">
+                                    <label>You Role</label>
+                                    <select class="form-control" id="select-1" formControlName="speciality">
+                                        <option>Developer</option>
+                                        <option>UX/UI</option>
+                                        <option>Graphic Designer</option>
+                                        <option>Data Scientist</option>
+                                        <option>Startup</option>
+                                    </select>
                                 </div>
                             </div>
-                            <a class="btn btn-continue">Update</a>
-                        </div>
-                    </section>
-                    <section class="col-sm-6 col-md-6 col-lg-6">
-                        <div class="about-edit">
-                            <form [formGroup]="updateAbout" (ngSubmit)="updateAboutInfo()">
-                                <h4 class="text-center">
-                                    About me</h4>
-                                <div class="textarea-edit">
-                                    <div class="form-group text-center">
-                                        <textarea rows="15" cols="25" formControlName="about"></textarea>
-                                    </div>
-                                    <input type="submit" value="Update" id="update-2" class="float-right ml-5">
+                            <div class="skill-edit col-4">
+                                <div class="form-group">
+                                    <label>Experience</label>
+                                    <select class="form-control" id="select-2" formControlName="experience">
+                                        <option>Aprentice</option>
+                                        <option>Junior</option>
+                                        <option>Semi-senior</option>
+                                        <option>Senior</option>
+                                        <option>God Level</option>
+                                    </select>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="skill-edit col-4">
+                                <div class="form-group">
+                                    <label>Availabity</label>
+                                    <select class="form-control" id="select-3" formControlName="availability">
+                                        <option>Full Time</option>
+                                        <option>Part Time</option>
+                                        <option>Weekends</option>
+                                        <option>Casual</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-
-                    </section>
-                </div>
-            </form>
-            <section *ngIf="mainUser" class="title-edit">
-                <h2>Info</h2>
-            </section>
+                        <input id="update" class="float-right mb-2" type="submit" value="Update">
+                    </form>
+                </section>
+                <section class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="about-edit">
+                        <form [formGroup]="updateAbout" (ngSubmit)="updateAboutInfo()">
+                            <h4 class="text-center">
+                                About me</h4>
+                            <div class="textarea-edit">
+                                <div class="form-group text-center">
+                                    <textarea rows="15" cols="25" formControlName="about"></textarea>
+                                </div>
+                                <input type="submit" value="Update" id="update-2" class="float-right ml-5">
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
             <div *ngIf="mainUser" class="row">
                 <div class="col-md-6">
                     <h4 class="text-center mt-2">Information fields are not required</h4>

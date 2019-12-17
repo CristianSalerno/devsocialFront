@@ -37,4 +37,15 @@ export class UserProfileService {
     }
     return this.http.post('http://localhost:3000/api/userProfile/about', pAbout, httpOptions).toPromise();
   }
+
+  updateSkills(token, pSkills) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        user_token: token,
+      })
+    }
+    return this.http.post("http://localhost:3000/api/userProfile/skills", pSkills, httpOptions).toPromise()
+  }
+
+
 }

@@ -14,20 +14,12 @@ export class EditProfileComponent implements OnInit {
   updateUser: FormGroup;
   updateUserInfo: FormGroup;
   updateAbout: FormGroup;
+  updateSkills: FormGroup;
 
   constructor(
     private usersService: UsersService,
     private userProfileService: UserProfileService,
   ) {
-
-  }
-  async ngOnInit() {
-    this.mainUser = await this.usersService.mainUserExist();
-    this.updateUser = new FormGroup({
-      username: new FormControl(this.mainUser.username),
-      name: new FormControl(this.mainUser.name),
-      surnames: new FormControl(this.mainUser.surnames)
-    });
     this.updateUserInfo = new FormGroup({
       country: new FormControl(''),
       city: new FormControl(''),
@@ -37,6 +29,19 @@ export class EditProfileComponent implements OnInit {
     this.updateAbout = new FormGroup({
       about: new FormControl(''),
     })
+    this.updateSkills = new FormGroup({
+      speciality: new FormControl(''),
+      experience: new FormControl(''),
+      availability: new FormControl(''),
+    })
+  }
+  async ngOnInit() {
+    this.mainUser = await this.usersService.mainUserExist();
+    this.updateUser = new FormGroup({
+      username: new FormControl(this.mainUser.username),
+      name: new FormControl(this.mainUser.name),
+      surnames: new FormControl(this.mainUser.surnames)
+    });
   }
 
   async updateInfo() {
@@ -55,6 +60,11 @@ export class EditProfileComponent implements OnInit {
     await this.userProfileService.updateAbout(token, this.updateAbout.value);
   }
 
+  async updateSkill() {
+    console.log(this.updateSkills.value)
+    const token = (localStorage.getItem('user_token')) ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
+    await this.userProfileService.updateSkills(token, this.updateSkills.value)
+  }
 
 
 }
