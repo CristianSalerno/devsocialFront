@@ -101,6 +101,13 @@ textarea{
     opacity: .8;
 }
 
+#update,#update-2{
+border:none;
+background:none;
+font-size: 14px;
+font-weight: 300;
+}
+
 #select-1, #select-2, #select-3{
     background:rgb(245, 245, 245);
     -webkit-appearance: none;

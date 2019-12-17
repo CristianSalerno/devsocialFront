@@ -75,7 +75,7 @@
                                 <div class="skill-edit col-4">
                                     <div class="form-group">
                                         <label>You Role</label>
-                                        <select class="form-control" id="select-1" formControlName="speciality">
+                                        <select class="form-control" id="select-1">
                                             <option>Developer</option>
                                             <option>UX/UI</option>
                                             <option>Graphic Designer</option>
@@ -87,7 +87,7 @@
                                 <div class="skill-edit col-4">
                                     <div class="form-group">
                                         <label>Experience</label>
-                                        <select class="form-control" id="select-2" formControlName="experience">
+                                        <select class="form-control" id="select-2">
                                             <option>Aprentice</option>
                                             <option>Junior</option>
                                             <option>Semi-senior</option>
@@ -99,7 +99,7 @@
                                 <div class="skill-edit col-4">
                                     <div class="form-group">
                                         <label>Availabity</label>
-                                        <select class="form-control" id="select-3" formControlName="availability">
+                                        <select class="form-control" id="select-3">
                                             <option>Full Time</option>
                                             <option>Part Time</option>
                                             <option>Weekends</option>
@@ -113,13 +113,16 @@
                     </section>
                     <section class="col-sm-6 col-md-6 col-lg-6">
                         <div class="about-edit">
-                            <h4 class="text-center">About me</h4>
-                            <div class="textarea-edit">
-                                <div class="form-group text-center">
-                                    <textarea rows="15" cols="25"></textarea>
+                            <form [formGroup]="updateAbout" (ngSubmit)="updateAboutInfo()">
+                                <h4 class="text-center">
+                                    About me</h4>
+                                <div class="textarea-edit">
+                                    <div class="form-group text-center">
+                                        <textarea rows="15" cols="25" formControlName="about"></textarea>
+                                    </div>
+                                    <input type="submit" value="Update" id="update-2" class="float-right ml-5">
                                 </div>
-                                <a class="btn btn-continue">Update</a>
-                            </div>
+                            </form>
                         </div>
 
                     </section>
@@ -134,29 +137,24 @@
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <div class="other-edit">
-                        <form>
+                        <form [formGroup]="updateUserInfo" (ngSubmit)="updateOtherInfo()">
                             <div class="form-group">
                                 <label>Country</label>
-                                <input type="text" class="form-control" placeholder="Country">
+                                <input type="text" class="form-control" placeholder="Country" formControlName="country">
                             </div>
                             <div class="form-group">
                                 <label>City</label>
-                                <input type="text" class="form-control" placeholder="City">
+                                <input type="text" class="form-control" placeholder="City" formControlName="city">
                             </div>
                             <div class="form-group">
                                 <label>Language</label>
-                                <input type="text" class="form-control" placeholder="Language">
+                                <input type="text" class="form-control" placeholder="Language"
+                                    formControlName="language">
                             </div>
                             <div class="form-group">
                                 <label>Phone</label>
-                                <input type="text" class="form-control" placeholder="Phone">
-                            </div>
-                            <div class="form-group">
-                                <label>Interest</label>
-                                <input type="text" class="form-control" placeholder="Interest">
-                            </div>
-                            <div class="btn-edit">
-                                <a class="btn btn-continue">Update</a>
+                                <input type="text" class="form-control" placeholder="Phone" formControlName="phone">
+                                <input id="update" class="float-right mb-2" type="submit" value="Update">
                             </div>
                         </form>
                     </div>
