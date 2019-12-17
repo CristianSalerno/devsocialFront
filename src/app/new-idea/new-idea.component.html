@@ -1,7 +1,6 @@
 <div class="container">
-  <p class="text-center">Create a new project</p>
   <div class="row">
-    <div class="col-12 col-md-12">
+    <div class="col-md-6 col-sm-6">
       <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
         <div class="form-group">
           <label for="exampleFormControlInput1">Project Name</label>
@@ -42,36 +41,21 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Collaborator 4</label>
-          <select class="form-control" id="exampleFormControlSelect1" formControlName="perfil4">
-            <option>UX/UI</option>
-            <option>Frontend Developer</option>
-            <option>Backend Developer</option>
-            <option>Data Sciencist</option>
-            <option>Graphic Designer</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Collaborator 5</label>
-          <select class="form-control" id="exampleFormControlSelect1" formControlName="perfil5">
-            <option>UX/UI</option>
-            <option>Frontend Developer</option>
-            <option>Backend Developer</option>
-            <option>Data Sciencist</option>
-            <option>Graphic Designer</option>
-          </select>
-        </div>
-        <div class="form-group">
           <label for="exampleFormControlInput1">Project Img</label>
           <input type="email" class="form-control" placeholder="Img URL" formControlName="imgUrl" />
         </div>
-        <div class="buttons text-center">
-          <button class="btn btn-danger mr-2" [routerLink]="['/projects']">
+        <div class="buttons text-center mb-4">
+          <button class="btn-error mr-2" [routerLink]="['/projects']">
             Cancel
           </button>
-          <button type="submit" class="btn btn-primary">Create</button>
+          <button type="submit" class="btn-continue">Create</button>
         </div>
       </form>
+    </div>
+    <div class="col-sm-6 col-md-6">
+      <h3 class="text-center">New project</h3>
+      <p>Contains all the requeriments you need to make your project. Collaborators
+        (Developers,Designers,UX/UI etc).</p>
     </div>
   </div>
 </div>

@@ -1,5 +1,36 @@
 .container {
-  min-height: 80vh;
+  min-height: 85vh;
   color: black;
-  padding-top: 10vh;
+  padding-top: 20vh;
+}
+
+
+form .form-group label {
+  font-weight: 400;
+}
+
+form .form-group input,textarea,option{
+  font-weight: 300;
+}
+
+form .form-group select{
+  background:rgb(245, 245, 245);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;  
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.col-sm-6 h3{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.col-sm-6 p{
+  font-weight: 300;
 }

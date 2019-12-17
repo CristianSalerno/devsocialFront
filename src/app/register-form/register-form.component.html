@@ -45,8 +45,8 @@
               *ngIf="register.controls.repeatpassword  .invalid && (register.controls.repeatpassword.touched ||     register.controls.repeatpassword.dirty)">
               the password doesn't match</p>
           </div>
-          <button class="btn-error mr-2" value="cancel" [routerLink]="['/home']">Cancel</button>
-          <button class="btn-continue" value="continue" *ngIf="register.controls.email.valid">Continue</button>
+          <button class="btn-error mr-2 mb-2" value="cancel" [routerLink]="['/home']">Cancel</button>
+          <button class="btn-continue mb-2" value="continue" *ngIf="register.controls.email.valid">Continue</button>
         </form>
       </div>
     </div>
