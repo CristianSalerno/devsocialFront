@@ -40,7 +40,8 @@
       </div>
       <!-- Projects -->
       <div class="projects">
-        <div class="project-card" style="width:15rem" *ngFor="let project of userProjects">
+        <div class="project-card" style="width:15rem" *ngFor="let project of userProjects"
+          (click)="onSubmit(project.id)">
           <div class="header-card">
             <h3>{{project.name}}</h3>
             <div class="body-card">

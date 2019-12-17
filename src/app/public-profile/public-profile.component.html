@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 p-2 text-center profile-edit">
+            <div class="box-profile shadow-sm p-5" *ngFor="let user of userInfo">
+                <h3 class="mb-4 p-2">
+                    {{ user.username }}
+                </h3>
+                <div class="img-profile">
+                    <img [src]="user.imageUrl" class="img-fluid rounded-circle image-profile" />
+                </div>
+                <p>
+                    <small>{{ user.speciality }}</small>
+                </p>
+                <hr />
+                <p>
+                    <small>Availability: </small>{{ user.availability }} <br />
+                    <small>Experience: </small>{{ user.experience }} <br />
+                </p>
+                <hr>
+                <h4>About Me</h4>
+                <p>{{ user.about_me }}</p>
+            </div>
+        </div>
+        <!-- Aca empiezan los proyectos -->
+        <div class="col-md-6 text-center profile-edit">
+            <div class="col-12">
+                <h3 class="mb-4">User Projects</h3>
+            </div>
+            <!-- Projects -->
+            <div class="projects">
+
+            </div>
+        </div>
+    </div>
+</div>

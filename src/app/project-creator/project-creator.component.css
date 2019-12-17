@@ -95,6 +95,9 @@ li .edit-btn-red-i i{
     margin-top: 7vh;
     color: rgb(82, 82, 82);
 }
+.description-project p{
+    font-weight: 300;
+}
 .editbtn-main {
     background: white;
     color: rgb(73, 73, 73);

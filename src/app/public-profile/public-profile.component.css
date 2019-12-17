@@ -1,0 +1,121 @@
+a {
+  text-decoration: none;
+  color: #3E8FD1;
+}
+
+.container-fluid{
+    background:rgb(245, 245, 245);
+    min-height: 85vh;
+}
+
+.profile-edit {
+  margin-top: 6%;
+  margin-left: auto;
+}
+
+.box-profile p{
+  font-weight: 300;
+  font-size:15px;
+}
+.box-profile h4{
+  font-weight: 400;
+  font-size:20px;
+}
+.box-profile small{
+  font-weight: 400;
+  font-size:15px;
+}
+.box-profile h3{
+  font-weight: 400;
+  font-size:50px;
+}
+
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+.row .box-profile {
+  background-color:#fff;
+  border:1px solid rgb(224, 224, 224); 
+  height:auto;
+  width: 90%;
+  margin:0 auto;
+}
+
+.row .buttons-config .btn {
+  border: 1px solid #3E8FD1;
+  color: #3E8FD1;
+}
+
+.row .buttons-config .btn:hover {
+  border: 1px solid #3E8FD1;
+  background: #3E8FD1;
+  color: #fff;
+}
+
+.container-fluid .row .progress .progress-bar {
+  background: #7BCBB7;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  color: #3E8FD1;
+}
+
+.projects .project-card {
+  margin:10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-weight: 300;
+  padding: 10px;
+  background:#fff;
+  height: auto;
+  width: auto;
+  cursor: pointer;
+}
+
+.img-profile img{
+  width:250px !important;
+  height: 250px !important;
+}
+
+.projects .project-card h3{
+  font-weight: 400;
+  font-size:25px;
+}
+.projects .project-card:hover{
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.146), 0 10px 10px rgba(0, 0, 0, 0.153);
+  transition:0.9s;
+}
+
+.projects .body-card i {
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  padding: 10px;
+}
+
+.projects .project-card .body-card {
+  padding: 20px;
+}
+
+/* media query */
+@media screen and (max-width: 768px) {
+  .row .box-profile {
+    border-right: none;
+    border-bottom: 3px solid #7BCBB7;
+  }
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  color: #3E8FD1;
+}
+
+}

@@ -14,16 +14,16 @@ form .form-group input,textarea,option{
 }
 
 form .form-group select{
-  background:rgb(245, 245, 245);
+    background:rgb(245, 245, 245);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;  
+    background-image:url("../../assets/arrow-down.png");
     background-repeat: no-repeat;
-    background-size: 20px;
-    background-position: right;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    background-size: 10px;
+    background-position: center right;
+    -webkit-padding-end: 5px;
+    -moz-padding-start: 5px;
 }
 
 .col-sm-6 h3{
