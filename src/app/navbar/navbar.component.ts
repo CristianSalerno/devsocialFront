@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserProfileService } from 'services/user-profile.service';
+import { UserProfileService } from 'src/app/services/user-profile.service';
 import { NgRedux } from '@angular-redux/store';
 import { IAppState } from '../store';
 

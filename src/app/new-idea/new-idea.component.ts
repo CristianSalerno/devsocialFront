@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
-import { TemasService } from 'services/temas.service';
-import { UsertemaService } from 'services/usertema.service';
-import { UsersService } from 'services/users.service';
-import { User } from 'models/user.model';
+import { TemasService } from 'src/app/services/temas.service';
+import { UsertemaService } from 'src/app/services/usertema.service';
+import { UsersService } from 'src/app/services/users.service';
+import { User } from 'src/app/models/user.model';
 import { Router } from '@angular/router';
 import { HttpRequest, HttpHeaders, HttpClient } from '@angular/common/http';
 

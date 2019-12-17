@@ -13,7 +13,7 @@ export class User {
     endAt: string;
     updateAt: string;
 
-    constructor({id, email, username, name, surnames, imageURL, isEula, eulaDate, isActive, startAt, endAt, updateAt}) {
+    constructor({ id, email, username, name, surnames, imageURL, isEula, eulaDate, isActive, startAt, endAt, updateAt }) {
         this.id = id;
         this.email = email;
         this.username = username;

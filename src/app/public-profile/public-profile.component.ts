@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UserProfileService } from 'services/user-profile.service';
-import { UsertemaService } from 'services/usertema.service';
+import { UserProfileService } from '../services/user-profile.service';
+import { UsertemaService } from '../services/usertema.service';
 
 @Component({
   selector: 'app-public-profile',
@@ -21,10 +21,10 @@ export class PublicProfileComponent implements OnInit {
 
   async ngOnInit() {
     this.activatedRoute.params.subscribe(async params => {
-      console.log(params.idUser)
+      console.log(params.idUser);
       this.userInfo = await this.userProfileService.getAllUserData(params.idUser);
       console.log(this.userInfo);
-    })
+    });
     const userToken = (localStorage.getItem('user_token')) ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
     this.userProjects = await this.userTemaService.getAllProjects(userToken);
   }
