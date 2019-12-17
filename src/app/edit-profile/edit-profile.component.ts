@@ -1,13 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import { UsersService } from 'services/users.service';
-import { User } from 'models/user.model';
-import { FormGroup, FormControl, FormControlDirective } from '@angular/forms';
-=======
 import { UsersService } from 'src/app/services/users.service';
 import { User } from 'src/app/models/user.model';
 import { FormGroup, FormControl } from '@angular/forms';
->>>>>>> develop
+import { UserProfileService } from '../services/user-profile.service';
 
 @Component({
   selector: 'app-edit-profile',
@@ -20,7 +15,10 @@ export class EditProfileComponent implements OnInit {
   updateUserInfo: FormGroup;
   updateAbout: FormGroup;
 
-  constructor(private usersService: UsersService) {
+  constructor(
+    private usersService: UsersService,
+    private userProfileService: UserProfileService,
+  ) {
 
   }
   async ngOnInit() {
@@ -47,10 +45,16 @@ export class EditProfileComponent implements OnInit {
     alert('Update Sucessfull');
   }
 
-  updateOtherInfo() {
-    console.log(this.updateUserInfo.value)
+  async updateOtherInfo() {
+    const token = (localStorage.getItem('user_token')) ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
+    await this.userProfileService.editUser(token, this.updateUserInfo.value);
   }
-  updateAboutInfo() {
+  async updateAboutInfo() {
     console.log(this.updateAbout.value)
+    const token = (localStorage.getItem('user_token')) ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
+    await this.userProfileService.updateAbout(token, this.updateAbout.value);
   }
+
+
+
 }
