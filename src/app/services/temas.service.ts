@@ -25,5 +25,7 @@ export class TemasService {
     return this.http.post<Temas[]>('http://localhost:3000/api/temas/create', pBody).toPromise();
   }
 
-
+  updateById(pBody) {
+    return this.http.post('http://localhost:3000/api/temas/update', pBody).toPromise();
+  }
 }

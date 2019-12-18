@@ -26,6 +26,9 @@
     margin-top: 7vh;
     color: rgb(82, 82, 82);
 }
+.description-area{
+    background-color: black;
+}
 
 .skills-project{
     margin: 5vh 0;
@@ -86,14 +89,7 @@
     background-color: white;
     margin-top: 13vh;
 }
-
-.subscription{
-    border: 1px solid rgb(224, 224, 224);   
-    background-color: white;
-    margin: 5vh 0;
-    height: 35vh;
-    padding: 1vh;
-}
+w
 
 .title{
     color: rgb(83, 83, 83);
@@ -101,20 +97,6 @@
     padding: 1vh;
 }
 
-.subcard{
-    margin: 3vh 0;
-    height: 15vh;
-    padding: 2vh;
-    overflow: scroll;
-}
-.usersubsc{
-    height: 7vh;
-    padding: .6vh;
-    border: 1px solid rgb(224, 224, 224);
-    display:flex;
-    text-align: center;
-    font-weight: 300;
-}
 
 .editbutton{
     border: 1px #7BCBB7 solid;
