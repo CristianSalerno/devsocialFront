@@ -7,9 +7,9 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 export class ChatService {
   constructor(private http: HttpClient) { }
 
-  leaveComent(pComent) {
+  leaveComent(pComent, pUser) {
     return this.http
-      .post("http://localhost:3000/api/coment", pComent)
+      .post("http://localhost:3000/api/coment", pComent, pUser)
       .toPromise();
   }
 

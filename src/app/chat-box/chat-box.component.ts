@@ -35,12 +35,15 @@ export class ChatBoxComponent implements OnInit {
 
   onSubmit() {
     this.chat.value.idUser = this.mainUser.id;
+    this.chat.value.userName = this.mainUser.username;
     this.activatedRoute.params.subscribe(params => {
       this.chat.value.idTema = parseInt(params.pId);
+
     });
 
-    this.chatService.leaveComent(this.chat.value).then(comentarios => {
+    this.chatService.leaveComent(this.chat.value, this.mainUser.username).then(comentarios => {
       this.comentsArr = comentarios;
+      console.log(this.comentsArr)
     });
   }
 }

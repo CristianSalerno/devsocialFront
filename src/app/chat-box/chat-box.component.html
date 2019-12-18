@@ -4,7 +4,7 @@
   <div class="coment-box">
     <div class="coment" *ngFor="let coment of comentsArr">
       <h6 *ngIf="mainUser">
-        {{ mainUser.username }} said at:
+        {{ coment.user_name }} said at:
         <small>{{ coment.date | date: "M/d/yy, h:mm a" }}</small>
       </h6>
       <p>{{ coment.coment }}</p>
