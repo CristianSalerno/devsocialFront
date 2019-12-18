@@ -27,16 +27,12 @@
             <p class="card-text" text-capitalize>
               <small class="text-muted">Last updated {{ proyecto.updateAt | date }}</small>
             </p>
-<<<<<<< HEAD
             <a (click)="checkUser(proyecto.id)" class="btn-error text-white" *ngIf="isMyProject(proyecto.id)">Go
               to
               {{ proyecto.name }}
             </a>
             <button (click)="onSubmit(proyecto.id)" class="btn-continue ml-3"
               *ngIf="!isMyProject(proyecto.id)">Subscription
-=======
-            <button (click)="onSubmit(proyecto.id)" class="btn btn-outline-primary ml-3">subscribe to project
->>>>>>> c9212e828ff94c7ec06a5f80a49e45fd6bd86890
             </button>
           </div>
         </div>
