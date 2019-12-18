@@ -21,6 +21,7 @@ li{
 
 .important-edit h4{
     font-size: 14px;
+    
 }
 .important-edit p{
     font-weight: 300;
@@ -101,6 +102,14 @@ textarea{
     opacity: .8;
 }
 
+
+.personal-info h3{
+    font-size: 20px;
+}
+.personal-info p {
+    font-weight: 300;
+    font-size: 14px;
+}
 #update,#update-2{
 border:none;
 background:none;
