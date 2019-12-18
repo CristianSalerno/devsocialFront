@@ -14,17 +14,25 @@ import { Router } from '@angular/router';
 export class ProjectsComponent implements OnInit {
   arrProyectos: Temas[];
   proyectosFiltrados: Temas[];
-  creatorRole: Temas;
+  proyectosSuscrito: Temas[];
+  existeUsuario: boolean;
+  token: string;
   constructor(
     private temasservice: TemasService,
     private subscriptionService: SubscriptionService,
     private usertemaService: UsertemaService,
     private router: Router) {
-
+    this.existeUsuario = false;
+    this.token = localStorage.getItem('user_token')
+      ? localStorage.getItem('user_token')
+      : sessionStorage.getItem('user_token');
   }
 
   async ngOnInit() {
     this.arrProyectos = await this.temasservice.getAll();
+    console.log(this.arrProyectos);
+    this.proyectosSuscrito = await this.temasservice.getSuscritos(this.token);
+    console.log(this.proyectosSuscrito);
     this.proyectosFiltrados = this.arrProyectos;
   }
 
@@ -54,5 +62,10 @@ export class ProjectsComponent implements OnInit {
     } else if (result['role'] === 'creator') {
       this.router.navigate(['/projects/creator/' + id]);
     }
+  }
+
+  isMyProject(pProjectId) {
+    console.log(this.proyectosSuscrito);
+    return this.proyectosSuscrito.includes(pProjectId);
   }
 }
