@@ -30,9 +30,7 @@ export class ProjectsComponent implements OnInit {
 
   async ngOnInit() {
     this.arrProyectos = await this.temasservice.getAll();
-    console.log(this.arrProyectos);
     this.proyectosSuscrito = await this.temasservice.getSuscritos(this.token);
-    console.log(this.proyectosSuscrito);
     this.proyectosFiltrados = this.arrProyectos;
   }
 
@@ -66,6 +64,6 @@ export class ProjectsComponent implements OnInit {
 
   isMyProject(pProjectId) {
     console.log(this.proyectosSuscrito);
-    return this.proyectosSuscrito.includes(pProjectId);
+    return (this.proyectosSuscrito.length === 0) ? false : this.proyectosSuscrito.includes(pProjectId);
   }
 }

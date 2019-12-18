@@ -3,49 +3,47 @@
         <div class="row">
             <div class="col-md-12 col-lg-8">
                 <section class="project-profile shadow-sm">
-                    <div class="title-project d-flex">
-                        <h1>DEVSOCIAL</h1>
-                        <a class="edit-links">Edit Tittle</a>
+                    <div *ngIf="!activeTitle" class="title-project d-flex">
+                        <h1>{{project.name}}</h1>
+                        <a (click)="activate('title')" class="edit-links">Edit Title</a>
                     </div>
+                    <form *ngIf="activeTitle" class="title-project d-flex" [formGroup]="dataTema"
+                        (ngSubmit)="updateData()">
+                        <input class="edit-title" type="text" placeholder="Title" formControlName="name">
+                        <input class="btn-continue ml-2" type="submit" value="Update">
+                        <a (click)="activate('title')" class="edit-links">Edit Title</a>
+                    </form>
                     <div class="image-project">
-                        <img class="img-fluid" src="https://www.imagen.com.mx/assets/img/imagen_share.png" alt="">
+                        <img class="img-fluid" [src]="'http://localhost:3000/images/' + project.imgUrl" alt="">
                         <a class="edit-links text-center">Edit img</a>
                     </div>
-
-                    <div class="description-project">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem repudiandae ex asperiores,
-                            molestias
-                            tempore necessitatibus iste cum, alias veritatis culpa error. Numquam commodi doloribus
-                            tenetur beatae
-                            molestiae architecto, quibusdam necessitatibus?</p>
-                        <a class="edit-links text-center">Edit Text</a>
+                    <div *ngIf="!activeDescription" class="description-project">
+                        <p>{{project.descripcion}}</p>
+                        <a (click)="activate('description')" class="edit-links text-center">Edit Text</a>
                     </div>
+                    <form *ngIf="activeDescription" [formGroup]="dataTema" (ngSubmit)="updateData()">
+                        <textarea id="styletextarea" type="text" placeholder="Description"
+                            formControlName="descripcion"></textarea>
+                        <input class="btn-continue ml-2" type="submit" value="Update">
+                        <a (click)="activate('description')" class="edit-links text-center">Edit Title</a>
+                    </form>
+
                     <div class="row skills-project text-center">
                         <div class="col-md-12 col-lg-12 col-xl-6 skill-accept">
                             <h3 class="title-skills">TEAM</h3>
                             <ul>
-                                <li>
-                                    <a class="btn editbtn-main" href="">adrianmartin <small>Frontend</small><i
+                                <li *ngFor="let user of usersTeam">
+                                    <a (click)="onSubmit(user.id)" class="btn editbtn-main">{{user.username}}<i
                                             class="fas fa-check ml-1"></i></a>
-                                    <a class="btn edit-btn-red-i"><i class="fas fa-times"></i></a>
-                                </li>
-                                <li>
-                                    <a class="btn editbtn-main" href="">ricardofanizzi <small>Developer</small> <i
-                                            class="fas fa-check ml-1"></i></a>
-                                    <a class="btn edit-btn-red-i"><i class="fas fa-times"></i></a>
-                                </li>
-                                <li>
-                                    <a class="btn editbtn-main" href="">cristiansalerno <small>UX/UI</small> <i
-                                            class="fas fa-check ml-1"></i></a>
-                                    <a class="btn edit-btn-red-i"><i class="fas fa-times"></i></a>
+                                    <a (click)="deleteTbi(user)" *ngIf="!(user.id === mainId)"
+                                        class="btn edit-btn-red-i"><i class="fas fa-times"></i></a>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-md-12 col-lg-12 col-xl-6 skill-pending">
                             <h3 class="title-skills">STILL WAITING</h3>
                             <ul>
-                                <li>Data Science</li>
-                                <li>Graphic Designer</li>
+                                <li *ngFor="let especializacion of project.especializacion">{{especializacion}}</li>
                             </ul>
                         </div>
                     </div>
@@ -67,7 +65,7 @@
                                 class="btn editbutton red ml-1">Reject</button>
                         </div>
                     </div>
-                    <p class="text-right pending">Pending {{subscriptionActive.length}}</p>
+                    <p *ngIf="subscriptionActive" class="text-right pending">Pending {{subscriptionActive.length}}</p>
                 </section>
             </div>
         </div>

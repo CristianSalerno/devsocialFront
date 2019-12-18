@@ -7,7 +7,7 @@
             <h1>{{project.name}}</h1>
           </div>
           <div class="image-project">
-            <img class="img-fluid" [src]="'http://localhost:3000/images/'+ project.imgUrl" alt="">
+            <img class="img-fluid" [src]="'http://localhost:3000/images/' + project.imgUrl" alt="">
           </div>
           <div class="description-project">
             <p>{{project.descripcion}}</p>
@@ -16,12 +16,8 @@
             <div class="col-md-12 col-lg-12 col-xl-6 skill-accept">
               <h3 class="title-skills">TEAM</h3>
               <ul>
-                <li><a class="btn editbtn-main btn-block" href="">adrianmartin <small>Frontend</small> <i
-                      class="fas fa-check ml-1"></i></a>
-                </li>
-                <li><a class="btn editbtn-main btn-block" href="">ricardofanizzi <small>Developer</small> <i
-                      class="fas fa-check ml-1"></i></a></li>
-                <li><a class="btn editbtn-main btn-block" href="">cristiansalerno <small>UX/UI</small> <i
+                <li *ngFor="let user of usersTeam">
+                  <a (click)="onSubmit(user.id)" class="btn editbtn-main btn-block">{{user.username}}<i
                       class="fas fa-check ml-1"></i></a>
                 </li>
               </ul>

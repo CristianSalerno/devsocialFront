@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TemasService } from 'src/app/services/temas.service';
-import { SubscriptionService } from 'src/app/services/subscription.service';
 import { UsertemaService } from 'src/app/services/usertema.service';
 import { Temas } from 'src/app/models/temas.model';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-project-profile',
@@ -15,9 +15,13 @@ export class ProjectProfileComponent implements OnInit {
   project: Temas;
   paramsId: number;
   subscriptionActive: any;
+  usersTeam: User[];
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private temasService: TemasService,
+    private usertemaService: UsertemaService,
+    private router: Router
   ) {
   }
 
@@ -28,6 +32,12 @@ export class ProjectProfileComponent implements OnInit {
       this.paramsId = parseInt(params.pId);
       this.project = result;
       this.project.especializacion = this.project.especializacion.split(',').filter(item => item !== '');
+
+      const token = localStorage.getItem("user_token") ? localStorage.getItem("user_token") : sessionStorage.getItem("user_token");
+      this.usersTeam = await this.usertemaService.getUsersByTema(token, { temaId: this.paramsId });
     });
+  }
+  onSubmit(id) {
+    this.router.navigate([`profile/${id}`]);
   }
 }

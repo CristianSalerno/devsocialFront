@@ -1,4 +1,4 @@
-<div class="background pt-5" *ngIf="proyectosSuscrito?.length > 0">
+<div class="background pt-5">
   <div class="container">
     <form class="pt-4 ">
       <div class="form-group  d-flex flex-column align-items-center pt-5">
@@ -27,13 +27,15 @@
             <p class="card-text" text-capitalize>
               <small class="text-muted">Last updated {{ proyecto.updateAt | date }}</small>
             </p>
-            <a (click)="checkUser(proyecto.id)" class="btn-error text-white" *ngIf="isMyProject(proyecto.id)">Go
-              to
-              {{ proyecto.name }}
-            </a>
-            <button (click)="onSubmit(proyecto.id)" class="btn-continue ml-3"
-              *ngIf="!isMyProject(proyecto.id)">Subscription
-            </button>
+            <div *ngIf="proyectosSuscrito">
+              <a (click)="checkUser(proyecto.id)" class="btn-error text-white" *ngIf="isMyProject(proyecto.id)">Go
+                to
+                {{ proyecto.name }}
+              </a>
+              <button (click)="onSubmit(proyecto.id)" class="btn-continue ml-3"
+                *ngIf="!isMyProject(proyecto.id)">Subscription
+              </button>
+            </div>
           </div>
         </div>
       </div>
