@@ -25,7 +25,7 @@ export class UserProfileService {
       headers: new HttpHeaders({
         user_token: token,
       })
-    }
+    };
     return this.http.post('http://localhost:3000/api/userProfile/dataExtra', pUserData, httpOptions).toPromise();
   }
 
@@ -34,7 +34,7 @@ export class UserProfileService {
       headers: new HttpHeaders({
         user_token: token,
       })
-    }
+    };
     return this.http.post('http://localhost:3000/api/userProfile/about', pAbout, httpOptions).toPromise();
   }
 
@@ -43,8 +43,8 @@ export class UserProfileService {
       headers: new HttpHeaders({
         user_token: token,
       })
-    }
-    return this.http.post("http://localhost:3000/api/userProfile/skills", pSkills, httpOptions).toPromise()
+    };
+    return this.http.post('http://localhost:3000/api/userProfile/skills', pSkills, httpOptions).toPromise();
   }
 
 

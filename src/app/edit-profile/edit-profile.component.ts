@@ -65,15 +65,15 @@ export class EditProfileComponent implements OnInit {
 
   async updateOtherInfo() {
     await this.userProfileService.editUser(this.token, this.updateUserInfo.value);
+    alert('Update Sucessfull');
   }
   async updateAboutInfo() {
     await this.userProfileService.updateAbout(this.token, this.updateAbout.value);
+    alert('Update Sucessfull');
   }
 
   async updateSkill() {
-    await this.userProfileService.updateSkills(this.token, this.updateSkills.value)
+    await this.userProfileService.updateSkills(this.token, this.updateSkills.value);
+    alert('Update Sucessfull');
   }
-
-
-
 }

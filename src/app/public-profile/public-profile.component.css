@@ -3,7 +3,8 @@ a {
   color: #3E8FD1;
 }
 
-.container-fluid{
+.fondo{
+  padding: 5vh 0;
     background:rgb(245, 245, 245);
     min-height: 85vh;
 }

@@ -119,4 +119,7 @@ export class ProjectCreatorComponent implements OnInit {
   onSubmit(id) {
     this.router.navigate([`profile/${id}`]);
   }
+  goProfile(id) {
+    this.router.navigate([`profile/${id}`]);
+  }
 }

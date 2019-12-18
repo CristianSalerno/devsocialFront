@@ -27,14 +27,15 @@
                         <input class="btn-continue ml-2" type="submit" value="Update">
                         <a (click)="activate('description')" class="edit-links text-center">Edit Title</a>
                     </form>
-
                     <div class="row skills-project text-center">
                         <div class="col-md-12 col-lg-12 col-xl-6 skill-accept">
                             <h3 class="title-skills">TEAM</h3>
                             <ul>
                                 <li *ngFor="let user of usersTeam">
-                                    <a (click)="onSubmit(user.id)" class="btn editbtn-main">{{user.username}}<i
-                                            class="fas fa-check ml-1"></i></a>
+                                    <a [ngClass]="{btn2: (user.id === mainId)}" (click)="onSubmit(user.id)"
+                                        class="btn editbtn-main">{{user.username}} <i class="fas fa-check ml-1"></i></a>
+                                    <a *ngIf="(user.id === mainId)" class="btn edit-btn-red-i"><i class="fas fa-award"
+                                            id="creator"></i></a>
                                     <a (click)="deleteTbi(user)" *ngIf="!(user.id === mainId)"
                                         class="btn edit-btn-red-i"><i class="fas fa-times"></i></a>
                                 </li>
@@ -59,7 +60,8 @@
                     </div>
                     <div class="subcard">
                         <div class="usersubsc" *ngFor="let subscription of subscriptionActive">
-                            <p class="username"><i class="fas fa-user"></i> {{subscription.username}}</p>
+                            <a (click)="goProfile(subscription.id)" class="username btn"><i class="fas fa-user"></i>
+                                {{subscription.username}}</a>
                             <button (click)="onSubmitAccept(subscription)" class="btn editbutton">Accept</button>
                             <button (click)="onSubmitReject(subscription)"
                                 class="btn editbutton red ml-1">Reject</button>
