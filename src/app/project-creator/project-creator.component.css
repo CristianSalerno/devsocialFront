@@ -167,10 +167,9 @@ li .edit-btn-red-i i{
 .username{
     width: 50%;
     color: rgb(102, 102, 102);
-    margin: .6vh;
+    
 }
-.pending{
-   color: rgb(214, 75, 75);
-   font-weight: 700;
-   margin-right: 2vh;
+#creator{
+    color: #7BCBB7;
+    cursor: default;
 }

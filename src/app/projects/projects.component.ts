@@ -23,15 +23,14 @@ export class ProjectsComponent implements OnInit {
     private usertemaService: UsertemaService,
     private router: Router) {
     this.existeUsuario = false;
-    this.token = localStorage.getItem('user_token')
-      ? localStorage.getItem('user_token')
-      : sessionStorage.getItem('user_token');
+    this.token = localStorage.getItem('user_token') ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
   }
 
   async ngOnInit() {
     this.arrProyectos = await this.temasservice.getAll();
     this.proyectosSuscrito = await this.temasservice.getSuscritos(this.token);
     this.proyectosFiltrados = this.arrProyectos;
+    console.log(this.arrProyectos)
   }
 
   async filtrarProyectos(e) {

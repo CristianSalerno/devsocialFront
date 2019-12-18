@@ -2,7 +2,7 @@ export class Temas {
 
     id: number;
     name: string;
-    fechaInicio: string;
+    fecha_inicio: string;
     fechaFinal: string;
     isPublic: string;
     isActive: string;
@@ -15,7 +15,7 @@ export class Temas {
     constructor(id, name, fechaInicio, fechaFinal, isPublic, isActive, updateAt, descripcion, imgUrl, especializacion, ucreadorId, umodId) {
         this.id = id;
         this.name = name;
-        this.fechaInicio = fechaInicio;
+        this.fecha_inicio = fechaInicio;
         this.fechaFinal = fechaFinal;
         this.isPublic = isPublic;
         this.isActive = isActive;
