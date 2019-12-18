@@ -7,9 +7,8 @@
             <section class="profile row">
             </section>
             <div class="edit-image col-md-12 col-lg-6">
-                <div class="image-profile">
-                    <img src="https://uybor.uz/borless/uybor/img/user-images/user_no_photo_300x300.png"
-                        class="img-fluid rounded-circle" />
+                <div class="image-profile" *ngFor="let info of userInfo">
+                    <img [src]="info.imageUrl" class="img-fluid rounded-circle" />
                 </div>
                 <div class="btnedit">
                     <button class="btn-continue">
