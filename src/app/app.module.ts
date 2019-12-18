@@ -27,6 +27,7 @@ import { ProjectCreatorComponent } from './project-creator/project-creator.compo
 
 /* REDUX */
 import { NgRedux, NgReduxModule } from '@angular-redux/store';
+
 import { IAppState, rootReducer, INITIAL_STATE } from './store';
 // ACA VA A IR REDUX POR RICARDO FANIZZI 😇🤓
 /* REDUX */
@@ -64,9 +65,13 @@ import { IAppState, rootReducer, INITIAL_STATE } from './store';
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
+
 export class AppModule {
   constructor(
     ngredux: NgRedux<IAppState>) {
     ngredux.configureStore(rootReducer, INITIAL_STATE);
   }
+
 }

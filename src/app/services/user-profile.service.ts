@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Injectable({
   providedIn: "root"
@@ -19,4 +19,33 @@ export class UserProfileService {
       .get(`http://localhost:3000/api/userProfile/allData/${pUserid}`)
       .toPromise();
   }
+
+  editUser(token, pUserData) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        user_token: token,
+      })
+    }
+    return this.http.post('http://localhost:3000/api/userProfile/dataExtra', pUserData, httpOptions).toPromise();
+  }
+
+  updateAbout(token, pAbout) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        user_token: token,
+      })
+    }
+    return this.http.post('http://localhost:3000/api/userProfile/about', pAbout, httpOptions).toPromise();
+  }
+
+  updateSkills(token, pSkills) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        user_token: token,
+      })
+    }
+    return this.http.post("http://localhost:3000/api/userProfile/skills", pSkills, httpOptions).toPromise()
+  }
+
+
 }

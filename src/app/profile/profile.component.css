@@ -16,17 +16,14 @@ a {
   font-weight: 300;
   font-size:15px;
 }
-.box-profile h4{
-  font-weight: 400;
-  font-size:20px;
-}
+
 .box-profile small{
   font-weight: 400;
   font-size:15px;
 }
 .box-profile h3{
   font-weight: 400;
-  font-size:50px;
+  font-size:30px;
 }
 
 
@@ -82,8 +79,9 @@ img {
 
 .projects .project-card h3{
   font-weight: 400;
-  font-size:25px;
+  font-size:20px;
 }
+
 .projects .project-card:hover{
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.146), 0 10px 10px rgba(0, 0, 0, 0.153);
   transition:0.9s;

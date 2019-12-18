@@ -29,22 +29,24 @@ export class RegisterFormComponent implements OnInit {
     (this.register = new FormGroup({
       email: new FormControl('', [
         Validators.required,
-        Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
+        Validators.pattern(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/)
       ]),
       username: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
-        Validators.maxLength(15)
+        Validators.maxLength(20)
       ]),
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
-        Validators.maxLength(10)
+        Validators.maxLength(20)
       ]),
       repeatpassword: new FormControl('')
     })),
       // tslint:disable-next-line: no-unused-expression
       [this.passwordValidator];
+
+
   }
 
   ngOnInit() { }
