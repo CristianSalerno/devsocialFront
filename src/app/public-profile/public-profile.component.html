@@ -23,23 +23,7 @@
                 </div>
             </div>
             <!-- Aca empiezan los proyectos -->
-
             <div class="col-md-6 text-center profile-edit">
-                <div class="col-12">
-                    <h3 class="mb-4">User Projects</h3>
-                </div>
-                <!-- Projects -->
-                <div class="projects">
-                    <div class="project-card shadow-sm" style="width:15rem" *ngFor="let project of userProjects">
-                        <div class=" header-card">
-                            <h3>{{project.name}}</h3>
-                            <div class="body-card">
-                                <img [src]="'http://localhost:3000/images/'+ project.imgUrl" class="img-fluid"
-                                    alt="img-project" style="width: 15rem;" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
