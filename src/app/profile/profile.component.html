@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6 p-2 text-center profile-edit">
-      <div class="box-profile p-5" *ngFor="let user of userInfo">
+      <div class="box-profile pb-5 pl-5 pr-5" *ngFor="let user of userInfo">
         <h3 class="mb-4 p-2">
           {{ user.username }}
         </h3>
@@ -34,19 +34,22 @@
       </div>
     </div>
     <!-- Aca empiezan los proyectos -->
-    <div class="col-md-6 text-center profile-edit">
-      <div class="col-12">
-        <h3 class="mb-4">User Projects</h3>
-      </div>
-      <!-- Projects -->
-      <div class="projects">
-        <div class="project-card" style="width:15rem" *ngFor="let project of userProjects"
-          (click)="onSubmit(project.id)">
-          <div class="header-card">
-            <h3>{{project.name}}</h3>
-            <div class="body-card">
-              <img [src]="'http://localhost:3000/images/'+ project.imgUrl" class="img-fluid" alt="img-project"
-                style="width: 15rem;" />
+    <div class="col-md-6  p-2 text-center profile-edit">
+      <div class="box-profile">
+        <div class="col-12">
+
+          <h3 class="mb-4 p-2">User Projects</h3>
+        </div>
+        <!-- Projects -->
+        <div class="projects">
+          <div class="project-card" style="width:15rem" *ngFor="let project of userProjects"
+            (click)="onSubmit(project.id)">
+            <div class="header-card">
+              <h3>{{project.name}}</h3>
+              <div class="body-card">
+                <img [src]="'http://localhost:3000/images/'+ project.imgUrl" class="img-fluid" alt="img-project"
+                  style="width: 15rem;" />
+              </div>
             </div>
           </div>
         </div>

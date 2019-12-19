@@ -118,10 +118,6 @@ li .edit-btn-red-i i{
     font-size:15px;
 }
 
-
-
-
-
 .chatbox{
     background-color: white;
     margin-top: 13vh;
@@ -131,7 +127,7 @@ li .edit-btn-red-i i{
     border: 1px solid rgb(224, 224, 224);   
     background-color: white;
     margin: 5vh 0;
-    height: 35vh;
+    min-height: 35vh;
     padding: 1vh;
 }
 
@@ -143,9 +139,8 @@ li .edit-btn-red-i i{
 
 .subcard{
     margin: 3vh 0;
-    height: 15vh;
+    min-height: 15vh;
     padding: 2vh;
-    overflow: scroll;
 }
 .usersubsc{
     height: 3em;
