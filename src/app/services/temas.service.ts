@@ -8,21 +8,22 @@ import { Temas } from '../models/temas.model';
 })
 export class TemasService {
   temas: Temas[];
+  baseUrl: string;
   constructor(private http: HttpClient) {
-
+    this.baseUrl = 'https://devsocial-back.herokuapp.com/api/temas/';
   }
 
   getAll() {
-    return this.http.get<Temas[]>('http://localhost:3000/api/temas/').toPromise();
+    return this.http.get<Temas[]>(this.baseUrl).toPromise();
   }
 
 
   getById(pId) {
-    return this.http.get<Temas>('http://localhost:3000/api/temas/' + pId).toPromise();
+    return this.http.get<Temas>(this.baseUrl + pId).toPromise();
   }
 
   create(pBody) {
-    return this.http.post<Temas[]>('http://localhost:3000/api/temas/create', pBody).toPromise();
+    return this.http.post<Temas[]>(this.baseUrl + 'create', pBody).toPromise();
   }
 
   getSuscritos(token) {
@@ -31,11 +32,11 @@ export class TemasService {
         user_token: token,
       })
     };
-    return this.http.get<Temas[]>('http://localhost:3000/api/userTema/dataInner', httpOptions).toPromise();
+    return this.http.get<Temas[]>('https://devsocial-back.herokuapp.com/api/userTema/dataInner', httpOptions).toPromise();
   }
 
 
   updateById(pBody) {
-    return this.http.post('http://localhost:3000/api/temas/update', pBody).toPromise();
+    return this.http.post(this.baseUrl + 'update', pBody).toPromise();
   }
 }

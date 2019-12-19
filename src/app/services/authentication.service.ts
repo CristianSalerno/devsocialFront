@@ -5,7 +5,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  constructor(private http: HttpClient) { }
+  baseUrl: string;
+  constructor(private http: HttpClient) {
+    this.baseUrl = 'https://devsocial-back.herokuapp.com/api/users/login';
+  }
 
   auth(pBody) {
     const body = {
@@ -13,7 +16,7 @@ export class AuthenticationService {
       password: pBody.password
     };
     return this.http
-      .post('http://localhost:3000/api/users/login', body)
+      .post(this.baseUrl, body)
       .toPromise();
   }
 }

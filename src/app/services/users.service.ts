@@ -7,12 +7,15 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 })
 export class UsersService {
   users: User[];
+  baseUrl: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.baseUrl = 'https://devsocial-back.herokuapp.com/api/users/';
+  }
 
   getAll(token) {
     return this.http
-      .get<User[]>("http://localhost:3000/api/users/")
+      .get<User[]>(this.baseUrl)
       .toPromise();
   }
   getById(pToken: string) {
@@ -21,7 +24,7 @@ export class UsersService {
         user_token: pToken
       })
     };
-    return this.http.get<User>('http://localhost:3000/api/users/', httpOptions).toPromise();
+    return this.http.get<User>(this.baseUrl, httpOptions).toPromise();
   }
   mainUserExist() {
     if (localStorage.getItem("user_token")) {
@@ -39,7 +42,7 @@ export class UsersService {
       })
     };
     return this.http
-      .get<User>("http://localhost:3000/api/users/main", httpOptions)
+      .get<User>(this.baseUrl + "main", httpOptions)
       .toPromise();
   }
   updateNames(pToken: string, pBody) {
@@ -49,7 +52,7 @@ export class UsersService {
       })
     };
     return this.http
-      .post("http://localhost:3000/api/users/updatenames", pBody, httpOptions)
+      .post(this.baseUrl + "updatenames", pBody, httpOptions)
       .toPromise();
   }
 
@@ -60,7 +63,7 @@ export class UsersService {
       })
     };
     return this.http
-      .post("http://localhost:3000/api/users/updatemail", pBody, httpOptions)
+      .post(this.baseUrl + "updatemail", pBody, httpOptions)
       .toPromise();
   }
 
@@ -71,13 +74,13 @@ export class UsersService {
       })
     };
     return this.http
-      .post("http://localhost:3000/api/users/updatepass", pBody, httpOptions)
+      .post(this.baseUrl + "updatepass", pBody, httpOptions)
       .toPromise();
   }
 
   registerUser(pUser) {
     return this.http
-      .post("http://localhost:3000/api/users/register", pUser)
+      .post(this.baseUrl + "register", pUser)
       .toPromise();
   }
 }

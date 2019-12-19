@@ -7,9 +7,9 @@ import { User } from '../models/user.model';
   providedIn: 'root'
 })
 export class UsertemaService {
-
+  baseUrl: string;
   constructor(private http: HttpClient) {
-
+    this.baseUrl = 'https://devsocial-back.herokuapp.com/api/usertema/';
   }
 
   insert(pToken, pBody) {
@@ -18,7 +18,7 @@ export class UsertemaService {
         user_token: pToken
       })
     };
-    return this.http.post('http://localhost:3000/api/usertema/insert', pBody, httpOptions).toPromise();
+    return this.http.post(this.baseUrl + 'insert', pBody, httpOptions).toPromise();
   }
 
   checkUser(pToken, pBody) {
@@ -27,7 +27,7 @@ export class UsertemaService {
         user_token: pToken
       })
     };
-    return this.http.post('http://localhost:3000/api/usertema/checkuser', pBody, httpOptions).toPromise();
+    return this.http.post(this.baseUrl + 'checkuser', pBody, httpOptions).toPromise();
   }
 
   getAllProjects(pToken) {
@@ -36,7 +36,7 @@ export class UsertemaService {
         user_token: pToken
       })
     };
-    return this.http.get(`http://localhost:3000/api/userTema/allData`, httpOptions).toPromise();
+    return this.http.get(this.baseUrl + 'allData', httpOptions).toPromise();
   }
 
   getUsersByTema(pToken, pBody) {
@@ -45,7 +45,7 @@ export class UsertemaService {
         user_token: pToken
       })
     };
-    return this.http.post<User[]>(`http://localhost:3000/api/usertema/checkusersbytema`, pBody, httpOptions).toPromise();
+    return this.http.post<User[]>(this.baseUrl + 'checkusersbytema', pBody, httpOptions).toPromise();
   }
   deleteById(pToken, pBody) {
     const httpOptions = {
@@ -53,6 +53,6 @@ export class UsertemaService {
         user_token: pToken
       })
     };
-    return this.http.post('http://localhost:3000/api/usertema/delete', pBody, httpOptions).toPromise();
+    return this.http.post(this.baseUrl + 'delete', pBody, httpOptions).toPromise();
   }
 }

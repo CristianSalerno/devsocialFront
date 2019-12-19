@@ -5,15 +5,18 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   providedIn: "root"
 })
 export class ChatService {
-  constructor(private http: HttpClient) { }
+  baseUrl: string;
+  constructor(private http: HttpClient) {
+    this.baseUrl = 'https://devsocial-back.herokuapp.com/api/coment/';
+  }
 
   leaveComent(pComent, pUser) {
     return this.http
-      .post("http://localhost:3000/api/coment", pComent, pUser)
+      .post(this.baseUrl, pComent, pUser)
       .toPromise();
   }
 
   getComents(pId) {
-    return this.http.get("http://localhost:3000/api/coment/" + pId).toPromise();
+    return this.http.get(this.baseUrl + pId).toPromise();
   }
 }

@@ -5,18 +5,21 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   providedIn: "root"
 })
 export class UserProfileService {
-  constructor(private http: HttpClient) { }
+  baseUrl: string;
+  constructor(private http: HttpClient) {
+    this.baseUrl = 'https://devsocial-back.herokuapp.com/api/userProfile/';
+  }
 
   /* Envia los campos a la tabla user_profile */
   addUserFields(pUserData) {
     return this.http
-      .post('http://localhost:3000/api/userProfile', pUserData)
+      .post(this.baseUrl, pUserData)
       .toPromise();
   }
 
   getAllUserData(pUserid) {
     return this.http
-      .get(`http://localhost:3000/api/userProfile/allData/${pUserid}`)
+      .get(this.baseUrl + pUserid)
       .toPromise();
   }
 
@@ -26,7 +29,7 @@ export class UserProfileService {
         user_token: token,
       })
     };
-    return this.http.post('http://localhost:3000/api/userProfile/dataExtra', pUserData, httpOptions).toPromise();
+    return this.http.post(this.baseUrl + 'dataExtra', pUserData, httpOptions).toPromise();
   }
 
   updateAbout(token, pAbout) {
@@ -35,7 +38,7 @@ export class UserProfileService {
         user_token: token,
       })
     };
-    return this.http.post('http://localhost:3000/api/userProfile/about', pAbout, httpOptions).toPromise();
+    return this.http.post(this.baseUrl + 'about', pAbout, httpOptions).toPromise();
   }
 
   updateSkills(token, pSkills) {
@@ -44,7 +47,7 @@ export class UserProfileService {
         user_token: token,
       })
     };
-    return this.http.post('http://localhost:3000/api/userProfile/skills', pSkills, httpOptions).toPromise();
+    return this.http.post(this.baseUrl + 'skills', pSkills, httpOptions).toPromise();
   }
 
 

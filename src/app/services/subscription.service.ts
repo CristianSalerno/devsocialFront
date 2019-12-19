@@ -5,8 +5,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class SubscriptionService {
-
+  baseUrl: string;
   constructor(private http: HttpClient) {
+    this.baseUrl = 'https://devsocial-back.herokuapp.com/api/subscription/';
   }
 
   insert(pToken: string, pTemaId: number) {
@@ -19,12 +20,12 @@ export class SubscriptionService {
         user_token: pToken
       })
     };
-    return this.http.post('http://localhost:3000/api/subscription/insert', body, httpOptions).toPromise();
+    return this.http.post(this.baseUrl + 'insert', body, httpOptions).toPromise();
   }
   getByTemaState(body) {
-    return this.http.post('http://localhost:3000/api/subscription/state', body).toPromise();
+    return this.http.post(this.baseUrl + 'state', body).toPromise();
   }
   updateState(body) {
-    return this.http.post('http://localhost:3000/api/subscription/updatestate', body).toPromise();
+    return this.http.post(this.baseUrl + 'updatestate', body).toPromise();
   }
 }
