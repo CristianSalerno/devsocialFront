@@ -15,7 +15,8 @@
           *ngFor="let proyecto of arrProyectos" (click)="checkUser(proyecto.id)">
           <div class="row">
             <div class="col-sm-12 col-md-5">
-              <img [src]="'https://devsocial-back.herokuapp.com/images/'+ proyecto.imgUrl" class="card-img" alt="..." />
+              <img [src]="'https://devsocial-back.herokuapp.com/images/'+ proyecto.imgUrl" class="img-fluid"
+                alt="..." />
             </div>
             <div class="col-sm-12 col-md-7">
               <div class="text-project">

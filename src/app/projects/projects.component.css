@@ -27,7 +27,6 @@
 .filters label{
     color: grey;
 }
-
 .projects{
     min-height: 60vh;
     background-color: #fff;
@@ -35,7 +34,9 @@
 }
 .text-project{
     min-height: 20vh;
-
+}
+.tamaño{
+    width: 60%;
 }
 
 .hover-effect:hover {
