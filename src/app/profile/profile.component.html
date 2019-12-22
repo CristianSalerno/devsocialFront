@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6 p-2 text-center profile-edit">
+    <div class="col-md-12 col-lg-6 p-2 text-center profile-edit">
       <div class="box-profile pb-5 pl-5 pr-5" *ngFor="let user of userInfo">
         <h3 class="mb-4 p-2">
           {{ user.username }}
@@ -34,22 +34,17 @@
       </div>
     </div>
     <!-- Aca empiezan los proyectos -->
-    <div class="col-md-6  p-2 text-center profile-edit">
+    <div class="col-md-12 col-lg-6 p-2 text-center profile-edit">
       <div class="box-profile">
         <div class="col-12">
-
-          <h3 class="mb-4 p-2">User Projects</h3>
+          <h3 class="p-2">USER PROJECT</h3>
         </div>
         <!-- Projects -->
         <div class="projects">
-          <div class="project-card" style="width:15rem" *ngFor="let project of userProjects"
-            (click)="onSubmit(project.id)">
-            <div class="header-card">
-              <h3>{{project.name}}</h3>
-              <div class="body-card">
-                <img [src]="'http://localhost:3000/images/'+ project.imgUrl" class="img-fluid" alt="img-project"
-                  style="width: 15rem;" />
-              </div>
+          <div class="card-project shadow-sm" *ngFor="let project of userProjects" (click)="onSubmit(project.id)">
+            <h4>{{project.name}}</h4>
+            <div class="">
+              <img class="img-profile" [src]="'https://devsocial-back.herokuapp.com/images/' + project.imgUrl">
             </div>
           </div>
         </div>
