@@ -52,7 +52,7 @@ export class NewIdeaComponent implements OnInit {
 
     const header = new HttpHeaders();
     header.append('Content-Type', 'multipart/form-data');
-    const req = new HttpRequest('POST', 'http://localhost:3000/api/temas/create', fd, {
+    const req = new HttpRequest('POST', 'https://devsocial-back.herokuapp.com/api/temas/create', fd, {
       headers: header
     });
 

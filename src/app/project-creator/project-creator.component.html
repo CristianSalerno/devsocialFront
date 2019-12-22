@@ -14,7 +14,8 @@
                         <a (click)="activate('title')" class="edit-links">Edit Title</a>
                     </form>
                     <div class="image-project">
-                        <img class="img-fluid" [src]="'http://localhost:3000/images/' + project.imgUrl" alt="">
+                        <img class="img-fluid" [src]="'https://devsocial-back.herokuapp.com/images/' + project.imgUrl"
+                            alt="">
                         <a class="edit-links text-center">Edit img</a>
                     </div>
                     <div *ngIf="!activeDescription" class="description-project">

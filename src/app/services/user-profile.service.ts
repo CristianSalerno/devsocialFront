@@ -19,7 +19,7 @@ export class UserProfileService {
 
   getAllUserData(pUserid) {
     return this.http
-      .get(this.baseUrl + pUserid)
+      .get(this.baseUrl + 'allData/' + pUserid)
       .toPromise();
   }
 

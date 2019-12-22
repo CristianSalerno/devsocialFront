@@ -1,13 +1,40 @@
-.fondo {
-    min-height: 70vh;
-}
-
+@import url('https://fonts.googleapis.com/css?family=Scada&display=swap');
 .background {
     background-color: rgb(245, 245, 245);
+    min-height: 88vh;
+    padding: 1%
 }
-
+.title{
+    font-family: 'Scada', sans-serif;
+    font-weight: bold;
+    color: #3E8FD1;
+}
+.container{
+    padding: 2%;
+}
 .word-wrap {
   word-wrap: break-word;
+}
+.project-card{
+    padding: 1%;
+}
+.filters{
+    min-height: 17vh;
+    max-height: 60vh;
+    background-color: #fff;
+    border: 1px solid rgb(224, 224, 224);
+}
+.filters label{
+    color: grey;
+}
+
+.projects{
+    min-height: 60vh;
+    background-color: #fff;
+    border: 1px solid rgb(224, 224, 224);
+}
+.text-project{
+    min-height: 20vh;
 
 }
 
@@ -20,7 +47,15 @@
 .color-blue {
     color: #3E8FD1;
 }
+.button-edits{
+    margin: 5% 0;
+}
 
-#exampleFormControlInput1 {
-    font-size: 25px;
+@media (max-width: 990px){
+    .text-project{
+        padding:4%;
+    }
+    .background {
+        padding: 5%
+    }
 }

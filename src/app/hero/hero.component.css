@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Scada&display=swap');
 
 .landing{
     min-height: 80vh;
@@ -13,8 +13,9 @@
 
 .hero-text h1{
     font-weight: 400;
-    font-size: 55px;
+    font-size: 65px;
     padding-top:10%;
+    font-family: 'Scada', sans-serif;
 }
 .hero-text h2{
     font-weight: 300;

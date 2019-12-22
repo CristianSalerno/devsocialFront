@@ -25,6 +25,7 @@ export class ProfileComponent implements OnInit {
     const token = (localStorage.getItem('user_token')) ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
     this.userInfo = await this.userProfile.getAllUserData(id);
     this.userProjects = await this.userTemaService.getAllProjects(token);
+    console.log(token);
   }
 
   async onSubmit(id) {

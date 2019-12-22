@@ -1,44 +1,49 @@
 <div class="background pb-5 pt-5">
+  <section class="form-group pt-5">
+    <h1 class="text-center title">PROJECTS</h1>
+  </section>
   <div class="container">
-    <form class="pt-2 ">
-      <div class="form-group  d-flex flex-column align-items-center pt-5">
-        <h2 class="text-center mb-4 font-weight-bold text-uppercase">Projects</h2>
-
-        <input (keyup)="filtrarProyectos($event)" type="text" class="form-control col-md-6"
-          id="exampleFormControlInput1" placeholder="Filter By Title..." />
-      </div>
-    </form>
-    ​
-    <div class="fondo">
-      <div class=" mt-3 pb-5 d-flex  bg-white shadow-sm border hover-effect rounded"
-        *ngFor="let proyecto of arrProyectos" (click)="checkUser(proyecto.id)">
-        <div class="col-4 col-md-4 mt-3 mb-3">
-          <img [src]="'http://localhost:3000/images/'+ proyecto.imgUrl" class="card-img" alt="..." />
-        </div>
-        <div class="col-12 col-md-8">
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold color-blue text-capitalize">
-              {{ proyecto.name }}
-            </h5>
-            <p class="card-text text-capitalize word-wrap">{{ proyecto.descripcion }}</p>
-            <p class="card-text text-capitalize">
-              <small class="text-muted">Create at {{ proyecto.fecha_inicio | date }}</small>
-            </p>
-            <p class="card-text" text-capitalize>
-              <small class="text-muted">Last updated {{ proyecto.updateAt | date }}</small>
-            </p>
-            <div *ngIf="proyectosSuscrito">
-              <a (click)="checkUser(proyecto.id)" class="btn-error text-white" *ngIf="isMyProject(proyecto.id)">Go
-                to
-                {{ proyecto.name }}
-              </a>
-              <button (click)="onSubmit(proyecto.id)" class="btn-continue ml-3"
-                *ngIf="!isMyProject(proyecto.id)">Subscription
-              </button>
+    <div class="row">
+      <section class="col-md-12 col-lg-3 shadow-sm filters">
+        <form class="pt-2">
+          <label>Filter by title</label>
+          <input (keyup)="filtrarProyectos($event)" type="text" class="form-control" id="exampleFormControlInput1" />
+        </form>
+      </section>
+      <section class="projects col-md-12 col-lg-9">
+        <div class=" mt-3 mb-2 d-flex  bg-white shadow-sm border hover-effect rounded project-card"
+          *ngFor="let proyecto of arrProyectos" (click)="checkUser(proyecto.id)">
+          <div class="row">
+            <div class="col-sm-12 col-md-5">
+              <img [src]="'https://devsocial-back.herokuapp.com/images/'+ proyecto.imgUrl" class="card-img" alt="..." />
+            </div>
+            <div class="col-sm-12 col-md-7">
+              <div class="text-project">
+                <h5 class="card-title font-weight-bold color-blue text-capitalize mt-2">
+                  {{ proyecto.name }}
+                </h5>
+                <p class="card-text text-capitalize word-wrap">{{ proyecto.descripcion }}</p>
+              </div>
+              <div class="row button-edits">
+                <div class="col-7">
+                  <p class="card-text text-capitalize">
+                    <small class="text-muted">Create at {{ proyecto.fecha_inicio | date }}</small>
+                  </p>
+                </div>
+                <div *ngIf="proyectosSuscrito" class="col-5">
+                  <a (click)="checkUser(proyecto.id)" class="btn-error text-white mb"
+                    *ngIf="isMyProject(proyecto.id)">Entry
+                    to
+                  </a>
+                  <button (click)="onSubmit(proyecto.id)" class="btn-continue ml-3"
+                    *ngIf="!isMyProject(proyecto.id)">Subscription
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 </div>
