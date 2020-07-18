@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserProfileService } from 'src/app/services/user-profile.service';
 import { UsertemaService } from '../services/usertema.service';
 import { Router } from '@angular/router';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-profile',
@@ -14,6 +15,7 @@ export class ProfileComponent implements OnInit {
 
 
 
+
   constructor(
     private userProfile: UserProfileService,
     private userTemaService: UsertemaService,
@@ -21,9 +23,11 @@ export class ProfileComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
+
     const id = (localStorage.getItem('id')) ? localStorage.getItem('id') : sessionStorage.getItem('id');
     const token = (localStorage.getItem('user_token')) ? localStorage.getItem('user_token') : sessionStorage.getItem('user_token');
     this.userInfo = await this.userProfile.getAllUserData(id);
+    console.log(this.userInfo)
     this.userProjects = await this.userTemaService.getAllProjects(token);
   }
 

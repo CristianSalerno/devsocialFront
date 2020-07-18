@@ -29,6 +29,7 @@ import { ProjectCreatorComponent } from './project-creator/project-creator.compo
 import { NgRedux, NgReduxModule } from '@angular-redux/store';
 
 import { IAppState, rootReducer, INITIAL_STATE } from './store';
+import { CovidChartComponent } from './covid-chart/covid-chart.component';
 // ACA VA A IR REDUX POR RICARDO FANIZZI 😇🤓
 /* REDUX */
 
@@ -52,7 +53,8 @@ import { IAppState, rootReducer, INITIAL_STATE } from './store';
     EditImageComponent,
     PublicProfileComponent,
     ProjectAdmComponent,
-    ProjectCreatorComponent
+    ProjectCreatorComponent,
+    CovidChartComponent
   ],
   imports: [
     BrowserModule,
